@@ -186,8 +186,10 @@ function SearchScene() {
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <div className="md:col-span-5">
             <p className="eyebrow mb-6">Chapter one</p>
-            <h2 className="section-opener">The search.</h2>
-            <MarkerUnderline />
+            <div className="w-fit">
+              <h2 className="section-opener">The search.</h2>
+              <MarkerUnderline />
+            </div>
           </div>
           <div className="md:col-span-7">
             <p className="body-lg mb-6 max-w-[560px]">
@@ -385,14 +387,16 @@ function PhoneList() {
           {/* Copy */}
           <div className="md:col-span-6 order-1 md:order-2">
             <p className="eyebrow mb-6">The shortlist</p>
-            <h2 className="section-opener mb-3">
-              Every company on this page is qualified.
-              <br />
-              <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                Every single one.
-              </span>
-            </h2>
-            <MarkerUnderline className="mb-8" />
+            <div className="w-fit mb-8">
+              <h2 className="section-opener mb-3">
+                Every company on this page is qualified.
+                <br />
+                <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+                  Every single one.
+                </span>
+              </h2>
+              <MarkerUnderline />
+            </div>
             <p className="body-lg mb-6 max-w-[520px]">
               The person with the collapsed wall isn't comparing. They're not
               reading reviews. They have a yard full of mud and they need someone
@@ -592,17 +596,19 @@ function TwentyFourSeven() {
           <p className="eyebrow mb-6" style={{ color: "var(--color-ember)" }}>
             Chapter three
           </p>
-          <h2
-            className="section-opener"
-            style={{ color: "white" }}
-          >
-            The{" "}
-            <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-              "24/7"
-            </span>{" "}
-            problem.
-          </h2>
-          <MarkerUnderline />
+          <div className="w-fit">
+            <h2
+              className="section-opener"
+              style={{ color: "white" }}
+            >
+              The{" "}
+              <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+                "24/7"
+              </span>{" "}
+              problem.
+            </h2>
+            <MarkerUnderline />
+          </div>
           <p
             className="body-lg mt-6"
             style={{ color: "rgba(255,255,255,0.75)" }}
@@ -680,8 +686,10 @@ function Proof() {
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
         <div className="max-w-[760px] mb-16 md:mb-20">
           <p className="eyebrow mb-6">Chapter four</p>
-          <h2 className="section-opener mb-3">This isn't a theory.</h2>
-          <MarkerUnderline className="mb-6" />
+          <div className="w-fit mb-6">
+            <h2 className="section-opener mb-3">This isn't a theory.</h2>
+            <MarkerUnderline />
+          </div>
           <p className="body-lg mb-5">
             A painting company thought they were answering their phones. They were —
             during business hours, when the office wasn't slammed.
@@ -795,10 +803,12 @@ function Emmy() {
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
         <div className="max-w-[760px] mb-16">
           <p className="eyebrow mb-6">Chapter five</p>
-          <h2 className="section-opener mb-3">
-            Meet Emmy.
-          </h2>
-          <MarkerUnderline className="mb-8" />
+          <div className="w-fit mb-8">
+            <h2 className="section-opener mb-3">
+              Meet Emmy.
+            </h2>
+            <MarkerUnderline />
+          </div>
           <p className="body-lg mb-6">
             Emmy is not here to replace your staff. Your people run your business.
             Emmy catches what they miss — the call that comes in while your
