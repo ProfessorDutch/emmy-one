@@ -186,8 +186,10 @@ function SearchScene() {
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <div className="md:col-span-5">
             <p className="eyebrow mb-6">Chapter one</p>
-            <h2 className="section-opener">The search.</h2>
-            <MarkerUnderline />
+            <div className="w-fit">
+              <h2 className="section-opener">The search.</h2>
+              <MarkerUnderline />
+            </div>
           </div>
           <div className="md:col-span-7">
             <p className="body-lg mb-6 max-w-[560px]">
