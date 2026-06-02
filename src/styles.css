@@ -19,26 +19,28 @@
   --color-paper: var(--paper);
   --color-ember: var(--ember);
   --color-night: var(--night);
+  --color-ash: var(--ash);
 }
 
 :root {
-  /* Warm paper off-white */
-  --background: oklch(0.967 0.012 90);
-  --paper: oklch(0.967 0.012 90);
-  /* Near-black, never pure */
-  --foreground: oklch(0.18 0.006 80);
-  --ink: oklch(0.18 0.006 80);
-  /* Warm gray */
-  --muted: oklch(0.92 0.008 85);
-  --muted-foreground: oklch(0.49 0.008 80);
-  /* Burnt amber accent */
-  --accent: oklch(0.598 0.156 47);
-  --accent-foreground: oklch(0.97 0.012 90);
-  --ember: oklch(0.598 0.156 47);
+  /* Pure paper white */
+  --background: oklch(1 0 0);
+  --paper: oklch(1 0 0);
+  /* Near-black ink */
+  --foreground: oklch(0.14 0 0);
+  --ink: oklch(0.14 0 0);
+  /* Warm grey scale */
+  --muted: oklch(0.96 0.003 60);
+  --muted-foreground: oklch(0.48 0.005 60);
+  --ash: oklch(0.92 0.003 60);
+  /* Bold orange accent */
+  --accent: oklch(0.68 0.205 41);
+  --accent-foreground: oklch(1 0 0);
+  --ember: oklch(0.68 0.205 41);
   /* Borders */
-  --border: oklch(0.86 0.012 85);
-  /* Deep near-black for dark sections */
-  --night: oklch(0.14 0.006 70);
+  --border: oklch(0.9 0.003 60);
+  /* Deep black for high-contrast sections */
+  --night: oklch(0.12 0 0);
 }
 
 @layer base {
@@ -58,7 +60,7 @@
   }
   ::selection {
     background: var(--color-ember);
-    color: var(--color-paper);
+    color: white;
   }
 }
 
@@ -79,7 +81,16 @@
     font-family: var(--font-sans);
     font-weight: 500;
     font-size: 11px;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-ember);
+  }
+
+  .eyebrow-muted {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--color-muted-foreground);
   }
@@ -87,17 +98,25 @@
   .hero-type {
     font-family: var(--font-display);
     font-weight: 400;
-    font-size: clamp(38px, 6vw, 64px);
-    line-height: 1.08;
+    font-size: clamp(36px, 6.2vw, 68px);
+    line-height: 1.06;
     letter-spacing: -0.02em;
   }
 
   .section-opener {
     font-family: var(--font-display);
     font-weight: 400;
-    font-size: clamp(28px, 3.6vw, 36px);
-    line-height: 1.15;
-    letter-spacing: -0.015em;
+    font-size: clamp(30px, 4.4vw, 44px);
+    line-height: 1.1;
+    letter-spacing: -0.018em;
+  }
+
+  .stat-num {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(80px, 16vw, 160px);
+    line-height: 0.9;
+    letter-spacing: -0.04em;
   }
 
   .body-lg {
@@ -120,7 +139,14 @@
   }
 
   .section {
-    padding-top: clamp(80px, 12vw, 160px);
-    padding-bottom: clamp(80px, 12vw, 160px);
+    padding-top: clamp(72px, 11vw, 144px);
+    padding-bottom: clamp(72px, 11vw, 144px);
+  }
+
+  .rule-orange {
+    display: inline-block;
+    width: 48px;
+    height: 2px;
+    background: var(--color-ember);
   }
 }
