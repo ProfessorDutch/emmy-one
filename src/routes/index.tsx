@@ -439,18 +439,18 @@ function CallSequence() {
       {/* Top image band */}
       <div className="relative w-full">
         <img
-          src={handsPhone}
-          alt="A man on the edge of his bed at dawn, holding his phone"
+          src={manCalling}
+          alt="A worried man on the edge of his bed at dawn, phone pressed to his ear, mid-call"
           loading="lazy"
           width={1920}
           height={1080}
-          className="w-full h-[40svh] md:h-[60svh] object-cover"
+          className="w-full h-[50svh] md:h-[72svh] object-cover object-center"
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%)",
+              "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.75) 100%)",
           }}
         />
         <div className="absolute bottom-0 left-0 right-0 p-5 md:p-12">
