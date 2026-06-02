@@ -519,21 +519,24 @@ function CallSequence() {
           ))}
         </div>
 
-        <div className="max-w-[640px] mt-16">
-          <p className="body-lg mb-8">
+        <div className="max-w-[840px] mt-20 md:mt-24">
+          <p className="body-lg mb-10 max-w-[640px]">
             The search is over. Not because the fourth company was better. Not
             because they had more reviews.
           </p>
           <p
-            className="font-display-italic"
+            className="font-display"
             style={{
-              fontSize: "clamp(24px, 2.8vw, 34px)",
-              lineHeight: 1.2,
+              fontSize: "clamp(36px, 5.4vw, 64px)",
+              lineHeight: 1.04,
+              letterSpacing: "-0.025em",
             }}
           >
-            The other three didn't lose on merit.
+            The other three didn't
+            <br className="hidden md:block" />
+            {" "}lose on merit.
             <br />
-            <span style={{ color: "var(--color-ember)" }}>
+            <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
               They just weren't there.
             </span>
           </p>
