@@ -658,20 +658,25 @@ function TwentyFourSeven() {
 
 function Proof() {
   const stats = [
-    { n: "409", label: "calls came in", note: "Spam. Wrong numbers. Noise." },
-    { n: "105", label: "real buyers", note: "People with an actual problem to solve." },
-    { n: "47", label: "closed jobs", note: "Customers who got help. Got scheduled. Got served." },
+    { n: "409", label: "calls they missed", note: "The overflow. Calls that went to voicemail, rang out, or hit the answering service while the team was busy or off the clock." },
+    { n: "105", label: "real buyers in that overflow", note: "Not spam. Not wrong numbers. People with an actual job to schedule." },
+    { n: "47", label: "appointments booked", note: "Emmy picked up the calls the company couldn't, and turned them into scheduled work." },
   ];
 
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
-        <div className="max-w-[700px] mb-16 md:mb-20">
+        <div className="max-w-[760px] mb-16 md:mb-20">
           <p className="eyebrow mb-6">Chapter four</p>
           <h2 className="section-opener mb-6">This isn't a theory.</h2>
+          <p className="body-lg mb-5">
+            A painting company thought they were answering their phones. They were —
+            during business hours, when the office wasn't slammed.
+          </p>
           <p className="body-lg">
-            A painting company was answering their phones. Or so they thought.
-            Here's one quarter of their inbound.
+            These are the calls they{" "}
+            <span style={{ color: "var(--color-ember)" }}>missed</span>
+            {" "}in one quarter. The overflow. The ones that never reached a human.
           </p>
         </div>
 
