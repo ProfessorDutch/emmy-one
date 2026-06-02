@@ -541,14 +541,14 @@ function CallSequence() {
           <p
             className="font-display"
             style={{
-              fontSize: "clamp(36px, 5.4vw, 64px)",
-              lineHeight: 1.04,
-              letterSpacing: "-0.025em",
+              fontSize: "clamp(28px, 3.6vw, 44px)",
+              lineHeight: 1.06,
+              letterSpacing: "-0.02em",
             }}
           >
             The other three didn't
             <br className="hidden md:block" />
-            {" "}lose on merit.
+            {" "}lose on quality.
             <br />
             <span className="font-display" style={{ color: "var(--color-ember)" }}>
               They just weren't there.
