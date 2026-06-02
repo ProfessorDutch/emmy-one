@@ -395,7 +395,6 @@ function PhoneList() {
                   Every single one.
                 </span>
               </h2>
-              <MarkerUnderline />
             </div>
             <p className="body-lg mb-6 max-w-[520px]">
               The person with the collapsed wall isn't comparing. They're not
