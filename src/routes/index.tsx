@@ -207,6 +207,7 @@ function SearchScene() {
           <div className="md:col-span-5">
             <p className="eyebrow mb-6">Chapter one</p>
             <h2 className="section-opener">The search.</h2>
+            <MarkerUnderline width={160} />
           </div>
           <div className="md:col-span-7">
             <p className="body-lg mb-6 max-w-[560px]">
