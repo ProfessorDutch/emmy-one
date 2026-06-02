@@ -1,10 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroAlarm from "@/assets/hero-alarm-607.jpg";
-import collapsedWall from "@/assets/collapsed-wall.jpg";
-import handsPhone from "@/assets/hands-phone-stress.jpg";
+import collapsedWallAsset from "@/assets/collapsed-wall-hero.png.asset.json";
+import manCalling from "@/assets/man-calling.jpg";
 import emptyOffice from "@/assets/empty-office-ringing.jpg";
 import crewFixing from "@/assets/crew-fixing.jpg";
 import phoneIncoming from "@/assets/phone-incoming.jpg";
+
+const collapsedWall = collapsedWallAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
