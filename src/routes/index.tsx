@@ -550,7 +550,7 @@ function CallSequence() {
             <br className="hidden md:block" />
             {" "}lose on merit.
             <br />
-            <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+            <span className="font-display" style={{ color: "var(--color-ember)" }}>
               They just weren't there.
             </span>
           </p>
@@ -838,9 +838,9 @@ function Emmy() {
                 {top}
               </p>
               <p
-                className="font-display-italic mt-1"
+                className="font-display mt-1"
                 style={{
-                  fontSize: "clamp(18px, 1.8vw, 22px)",
+                  fontSize: "clamp(20px, 2vw, 24px)",
                   color: "var(--color-ember)",
                   lineHeight: 1.2,
                 }}
