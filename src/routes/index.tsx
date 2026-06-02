@@ -691,8 +691,8 @@ function TwentyFourSeven() {
 function Proof() {
   const stats = [
     { n: "409", label: "calls they missed", note: "The overflow. Calls that went to voicemail, rang out, or hit the answering service while the team was busy or off the clock." },
-    { n: "105", label: "real buyers in that overflow", note: "Not spam. Not wrong numbers. People with an actual job to schedule." },
-    { n: "47", label: "appointments booked", note: "Emmy picked up the calls the company couldn't, and turned them into scheduled work." },
+    { n: "105", label: "appointments booked", note: "Emmy picked up the calls the company couldn't, asked the right questions, and put the homeowner on the schedule." },
+    { n: "47", label: "closed deals", note: "Signed contracts. Real revenue. From the calls the company was never going to answer in the first place." },
   ];
 
   return (
