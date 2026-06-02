@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroNightstand from "@/assets/hero-nightstand.jpg";
-import handPhoneSearch from "@/assets/hand-phone-search.jpg";
-import emptyOffice from "@/assets/empty-office-phone.jpg";
-import painters from "@/assets/painters-working.jpg";
-import handsAppointment from "@/assets/hands-phone-appointment.jpg";
-import phoneDark from "@/assets/phone-dark-waiting.jpg";
+import heroAlarm from "@/assets/hero-alarm-607.jpg";
+import collapsedWall from "@/assets/collapsed-wall.jpg";
+import handsPhone from "@/assets/hands-phone-stress.jpg";
+import emptyOffice from "@/assets/empty-office-ringing.jpg";
+import crewFixing from "@/assets/crew-fixing.jpg";
+import phoneIncoming from "@/assets/phone-incoming.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "They weren't choosing between you and your competitor. They were moving down a list until somebody helped them.",
+          "They weren't choosing between you and a competitor. They were moving down a list until somebody helped them.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -34,7 +34,7 @@ function Index() {
     <main className="bg-background text-foreground overflow-x-hidden">
       <Hero />
       <SearchScene />
-      <AngiMock />
+      <PhoneList />
       <CallSequence />
       <TwentyFourSeven />
       <Proof />
@@ -45,62 +45,77 @@ function Index() {
   );
 }
 
-/* ---------------- HERO ---------------- */
+/* ============================================================
+   HERO — 6:07 am alarm clock. Phone next to bed. You just woke up.
+   ============================================================ */
 
 function Hero() {
   return (
-    <section className="relative min-h-[100vh] flex items-end overflow-hidden bg-night">
+    <section className="relative min-h-[100svh] flex flex-col bg-night text-white overflow-hidden">
       <img
-        src={heroNightstand}
+        src={heroAlarm}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-30"
+        fetchPriority="high"
         width={1920}
         height={1080}
+        className="absolute inset-0 h-full w-full object-cover"
+        style={{ opacity: 0.55 }}
       />
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(20,15,10,0.55) 0%, rgba(20,15,10,0.7) 70%, rgba(20,15,10,0.92) 100%)",
+            "linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.6) 40%, rgba(10,10,10,0.95) 100%)",
         }}
       />
-      <div className="relative z-10 w-full px-6 md:px-12 pb-24 md:pb-32 pt-32">
-        <div className="mx-auto max-w-[1280px]">
-          <div className="measure">
+
+      {/* top bar */}
+      <div className="relative z-10 px-5 md:px-10 pt-6 md:pt-8 flex items-center justify-between">
+        <p
+          className="font-display tracking-tight text-[20px] md:text-[22px]"
+          style={{ color: "white" }}
+        >
+          MeetEmmy
+        </p>
+        <p className="eyebrow" style={{ color: "var(--color-ember)" }}>
+          A scene
+        </p>
+      </div>
+
+      <div className="relative z-10 flex-1 flex items-end px-5 md:px-10 pb-16 md:pb-24 pt-24 md:pt-32">
+        <div className="mx-auto w-full max-w-[1280px]">
+          <div className="max-w-[760px]">
+            <div className="flex items-center gap-3 mb-8">
+              <span className="rule-orange" />
+              <p
+                className="eyebrow"
+                style={{ color: "var(--color-ember)", letterSpacing: "0.22em" }}
+              >
+                6:07 AM
+              </p>
+            </div>
+
+            <h1 className="hero-type" style={{ color: "white" }}>
+              Your retaining wall gave way.
+              <br />
+              <span className="font-display-italic" style={{ color: "rgba(255,255,255,0.75)" }}>
+                You don't know how much of the yard went with it.
+              </span>
+            </h1>
+
             <p
-              className="eyebrow mb-10"
-              style={{ color: "rgba(247,245,240,0.55)" }}
+              className="body-lg mt-8 max-w-[560px]"
+              style={{ color: "rgba(255,255,255,0.72)" }}
             >
-              MeetEmmy / A scene
+              It rained hard last night. Your wife is at the back door. You've got
+              a slope, a mess, and no idea who to call.
             </p>
+
             <p
-              className="font-display-italic mb-8"
+              className="font-display-italic mt-12"
               style={{
                 fontSize: "clamp(20px, 2vw, 26px)",
-                color: "rgba(247,245,240,0.7)",
-              }}
-            >
-              2:07 am
-            </p>
-            <h1
-              className="hero-type"
-              style={{ color: "rgba(247,245,240,0.96)" }}
-            >
-              Your retaining wall just gave way. You don't know how much of the
-              yard went with it. It rained hard last night.
-            </h1>
-            <p
-              className="body-lg mt-8"
-              style={{ color: "rgba(247,245,240,0.7)" }}
-            >
-              Your wife is standing at the back door. You've got a slope, a
-              mess, and no idea who to call.
-            </p>
-            <p
-              className="font-display-italic mt-10"
-              style={{
-                fontSize: "clamp(22px, 2.2vw, 30px)",
-                color: "rgba(247,245,240,0.85)",
+                color: "var(--color-ember)",
               }}
             >
               So you do what every person does.
@@ -112,31 +127,61 @@ function Hero() {
   );
 }
 
-/* ---------------- SEARCH SCENE ---------------- */
+/* ============================================================
+   SEARCH SCENE — full-bleed wall image, big value callout
+   ============================================================ */
 
 function SearchScene() {
   return (
-    <section className="section bg-background">
-      <div className="mx-auto max-w-[1280px] px-6 md:px-12">
-        <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
-          <div>
-            <p className="eyebrow mb-8">Chapter one</p>
-            <h2 className="section-opener mb-8">The search.</h2>
-            <p className="body-lg measure">
-              You open your phone. You search. You find a page that looks like
-              this.
-            </p>
+    <section className="relative bg-white">
+      {/* Full-bleed image */}
+      <div className="relative w-full">
+        <img
+          src={collapsedWall}
+          alt="A collapsed residential retaining wall the morning after heavy rain"
+          loading="lazy"
+          width={1920}
+          height={1080}
+          className="w-full h-[60svh] md:h-[85svh] object-cover"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.65) 100%)",
+          }}
+        />
+        <div className="absolute bottom-0 left-0 right-0 p-5 md:p-12">
+          <p
+            className="eyebrow mb-3"
+            style={{ color: "var(--color-ember)" }}
+          >
+            What you woke up to
+          </p>
+          <p
+            className="font-display-italic text-white max-w-[640px]"
+            style={{ fontSize: "clamp(22px, 2.6vw, 32px)", lineHeight: 1.2 }}
+          >
+            This isn't a project. This is an emergency.
+          </p>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
+        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
+          <div className="md:col-span-5">
+            <p className="eyebrow mb-6">Chapter one</p>
+            <h2 className="section-opener">The search.</h2>
           </div>
-          <div className="relative">
-            <img
-              src={handPhoneSearch}
-              alt="A hand holding a phone showing search results"
-              loading="lazy"
-              width={1600}
-              height={1200}
-              className="w-full h-auto object-cover"
-              style={{ filter: "saturate(0.85) contrast(1.02)" }}
-            />
+          <div className="md:col-span-7">
+            <p className="body-lg mb-6 max-w-[560px]">
+              You open your phone. You search{" "}
+              <em className="font-display-italic">"retaining wall repair near me."</em>{" "}
+              You find a page that looks like this.
+            </p>
+            <p className="body-soft max-w-[560px]">
+              Four companies. All qualified. All claiming 24/7. All a tap away.
+            </p>
           </div>
         </div>
       </div>
@@ -144,219 +189,322 @@ function SearchScene() {
   );
 }
 
-/* ---------------- ANGI-STYLE MOCK INSIDE PHONE ---------------- */
+/* ============================================================
+   PHONE LIST — actual phone-sized device with 770-555 numbers
+   ============================================================ */
 
-function AngiMock() {
+function PhoneList() {
   const companies = [
-    { initials: "AC", name: "All-Star Concrete & Masonry", years: 14, rating: "4.9", reviews: 312 },
-    { initials: "PW", name: "ProWall Solutions", years: 9, rating: "4.8", reviews: 278 },
-    { initials: "HL", name: "Heritage Landscape & Stone", years: 11, rating: "4.9", reviews: 194 },
-    { initials: "BM", name: "Benchmark Hardscapes", years: 7, rating: "4.8", reviews: 156 },
+    { name: "All-Star Concrete & Masonry", phone: "(770) 555-0142", rating: "4.9", reviews: 312, badge: "Top Pro" },
+    { name: "ProWall Solutions", phone: "(770) 555-0188", rating: "4.8", reviews: 278, badge: "Top Pro" },
+    { name: "Heritage Landscape & Stone", phone: "(770) 555-0207", rating: "4.9", reviews: 194, badge: "" },
+    { name: "Benchmark Hardscapes", phone: "(770) 555-0233", rating: "4.8", reviews: 156, badge: "Hired 12x" },
   ];
 
   return (
-    <section className="section bg-background">
-      <div className="mx-auto max-w-[1280px] px-6 md:px-12">
-        <div className="flex justify-center">
-          {/* Phone frame */}
-          <div
-            className="relative"
-            style={{
-              width: "min(360px, 90vw)",
-              padding: "14px",
-              borderRadius: "52px",
-              background: "linear-gradient(180deg, #1a1a18 0%, #2a2826 100%)",
-              boxShadow:
-                "0 40px 80px -20px rgba(28,28,26,0.35), 0 0 0 2px rgba(28,28,26,0.08)",
-            }}
-          >
+    <section className="relative" style={{ background: "var(--color-muted)" }}>
+      <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
+        <div className="grid md:grid-cols-12 gap-14 md:gap-16 items-center">
+          {/* Phone mockup — real phone size, ~320px */}
+          <div className="md:col-span-6 flex justify-center md:justify-start order-2 md:order-1">
             <div
-              className="relative overflow-hidden bg-white pb-8"
-              style={{ borderRadius: "40px" }}
+              className="relative shrink-0"
+              style={{
+                width: 320,
+                padding: 10,
+                borderRadius: 46,
+                background: "linear-gradient(180deg, #0a0a0a 0%, #1f1f1f 100%)",
+                boxShadow:
+                  "0 50px 100px -30px rgba(0,0,0,0.45), 0 0 0 1.5px rgba(0,0,0,0.6)",
+              }}
             >
-              {/* notch */}
               <div
-                className="absolute top-2 left-1/2 -translate-x-1/2 z-20"
-                style={{
-                  width: "100px",
-                  height: "24px",
-                  borderRadius: "14px",
-                  background: "#0a0a08",
-                }}
-              />
-              {/* status bar */}
-              <div className="flex justify-between items-center px-7 pt-3 text-[11px] font-medium text-[#1C1C1A]">
-                <span>9:44</span>
-                <span className="opacity-0">.</span>
-              </div>
-              {/* search bar */}
-              <div className="px-4 pt-6">
+                className="relative overflow-hidden bg-white"
+                style={{ borderRadius: 36, height: 660 }}
+              >
+                {/* dynamic island */}
                 <div
-                  className="flex items-center gap-2 px-3 py-2 rounded-full border"
-                  style={{ borderColor: "#e5e5e2", background: "#fafaf8" }}
-                >
-                  <span className="text-[#9b9b97] text-xs">⌕</span>
-                  <span
-                    className="text-[12px] text-[#3a3a37] truncate"
+                  className="absolute top-2 left-1/2 -translate-x-1/2 z-20"
+                  style={{
+                    width: 96,
+                    height: 26,
+                    borderRadius: 14,
+                    background: "#0a0a0a",
+                  }}
+                />
+                {/* status bar */}
+                <div className="flex justify-between items-center px-6 pt-3 text-[12px] font-semibold text-black">
+                  <span>6:11</span>
+                  <span className="opacity-0">.</span>
+                </div>
+
+                {/* search bar */}
+                <div className="px-3 pt-5">
+                  <div
+                    className="flex items-center gap-2 px-3 py-2.5 rounded-full"
+                    style={{ background: "#f2f2f0" }}
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#777"
+                      strokeWidth="2.5"
+                    >
+                      <circle cx="11" cy="11" r="7" />
+                      <path d="m20 20-3-3" />
+                    </svg>
+                    <span
+                      className="text-[12px] text-[#333] truncate"
+                      style={{ fontFamily: "var(--font-sans)" }}
+                    >
+                      retaining wall repair near me
+                    </span>
+                  </div>
+                </div>
+
+                {/* sponsored label */}
+                <div className="px-4 pt-4 pb-2">
+                  <p
+                    className="text-[10px] font-medium uppercase tracking-wider text-[#888]"
                     style={{ fontFamily: "var(--font-sans)" }}
                   >
-                    retaining wall repair near me
-                  </span>
+                    Sponsored · 4 results
+                  </p>
                 </div>
-              </div>
-              {/* results */}
-              <div className="px-4 pt-4 space-y-3">
-                {companies.map((c) => (
-                  <div
-                    key={c.initials}
-                    className="rounded-xl border p-3"
-                    style={{ borderColor: "#ececea", background: "#fff" }}
-                  >
-                    <div className="flex gap-3">
-                      <div
-                        className="flex items-center justify-center text-[11px] font-medium text-white shrink-0"
-                        style={{
-                          width: 40,
-                          height: 40,
-                          borderRadius: 8,
-                          background: "#1C1C1A",
-                        }}
-                      >
-                        {c.initials}
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <div className="flex items-center gap-1.5 mb-0.5">
+
+                {/* results */}
+                <div className="px-3 space-y-2.5">
+                  {companies.map((c, i) => (
+                    <div
+                      key={c.phone}
+                      className="rounded-2xl p-3"
+                      style={{
+                        background: "#fff",
+                        border: "1px solid #ececea",
+                      }}
+                    >
+                      <div className="flex items-start gap-2.5">
+                        <div
+                          className="flex items-center justify-center text-[10px] font-bold text-white shrink-0"
+                          style={{
+                            width: 36,
+                            height: 36,
+                            borderRadius: 8,
+                            background: i === 0 ? "var(--color-ember)" : "#1a1a1a",
+                          }}
+                        >
+                          {c.name
+                            .split(" ")
+                            .filter((w) => /^[A-Z]/.test(w))
+                            .slice(0, 2)
+                            .map((w) => w[0])
+                            .join("")}
+                        </div>
+                        <div className="min-w-0 flex-1">
                           <p
-                            className="text-[12px] font-medium text-[#1C1C1A] truncate"
+                            className="text-[11.5px] font-semibold text-[#0a0a0a] leading-tight truncate"
                             style={{ fontFamily: "var(--font-sans)" }}
                           >
                             {c.name}
                           </p>
-                        </div>
-                        <p
-                          className="text-[10px] text-[#6B6B67] mb-1"
-                          style={{ fontFamily: "var(--font-sans)" }}
-                        >
-                          Licensed • Insured • {c.years} yrs
-                        </p>
-                        <div className="flex items-center gap-1.5">
-                          <span className="text-[10px] text-[#1C1C1A]">
-                            ★★★★★
-                          </span>
-                          <span
-                            className="text-[10px] text-[#6B6B67]"
-                            style={{ fontFamily: "var(--font-sans)" }}
-                          >
-                            {c.rating} ({c.reviews})
-                          </span>
-                          <span
-                            className="ml-auto text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded"
-                            style={{
-                              background: "#f3efe6",
-                              color: "#1C1C1A",
-                              fontFamily: "var(--font-sans)",
-                              fontWeight: 500,
-                            }}
-                          >
-                            Top Pro
-                          </span>
+                          <div className="flex items-center gap-1 mt-0.5">
+                            <span className="text-[10px] text-[#FF8c00]">★★★★★</span>
+                            <span
+                              className="text-[9.5px] text-[#666]"
+                              style={{ fontFamily: "var(--font-sans)" }}
+                            >
+                              {c.rating} ({c.reviews})
+                            </span>
+                            {c.badge && (
+                              <span
+                                className="ml-1 text-[8px] uppercase tracking-wider px-1 py-0.5 rounded font-semibold"
+                                style={{
+                                  background: "#FFF1E8",
+                                  color: "#C24A00",
+                                  fontFamily: "var(--font-sans)",
+                                }}
+                              >
+                                {c.badge}
+                              </span>
+                            )}
+                          </div>
                         </div>
                       </div>
+                      {/* Call button */}
+                      <a
+                        href={`tel:${c.phone.replace(/[^0-9]/g, "")}`}
+                        className="mt-2.5 w-full flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[11.5px] font-semibold"
+                        style={{
+                          background:
+                            i === 0
+                              ? "var(--color-ember)"
+                              : "#0a0a0a",
+                          color: "white",
+                          fontFamily: "var(--font-sans)",
+                        }}
+                      >
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="white">
+                          <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.58l2.2-2.21a1 1 0 0 0 .25-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1Z" />
+                        </svg>
+                        Call {c.phone}
+                      </a>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+
+                <div className="pt-3 pb-4 text-center">
+                  <p
+                    className="text-[10px] text-[#888]"
+                    style={{ fontFamily: "var(--font-sans)" }}
+                  >
+                    See more results
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="mx-auto measure mt-20 md:mt-28">
-          <p className="font-display-italic mb-6" style={{ fontSize: "clamp(24px, 2.4vw, 32px)", lineHeight: 1.25 }}>
-            Every company on this page is qualified. Every single one.
-          </p>
-          <p className="body-lg mb-6">
-            The person with the collapsed wall isn't comparing. They're not
-            reading reviews. They're not picking the best option. They have a
-            yard full of mud and they need someone to help them.
-          </p>
-          <p className="body-soft">
-            You are a potential solution. So is every other company on that
-            page.
-          </p>
+          {/* Copy */}
+          <div className="md:col-span-6 order-1 md:order-2">
+            <p className="eyebrow mb-6">The shortlist</p>
+            <h2 className="section-opener mb-8">
+              Every company on this page is qualified.
+              <br />
+              <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+                Every single one.
+              </span>
+            </h2>
+            <p className="body-lg mb-6 max-w-[520px]">
+              The person with the collapsed wall isn't comparing. They're not
+              reading reviews. They have a yard full of mud and they need someone
+              to help them — now.
+            </p>
+            <p className="body-soft max-w-[520px]">
+              You are a potential solution. So is every other company on that
+              page. The winner is whoever picks up the phone.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-/* ---------------- CALL SEQUENCE ---------------- */
+/* ============================================================
+   CALL SEQUENCE — Big editorial timeline. The first three lose.
+   ============================================================ */
 
 function CallSequence() {
   const rows = [
-    { label: "First company", result: "No answer.", fail: true },
-    { label: "Second company", result: "Voicemail.", fail: true },
     {
-      label: "Third company",
-      result:
-        '"24/7 service" — hold music — call center — can\'t schedule anything.',
+      n: "01",
+      label: "All-Star Concrete",
+      phone: "(770) 555-0142",
+      result: "No answer.",
       fail: true,
     },
     {
-      label: "Fourth company",
+      n: "02",
+      label: "ProWall Solutions",
+      phone: "(770) 555-0188",
+      result: "Voicemail.",
+      fail: true,
+    },
+    {
+      n: "03",
+      label: "Heritage Landscape",
+      phone: "(770) 555-0207",
+      result: "Answering service. No appointment booked.",
+      fail: true,
+    },
+    {
+      n: "04",
+      label: "Benchmark Hardscapes",
+      phone: "(770) 555-0233",
       result: "Someone answers. Books the appointment. Done.",
       fail: false,
     },
   ];
 
   return (
-    <section className="relative section overflow-hidden" style={{ background: "#efeae0" }}>
-      <img
-        src={emptyOffice}
-        alt=""
-        loading="lazy"
-        width={1920}
-        height={1080}
-        className="absolute right-0 top-0 h-full w-full md:w-1/2 object-cover opacity-40"
-        style={{ filter: "saturate(0.7)" }}
-      />
-      <div
-        className="absolute inset-0 md:left-1/2"
-        style={{
-          background:
-            "linear-gradient(90deg, #efeae0 0%, rgba(239,234,224,0.7) 30%, rgba(239,234,224,0.4) 100%)",
-        }}
-      />
-      <div className="relative z-10 mx-auto max-w-[1280px] px-6 md:px-12">
-        <div className="measure mb-16">
-          <p className="eyebrow mb-8">Chapter two</p>
-          <h2 className="section-opener mb-8">What happens when they call.</h2>
+    <section className="relative bg-white overflow-hidden">
+      {/* Top image band */}
+      <div className="relative w-full">
+        <img
+          src={handsPhone}
+          alt="A man on the edge of his bed at dawn, holding his phone"
+          loading="lazy"
+          width={1920}
+          height={1080}
+          className="w-full h-[40svh] md:h-[60svh] object-cover"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%)",
+          }}
+        />
+        <div className="absolute bottom-0 left-0 right-0 p-5 md:p-12">
+          <p className="eyebrow mb-3" style={{ color: "var(--color-ember)" }}>
+            Chapter two
+          </p>
+          <p
+            className="font-display text-white max-w-[760px]"
+            style={{ fontSize: "clamp(26px, 3.2vw, 40px)", lineHeight: 1.15 }}
+          >
+            He starts dialing.
+          </p>
         </div>
-        <div className="max-w-[760px]">
-          {rows.map((r, i) => (
+      </div>
+
+      <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-28">
+        <div className="max-w-[840px]">
+          {rows.map((r) => (
             <div
-              key={i}
-              className="grid grid-cols-[140px_1fr] md:grid-cols-[200px_1fr] gap-4 md:gap-8 items-center border-b"
-              style={{
-                minHeight: 72,
-                borderColor: "rgba(28,28,26,0.12)",
-              }}
+              key={r.n}
+              className="grid grid-cols-[40px_1fr] md:grid-cols-[60px_220px_1fr] gap-3 md:gap-8 items-baseline py-7 border-b"
+              style={{ borderColor: "var(--color-border)" }}
             >
               <p
-                className="text-[14px] md:text-[15px] font-medium"
+                className="font-display-italic"
                 style={{
-                  fontFamily: "var(--font-sans)",
-                  color: "var(--color-muted-foreground)",
-                  letterSpacing: "0.01em",
+                  fontSize: 22,
+                  color: r.fail
+                    ? "var(--color-muted-foreground)"
+                    : "var(--color-ember)",
                 }}
               >
-                {r.label}
+                {r.n}
               </p>
+              <div>
+                <p
+                  className="text-[15px] font-semibold"
+                  style={{ fontFamily: "var(--font-sans)" }}
+                >
+                  {r.label}
+                </p>
+                <p
+                  className="text-[13px]"
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    color: "var(--color-muted-foreground)",
+                  }}
+                >
+                  {r.phone}
+                </p>
+              </div>
               <p
-                className="text-[16px] md:text-[18px] py-5"
+                className="text-[18px] md:text-[22px] col-start-2 md:col-start-3"
                 style={{
-                  fontFamily: "var(--font-sans)",
+                  fontFamily: r.fail ? "var(--font-sans)" : "var(--font-display)",
+                  fontStyle: r.fail ? "normal" : "italic",
                   fontWeight: r.fail ? 300 : 400,
-                  color: r.fail ? "var(--color-foreground)" : "var(--color-foreground)",
+                  color: r.fail
+                    ? "var(--color-muted-foreground)"
+                    : "var(--color-ember)",
                 }}
               >
                 {r.result}
@@ -365,15 +513,23 @@ function CallSequence() {
           ))}
         </div>
 
-        <div className="measure mt-16">
-          <p className="body-lg mb-6">
-            The search is over. Not because they were better. Not because they
-            had more reviews. Because they were the first company that actually
-            helped.
+        <div className="max-w-[640px] mt-16">
+          <p className="body-lg mb-8">
+            The search is over. Not because the fourth company was better. Not
+            because they had more reviews.
           </p>
-          <p className="font-display-italic" style={{ fontSize: "clamp(22px, 2.2vw, 28px)", lineHeight: 1.3 }}>
-            The other three companies didn't lose on merit. They just weren't
-            there.
+          <p
+            className="font-display-italic"
+            style={{
+              fontSize: "clamp(24px, 2.8vw, 34px)",
+              lineHeight: 1.2,
+            }}
+          >
+            The other three didn't lose on merit.
+            <br />
+            <span style={{ color: "var(--color-ember)" }}>
+              They just weren't there.
+            </span>
           </p>
         </div>
       </div>
@@ -381,7 +537,9 @@ function CallSequence() {
   );
 }
 
-/* ---------------- 24/7 PROBLEM ---------------- */
+/* ============================================================
+   24/7 — Hard side-by-side. Empty office image dominates.
+   ============================================================ */
 
 function TwentyFourSeven() {
   const rows = [
@@ -389,49 +547,95 @@ function TwentyFourSeven() {
     ['"We always pick up."', "Message taken. Someone will call you back."],
     ['"24/7 emergency service."', "No appointment. No next step. No help."],
   ];
+
   return (
-    <section className="section bg-background">
-      <div className="mx-auto max-w-[1280px] px-6 md:px-12">
-        <div className="measure mb-16">
-          <p className="eyebrow mb-8">Chapter three</p>
-          <h2 className="section-opener mb-8">The "24/7" problem.</h2>
-          <p className="body-lg">
-            Half the companies on that list advertise 24/7 availability. Here's
-            what that actually looks like.
+    <section className="relative bg-night text-white overflow-hidden">
+      <img
+        src={emptyOffice}
+        alt=""
+        loading="lazy"
+        width={1920}
+        height={1080}
+        className="absolute inset-0 h-full w-full object-cover"
+        style={{ opacity: 0.45 }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.92) 100%)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-[1280px] px-5 md:px-10 py-24 md:py-36">
+        <div className="max-w-[700px] mb-16 md:mb-24">
+          <p className="eyebrow mb-6" style={{ color: "var(--color-ember)" }}>
+            Chapter three
+          </p>
+          <h2
+            className="section-opener"
+            style={{ color: "white" }}
+          >
+            The{" "}
+            <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+              "24/7"
+            </span>{" "}
+            problem.
+          </h2>
+          <p
+            className="body-lg mt-6"
+            style={{ color: "rgba(255,255,255,0.75)" }}
+          >
+            Half the companies on that list advertise round-the-clock service.
+            Here's what that actually looks like.
           </p>
         </div>
 
-        <div className="max-w-[820px] space-y-0">
+        <div className="max-w-[920px]">
           {rows.map(([promise, reality], i) => (
             <div
               key={i}
-              className="grid md:grid-cols-[1fr_auto_1fr] gap-3 md:gap-8 items-center py-7 border-b"
-              style={{ borderColor: "rgba(28,28,26,0.12)" }}
+              className="grid md:grid-cols-[1fr_auto_1fr] gap-3 md:gap-10 items-center py-8 border-b"
+              style={{ borderColor: "rgba(255,255,255,0.14)" }}
             >
               <p
                 className="font-display-italic"
-                style={{ fontSize: "clamp(18px, 1.8vw, 22px)" }}
+                style={{
+                  fontSize: "clamp(20px, 2.2vw, 28px)",
+                  color: "rgba(255,255,255,0.95)",
+                }}
               >
                 {promise}
               </p>
               <span
-                className="hidden md:inline text-[11px] tracking-widest uppercase"
-                style={{ color: "var(--color-muted-foreground)", fontWeight: 500 }}
+                className="hidden md:flex w-10 h-px"
+                style={{ background: "var(--color-ember)" }}
+              />
+              <p
+                className="text-[17px] md:text-[19px]"
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontWeight: 300,
+                  color: "rgba(255,255,255,0.6)",
+                }}
               >
-                →
-              </span>
-              <p className="body-soft" style={{ marginBottom: 0 }}>
                 {reality}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="measure mt-16">
-          <p className="body-lg">
-            The person with the collapsed wall doesn't need a message taken.
-            They need an appointment. The moment they realize nobody can
-            actually help them, they're already dialing the next number.
+        <div className="max-w-[640px] mt-16">
+          <p
+            className="body-lg"
+            style={{ color: "rgba(255,255,255,0.78)" }}
+          >
+            The person with the collapsed wall doesn't need a message taken. He
+            needs an appointment. The moment he realizes nobody can actually help
+            him,{" "}
+            <span style={{ color: "var(--color-ember)" }}>
+              he's already dialing the next number.
+            </span>
           </p>
         </div>
       </div>
@@ -439,227 +643,231 @@ function TwentyFourSeven() {
   );
 }
 
-/* ---------------- PROOF ---------------- */
+/* ============================================================
+   PROOF — Huge orange stats. Crew image as proof of resolution.
+   ============================================================ */
 
 function Proof() {
+  const stats = [
+    { n: "409", label: "calls came in", note: "Spam. Wrong numbers. Noise." },
+    { n: "105", label: "real buyers", note: "People with an actual problem to solve." },
+    { n: "47", label: "closed jobs", note: "Customers who got help. Got scheduled. Got served." },
+  ];
+
   return (
-    <section className="relative section overflow-hidden bg-night">
-      <img
-        src={painters}
-        alt=""
-        loading="lazy"
-        width={1920}
-        height={1080}
-        className="absolute inset-0 h-full w-full object-cover"
-        style={{ opacity: 0.25, filter: "saturate(0.7)" }}
-      />
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(20,15,10,0.7) 0%, rgba(20,15,10,0.85) 100%)",
-        }}
-      />
-      <div className="relative z-10 mx-auto max-w-[1280px] px-6 md:px-12">
-        <div className="measure mb-20">
-          <p className="eyebrow mb-8" style={{ color: "rgba(247,245,240,0.55)" }}>
-            Chapter four
-          </p>
-          <h2
-            className="section-opener mb-8"
-            style={{ color: "rgba(247,245,240,0.96)" }}
-          >
-            This isn't a theory.
-          </h2>
-          <p className="body-lg" style={{ color: "rgba(247,245,240,0.78)" }}>
+    <section className="bg-white">
+      <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
+        <div className="max-w-[700px] mb-16 md:mb-20">
+          <p className="eyebrow mb-6">Chapter four</p>
+          <h2 className="section-opener mb-6">This isn't a theory.</h2>
+          <p className="body-lg">
             A painting company was answering their phones. Or so they thought.
+            Here's one quarter of their inbound.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12 md:gap-8 max-w-[1000px]">
-          {[
-            { n: "409", label: "calls came in", note: "Spam. Wrong numbers. Noise." },
-            { n: "105", label: "real buyers", note: "People with an actual problem to solve." },
-            { n: "47", label: "closed jobs", note: "Customers who got help. Got scheduled. Got served." },
-          ].map((s) => (
-            <div key={s.n}>
+        <div className="grid md:grid-cols-3 border-t border-b" style={{ borderColor: "var(--color-ink)" }}>
+          {stats.map((s, i) => (
+            <div
+              key={s.n}
+              className="py-10 md:py-14 px-5 md:px-8"
+              style={{
+                borderRight:
+                  i < stats.length - 1
+                    ? "1px solid var(--color-border)"
+                    : "none",
+                borderBottom:
+                  i < stats.length - 1
+                    ? "1px solid var(--color-border)"
+                    : "none",
+              }}
+            >
               <p
-                className="font-display"
+                className="stat-num"
                 style={{
-                  fontSize: "clamp(64px, 9vw, 96px)",
-                  lineHeight: 1,
-                  color: "rgba(247,245,240,0.96)",
-                  letterSpacing: "-0.03em",
+                  color:
+                    s.n === "47" ? "var(--color-ember)" : "var(--color-ink)",
                 }}
               >
                 {s.n}
               </p>
               <p
-                className="font-display-italic mt-3"
-                style={{
-                  fontSize: "20px",
-                  color: "rgba(247,245,240,0.7)",
-                }}
+                className="font-display-italic mt-4"
+                style={{ fontSize: 22, color: "var(--color-ink)" }}
               >
                 {s.label}
               </p>
-              <p
-                className="mt-4 body-soft"
-                style={{ color: "rgba(247,245,240,0.55)", marginBottom: 0 }}
-              >
+              <p className="mt-3 body-soft" style={{ marginBottom: 0 }}>
                 {s.note}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="measure mt-20">
-          <p className="body-lg" style={{ color: "rgba(247,245,240,0.85)" }}>
-            Those 47 people had a problem. Emmy answered, asked the right
-            questions, and booked the appointment. They got help. They have no
-            idea what Emmy is. They don't care. They just know somebody
-            answered.
-          </p>
-          <p
-            className="font-display-italic mt-10"
-            style={{
-              fontSize: "clamp(22px, 2.2vw, 28px)",
-              color: "rgba(247,245,240,0.92)",
-              lineHeight: 1.3,
-            }}
-          >
-            The question isn't how many calls you're getting. It's how many of
-            the real ones are going to the next company on the list while
-            yours rings out.
-          </p>
+        <div className="grid md:grid-cols-12 gap-10 md:gap-16 mt-20 md:mt-28 items-center">
+          <div className="md:col-span-6">
+            <img
+              src={crewFixing}
+              alt="A masonry crew rebuilding a residential retaining wall at golden hour"
+              loading="lazy"
+              width={1920}
+              height={1080}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="md:col-span-6">
+            <p className="eyebrow mb-6">What 47 looks like</p>
+            <p
+              className="font-display-italic mb-8"
+              style={{
+                fontSize: "clamp(24px, 2.6vw, 32px)",
+                lineHeight: 1.2,
+              }}
+            >
+              Forty-seven yards.
+              <br />
+              Forty-seven homeowners who stopped dialing.
+            </p>
+            <p className="body-lg mb-6">
+              They got help. Emmy answered, asked the right questions, and booked
+              the appointment. They have no idea what Emmy is. They don't care.
+            </p>
+            <p className="body-lg">
+              The question isn't how many calls you're getting. It's{" "}
+              <span style={{ color: "var(--color-ember)" }}>
+                how many of the real ones are going to the next company on the
+                list while yours rings out.
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-/* ---------------- EMMY ---------------- */
+/* ============================================================
+   EMMY — Editorial bullet list, no image (visual rest)
+   ============================================================ */
 
 function Emmy() {
   const items = [
-    "Every call answered",
-    "Every hour of the day",
-    "Appointment booked",
-    "Your staff, still in control",
+    ["Every call", "answered"],
+    ["Every hour", "of the day"],
+    ["Appointment", "booked"],
+    ["Your staff", "still in control"],
   ];
+
   return (
-    <section className="section bg-background">
-      <div className="mx-auto max-w-[1280px] px-6 md:px-12">
-        <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
-          <div>
-            <p className="eyebrow mb-8">Chapter five</p>
-            <h2 className="section-opener mb-10">Meet Emmy.</h2>
-            <p className="body-lg mb-6">
-              Emmy is not here to replace your staff. Your people run your
-              business. Emmy catches what they miss — the call that comes in
-              while your scheduler is on another line, while your crew is on a
-              job, while everyone has gone home.
-            </p>
-            <p className="body-soft mb-12">
-              Not a call center. Not a message service. Emmy asks the right
-              questions and books the appointment. The person with the problem
-              gets a next step. Not a callback. Not a voicemail. A scheduled
-              appointment.
-            </p>
-
-            <ul className="space-y-4 mb-12">
-              {items.map((it) => (
-                <li
-                  key={it}
-                  className="flex items-baseline gap-4 border-b pb-3"
-                  style={{ borderColor: "rgba(28,28,26,0.1)" }}
-                >
-                  <span
-                    className="font-display-italic"
-                    style={{ fontSize: 14, color: "var(--color-muted-foreground)" }}
-                  >
-                    —
-                  </span>
-                  <span
-                    className="text-[18px]"
-                    style={{ fontFamily: "var(--font-sans)", fontWeight: 400 }}
-                  >
-                    {it}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <p
-              className="font-display-italic"
-              style={{ fontSize: "clamp(22px, 2.2vw, 28px)", lineHeight: 1.3 }}
-            >
-              The person with the problem just wants help. Emmy makes sure they
-              get it.
-            </p>
-          </div>
-
-          <div className="relative">
-            <img
-              src={handsAppointment}
-              alt="Hands on a phone, an appointment being confirmed"
-              loading="lazy"
-              width={1600}
-              height={1200}
-              className="w-full h-auto object-cover"
-              style={{ filter: "saturate(0.85)" }}
-            />
-          </div>
+    <section className="relative" style={{ background: "var(--color-muted)" }}>
+      <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
+        <div className="max-w-[760px] mb-16">
+          <p className="eyebrow mb-6">Chapter five</p>
+          <h2 className="section-opener mb-8">
+            Meet Emmy.
+          </h2>
+          <p className="body-lg mb-6">
+            Emmy is not here to replace your staff. Your people run your business.
+            Emmy catches what they miss — the call that comes in while your
+            scheduler is on another line, while your crew is on a job, while
+            everyone has gone home.
+          </p>
+          <p className="body-soft">
+            Not a call center. Not a message service. Emmy asks the right
+            questions and books the appointment. The person with the problem
+            gets a next step. A scheduled appointment.
+          </p>
         </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[var(--color-border)] border-y" style={{ borderColor: "var(--color-border)" }}>
+          {items.map(([top, bottom]) => (
+            <div
+              key={top}
+              className="bg-[var(--color-muted)] p-6 md:p-8"
+            >
+              <p
+                className="font-display"
+                style={{
+                  fontSize: "clamp(22px, 2.4vw, 30px)",
+                  lineHeight: 1.1,
+                  color: "var(--color-ink)",
+                }}
+              >
+                {top}
+              </p>
+              <p
+                className="font-display-italic mt-1"
+                style={{
+                  fontSize: "clamp(18px, 1.8vw, 22px)",
+                  color: "var(--color-ember)",
+                  lineHeight: 1.2,
+                }}
+              >
+                {bottom}.
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <p
+          className="font-display-italic mt-16 max-w-[640px]"
+          style={{ fontSize: "clamp(22px, 2.4vw, 30px)", lineHeight: 1.25 }}
+        >
+          The person with the problem just wants help.
+          <br />
+          <span style={{ color: "var(--color-ember)" }}>
+            Emmy makes sure they get it.
+          </span>
+        </p>
       </div>
     </section>
   );
 }
 
-/* ---------------- CTA ---------------- */
+/* ============================================================
+   CTA — Black. Big orange phone. Real call.
+   ============================================================ */
 
 function CTA() {
   return (
-    <section className="relative overflow-hidden bg-night" style={{ minHeight: "100vh" }}>
+    <section className="relative overflow-hidden bg-night text-white" style={{ minHeight: "100svh" }}>
       <img
-        src={phoneDark}
+        src={phoneIncoming}
         alt=""
         loading="lazy"
         width={1920}
         height={1080}
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ opacity: 0.6 }}
+        style={{ opacity: 0.5 }}
       />
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(14,12,10,0.55) 0%, rgba(14,12,10,0.85) 100%)",
+            "linear-gradient(180deg, rgba(8,8,8,0.7) 0%, rgba(8,8,8,0.92) 100%)",
         }}
       />
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 md:px-12 py-32">
-        <div className="max-w-[720px] text-center">
-          <p
-            className="eyebrow mb-10"
-            style={{ color: "rgba(247,245,240,0.55)" }}
-          >
+
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-[100svh] px-5 md:px-10 py-24 md:py-32">
+        <div className="max-w-[760px] text-center">
+          <p className="eyebrow mb-10" style={{ color: "var(--color-ember)" }}>
             Try it now
           </p>
           <p
-            className="font-display mb-6"
+            className="font-display mb-4"
             style={{
-              fontSize: "clamp(24px, 2.4vw, 30px)",
-              color: "rgba(247,245,240,0.92)",
-              lineHeight: 1.35,
+              fontSize: "clamp(28px, 3vw, 38px)",
+              color: "white",
+              lineHeight: 1.25,
             }}
           >
             Call this number.
           </p>
           <p
-            className="font-display-italic mb-16"
+            className="font-display-italic mb-14 md:mb-20"
             style={{
               fontSize: "clamp(20px, 2vw, 24px)",
-              color: "rgba(247,245,240,0.7)",
+              color: "rgba(255,255,255,0.7)",
               lineHeight: 1.4,
             }}
           >
@@ -670,40 +878,47 @@ function CTA() {
             href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
             className="font-display block transition-opacity hover:opacity-90"
             style={{
-              fontSize: "clamp(40px, 6vw, 68px)",
-              color: "#C4621D",
-              letterSpacing: "-0.02em",
-              lineHeight: 1.1,
+              fontSize: "clamp(44px, 7.5vw, 88px)",
+              color: "var(--color-ember)",
+              letterSpacing: "-0.025em",
+              lineHeight: 1,
             }}
           >
             {PHONE}
           </a>
           <p
             className="mt-6 body-soft"
-            style={{ color: "rgba(247,245,240,0.55)", marginBottom: 0 }}
+            style={{ color: "rgba(255,255,255,0.55)", marginBottom: 0 }}
           >
             Emmy answers 24 hours a day.
           </p>
 
+          <div
+            className="mt-16 md:mt-24 mx-auto"
+            style={{ width: 48, height: 1, background: "var(--color-ember)" }}
+          />
+
           <p
-            className="mt-20 body-soft"
-            style={{ color: "rgba(247,245,240,0.5)", marginBottom: 0 }}
+            className="mt-12 body-soft max-w-[520px] mx-auto"
+            style={{ color: "rgba(255,255,255,0.55)" }}
           >
-            No pitch. No demo. No salesperson. Just the experience your
-            customers have every time your phone rings unanswered.
+            No pitch. No demo. No salesperson. Just the experience your customers
+            have every time your phone rings unanswered.
           </p>
 
           <p
-            className="font-display-italic mt-16"
+            className="font-display-italic mt-16 md:mt-20"
             style={{
-              fontSize: "clamp(20px, 2vw, 26px)",
-              color: "rgba(247,245,240,0.85)",
+              fontSize: "clamp(22px, 2.2vw, 28px)",
+              color: "white",
               lineHeight: 1.35,
             }}
           >
             The person with the problem just wants help.
             <br />
-            Now you know exactly how that feels.
+            <span style={{ color: "var(--color-ember)" }}>
+              Now you know exactly how that feels.
+            </span>
           </p>
         </div>
       </div>
@@ -711,24 +926,26 @@ function CTA() {
   );
 }
 
-/* ---------------- FOOTER ---------------- */
+/* ============================================================
+   FOOTER
+   ============================================================ */
 
 function Footer() {
   return (
     <footer
-      className="py-12 px-6 md:px-12 border-t"
-      style={{ background: "#0e0c0a", borderColor: "rgba(247,245,240,0.08)" }}
+      className="py-10 px-5 md:px-10 border-t"
+      style={{ background: "#050505", borderColor: "rgba(255,255,255,0.08)" }}
     >
       <div className="mx-auto max-w-[1280px] flex flex-col md:flex-row justify-between items-center gap-4">
         <p
           className="font-display"
-          style={{ color: "rgba(247,245,240,0.85)", fontSize: 18 }}
+          style={{ color: "white", fontSize: 20 }}
         >
           MeetEmmy
         </p>
         <p
           className="text-[11px] tracking-widest uppercase"
-          style={{ color: "rgba(247,245,240,0.4)", fontWeight: 500 }}
+          style={{ color: "rgba(255,255,255,0.4)", fontWeight: 500 }}
         >
           © {new Date().getFullYear()} — Every call answered
         </p>
