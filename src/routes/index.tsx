@@ -171,8 +171,8 @@ function AngiMock() {
             }}
           >
             <div
-              className="relative overflow-hidden bg-white"
-              style={{ borderRadius: "40px", aspectRatio: "9/19" }}
+              className="relative overflow-hidden bg-white pb-8"
+              style={{ borderRadius: "40px" }}
             >
               {/* notch */}
               <div
