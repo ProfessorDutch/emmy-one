@@ -161,10 +161,14 @@ function SearchScene() {
             What you woke up to
           </p>
           <p
-            className="font-display-italic text-white max-w-[640px]"
-            style={{ fontSize: "clamp(22px, 2.6vw, 32px)", lineHeight: 1.2 }}
+            className="font-display text-white max-w-[820px]"
+            style={{ fontSize: "clamp(32px, 4.6vw, 56px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
           >
-            This isn't a project. This is an emergency.
+            This isn't a project.
+            <br />
+            <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+              This is an emergency.
+            </span>
           </p>
         </div>
       </div>
