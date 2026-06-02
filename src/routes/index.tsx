@@ -31,6 +31,35 @@ export const Route = createFileRoute("/")({
 
 const PHONE = "(888) 555-1212";
 
+function MarkerUnderline({
+  width = 200,
+  className = "",
+}: {
+  width?: number;
+  className?: string;
+}) {
+  return (
+    <svg
+      aria-hidden
+      className={`block mt-4 ${className}`}
+      width={width}
+      height={16}
+      viewBox="0 0 200 16"
+      fill="none"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M3 9 C 35 3, 80 14, 120 7 S 180 5, 197 9"
+        stroke="var(--color-ember)"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        opacity="0.92"
+      />
+    </svg>
+  );
+}
+
 function Index() {
   return (
     <main className="bg-background text-foreground overflow-x-hidden">
@@ -178,6 +207,7 @@ function SearchScene() {
           <div className="md:col-span-5">
             <p className="eyebrow mb-6">Chapter one</p>
             <h2 className="section-opener">The search.</h2>
+            <MarkerUnderline width={160} />
           </div>
           <div className="md:col-span-7">
             <p className="body-lg mb-6 max-w-[560px]">
@@ -375,13 +405,14 @@ function PhoneList() {
           {/* Copy */}
           <div className="md:col-span-6 order-1 md:order-2">
             <p className="eyebrow mb-6">The shortlist</p>
-            <h2 className="section-opener mb-8">
+            <h2 className="section-opener mb-3">
               Every company on this page is qualified.
               <br />
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
                 Every single one.
               </span>
             </h2>
+            <MarkerUnderline width={200} className="mb-8" />
             <p className="body-lg mb-6 max-w-[520px]">
               The person with the collapsed wall isn't comparing. They're not
               reading reviews. They have a yard full of mud and they need someone
@@ -591,6 +622,7 @@ function TwentyFourSeven() {
             </span>{" "}
             problem.
           </h2>
+          <MarkerUnderline width={180} />
           <p
             className="body-lg mt-6"
             style={{ color: "rgba(255,255,255,0.75)" }}
@@ -659,8 +691,8 @@ function TwentyFourSeven() {
 function Proof() {
   const stats = [
     { n: "409", label: "calls they missed", note: "The overflow. Calls that went to voicemail, rang out, or hit the answering service while the team was busy or off the clock." },
-    { n: "105", label: "real buyers in that overflow", note: "Not spam. Not wrong numbers. People with an actual job to schedule." },
-    { n: "47", label: "appointments booked", note: "Emmy picked up the calls the company couldn't, and turned them into scheduled work." },
+    { n: "105", label: "appointments booked", note: "Emmy picked up the calls the company couldn't, asked the right questions, and put the homeowner on the schedule." },
+    { n: "47", label: "closed deals", note: "Signed contracts. Real revenue. From the calls the company was never going to answer in the first place." },
   ];
 
   return (
@@ -668,7 +700,8 @@ function Proof() {
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
         <div className="max-w-[760px] mb-16 md:mb-20">
           <p className="eyebrow mb-6">Chapter four</p>
-          <h2 className="section-opener mb-6">This isn't a theory.</h2>
+          <h2 className="section-opener mb-3">This isn't a theory.</h2>
+          <MarkerUnderline width={180} className="mb-6" />
           <p className="body-lg mb-5">
             A painting company thought they were answering their phones. They were —
             during business hours, when the office wasn't slammed.
@@ -739,17 +772,16 @@ function Proof() {
                 letterSpacing: "-0.02em",
               }}
             >
-              47 homeowners who called a company
+              47 homeowners who hired the company
               {" "}
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                and got exactly what they wanted.
+                instead of the next name on the list.
               </span>
-              {" "}
-              An appointment.
             </p>
             <p className="body-lg mb-6">
               Emmy answered while the office was on another line. Asked the right
-              questions. Booked the job. The homeowner has no idea what Emmy is.
+              questions. Booked the appointment. The crew showed up, gave the
+              estimate, signed the job. The homeowner has no idea what Emmy is.
               They don't care.
             </p>
             <p className="body-lg">
@@ -783,9 +815,10 @@ function Emmy() {
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
         <div className="max-w-[760px] mb-16">
           <p className="eyebrow mb-6">Chapter five</p>
-          <h2 className="section-opener mb-8">
+          <h2 className="section-opener mb-3">
             Meet Emmy.
           </h2>
+          <MarkerUnderline width={150} className="mb-8" />
           <p className="body-lg mb-6">
             Emmy is not here to replace your staff. Your people run your business.
             Emmy catches what they miss — the call that comes in while your
