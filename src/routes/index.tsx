@@ -803,10 +803,12 @@ function Emmy() {
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
         <div className="max-w-[760px] mb-16">
           <p className="eyebrow mb-6">Chapter five</p>
-          <h2 className="section-opener mb-3">
-            Meet Emmy.
-          </h2>
-          <MarkerUnderline className="mb-8" />
+          <div className="w-fit mb-8">
+            <h2 className="section-opener mb-3">
+              Meet Emmy.
+            </h2>
+            <MarkerUnderline />
+          </div>
           <p className="body-lg mb-6">
             Emmy is not here to replace your staff. Your people run your business.
             Emmy catches what they miss — the call that comes in while your
