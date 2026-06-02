@@ -1,10 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroAlarm from "@/assets/hero-alarm-607.jpg";
-import collapsedWall from "@/assets/collapsed-wall.jpg";
-import handsPhone from "@/assets/hands-phone-stress.jpg";
+import collapsedWallAsset from "@/assets/collapsed-wall-hero.png.asset.json";
+import manCalling from "@/assets/man-calling.jpg";
 import emptyOffice from "@/assets/empty-office-ringing.jpg";
 import crewFixing from "@/assets/crew-fixing.jpg";
 import phoneIncoming from "@/assets/phone-incoming.jpg";
+
+const collapsedWall = collapsedWallAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -159,10 +161,14 @@ function SearchScene() {
             What you woke up to
           </p>
           <p
-            className="font-display-italic text-white max-w-[640px]"
-            style={{ fontSize: "clamp(22px, 2.6vw, 32px)", lineHeight: 1.2 }}
+            className="font-display text-white max-w-[820px]"
+            style={{ fontSize: "clamp(32px, 4.6vw, 56px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
           >
-            This isn't a project. This is an emergency.
+            This isn't a project.
+            <br />
+            <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+              This is an emergency.
+            </span>
           </p>
         </div>
       </div>
@@ -433,18 +439,18 @@ function CallSequence() {
       {/* Top image band */}
       <div className="relative w-full">
         <img
-          src={handsPhone}
-          alt="A man on the edge of his bed at dawn, holding his phone"
+          src={manCalling}
+          alt="A worried man on the edge of his bed at dawn, phone pressed to his ear, mid-call"
           loading="lazy"
           width={1920}
           height={1080}
-          className="w-full h-[40svh] md:h-[60svh] object-cover"
+          className="w-full h-[50svh] md:h-[72svh] object-cover object-center"
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%)",
+              "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.75) 100%)",
           }}
         />
         <div className="absolute bottom-0 left-0 right-0 p-5 md:p-12">
@@ -513,21 +519,24 @@ function CallSequence() {
           ))}
         </div>
 
-        <div className="max-w-[640px] mt-16">
-          <p className="body-lg mb-8">
+        <div className="max-w-[840px] mt-20 md:mt-24">
+          <p className="body-lg mb-10 max-w-[640px]">
             The search is over. Not because the fourth company was better. Not
             because they had more reviews.
           </p>
           <p
-            className="font-display-italic"
+            className="font-display"
             style={{
-              fontSize: "clamp(24px, 2.8vw, 34px)",
-              lineHeight: 1.2,
+              fontSize: "clamp(36px, 5.4vw, 64px)",
+              lineHeight: 1.04,
+              letterSpacing: "-0.025em",
             }}
           >
-            The other three didn't lose on merit.
+            The other three didn't
+            <br className="hidden md:block" />
+            {" "}lose on merit.
             <br />
-            <span style={{ color: "var(--color-ember)" }}>
+            <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
               They just weren't there.
             </span>
           </p>
@@ -649,20 +658,25 @@ function TwentyFourSeven() {
 
 function Proof() {
   const stats = [
-    { n: "409", label: "calls came in", note: "Spam. Wrong numbers. Noise." },
-    { n: "105", label: "real buyers", note: "People with an actual problem to solve." },
-    { n: "47", label: "closed jobs", note: "Customers who got help. Got scheduled. Got served." },
+    { n: "409", label: "calls they missed", note: "The overflow. Calls that went to voicemail, rang out, or hit the answering service while the team was busy or off the clock." },
+    { n: "105", label: "real buyers in that overflow", note: "Not spam. Not wrong numbers. People with an actual job to schedule." },
+    { n: "47", label: "appointments booked", note: "Emmy picked up the calls the company couldn't, and turned them into scheduled work." },
   ];
 
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
-        <div className="max-w-[700px] mb-16 md:mb-20">
+        <div className="max-w-[760px] mb-16 md:mb-20">
           <p className="eyebrow mb-6">Chapter four</p>
           <h2 className="section-opener mb-6">This isn't a theory.</h2>
+          <p className="body-lg mb-5">
+            A painting company thought they were answering their phones. They were —
+            during business hours, when the office wasn't slammed.
+          </p>
           <p className="body-lg">
-            A painting company was answering their phones. Or so they thought.
-            Here's one quarter of their inbound.
+            These are the calls they{" "}
+            <span style={{ color: "var(--color-ember)" }}>missed</span>
+            {" "}in one quarter. The overflow. The ones that never reached a human.
           </p>
         </div>
 
@@ -718,19 +732,25 @@ function Proof() {
           <div className="md:col-span-6">
             <p className="eyebrow mb-6">What 47 looks like</p>
             <p
-              className="font-display-italic mb-8"
+              className="font-display mb-8"
               style={{
-                fontSize: "clamp(24px, 2.6vw, 32px)",
-                lineHeight: 1.2,
+                fontSize: "clamp(30px, 4vw, 48px)",
+                lineHeight: 1.08,
+                letterSpacing: "-0.02em",
               }}
             >
-              Forty-seven yards.
-              <br />
-              Forty-seven homeowners who stopped dialing.
+              47 homeowners who called a company
+              {" "}
+              <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+                and got exactly what they wanted.
+              </span>
+              {" "}
+              An appointment.
             </p>
             <p className="body-lg mb-6">
-              They got help. Emmy answered, asked the right questions, and booked
-              the appointment. They have no idea what Emmy is. They don't care.
+              Emmy answered while the office was on another line. Asked the right
+              questions. Booked the job. The homeowner has no idea what Emmy is.
+              They don't care.
             </p>
             <p className="body-lg">
               The question isn't how many calls you're getting. It's{" "}
