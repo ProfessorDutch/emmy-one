@@ -31,31 +31,12 @@ export const Route = createFileRoute("/")({
 
 const PHONE = "(888) 555-1212";
 
-function MarkerUnderline({
-  width = 220,
-  className = "",
-}: {
-  width?: number;
-  className?: string;
-}) {
+function MarkerUnderline({ className = "" }: { className?: string }) {
   return (
-    <svg
+    <div
       aria-hidden
-      className={`block mt-3 ${className}`}
-      width={width}
-      height={28}
-      viewBox="0 0 220 28"
-      fill="none"
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M6 20 Q 110 -6 214 16"
-        stroke="var(--color-ember)"
-        strokeWidth="7"
-        strokeLinecap="round"
-        fill="none"
-      />
-    </svg>
+      className={`block mt-1 h-2 rounded-full bg-[var(--color-ember)] opacity-90 ${className}`}
+    />
   );
 }
 
@@ -206,7 +187,7 @@ function SearchScene() {
           <div className="md:col-span-5">
             <p className="eyebrow mb-6">Chapter one</p>
             <h2 className="section-opener">The search.</h2>
-            <MarkerUnderline width={160} />
+            <MarkerUnderline />
           </div>
           <div className="md:col-span-7">
             <p className="body-lg mb-6 max-w-[560px]">
@@ -411,7 +392,7 @@ function PhoneList() {
                 Every single one.
               </span>
             </h2>
-            <MarkerUnderline width={200} className="mb-8" />
+            <MarkerUnderline className="mb-8" />
             <p className="body-lg mb-6 max-w-[520px]">
               The person with the collapsed wall isn't comparing. They're not
               reading reviews. They have a yard full of mud and they need someone
@@ -621,7 +602,7 @@ function TwentyFourSeven() {
             </span>{" "}
             problem.
           </h2>
-          <MarkerUnderline width={180} />
+          <MarkerUnderline />
           <p
             className="body-lg mt-6"
             style={{ color: "rgba(255,255,255,0.75)" }}
@@ -700,7 +681,7 @@ function Proof() {
         <div className="max-w-[760px] mb-16 md:mb-20">
           <p className="eyebrow mb-6">Chapter four</p>
           <h2 className="section-opener mb-3">This isn't a theory.</h2>
-          <MarkerUnderline width={180} className="mb-6" />
+          <MarkerUnderline className="mb-6" />
           <p className="body-lg mb-5">
             A painting company thought they were answering their phones. They were —
             during business hours, when the office wasn't slammed.
@@ -817,7 +798,7 @@ function Emmy() {
           <h2 className="section-opener mb-3">
             Meet Emmy.
           </h2>
-          <MarkerUnderline width={150} className="mb-8" />
+          <MarkerUnderline className="mb-8" />
           <p className="body-lg mb-6">
             Emmy is not here to replace your staff. Your people run your business.
             Emmy catches what they miss — the call that comes in while your
