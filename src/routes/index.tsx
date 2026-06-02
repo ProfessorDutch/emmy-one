@@ -596,17 +596,19 @@ function TwentyFourSeven() {
           <p className="eyebrow mb-6" style={{ color: "var(--color-ember)" }}>
             Chapter three
           </p>
-          <h2
-            className="section-opener"
-            style={{ color: "white" }}
-          >
-            The{" "}
-            <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-              "24/7"
-            </span>{" "}
-            problem.
-          </h2>
-          <MarkerUnderline />
+          <div className="w-fit">
+            <h2
+              className="section-opener"
+              style={{ color: "white" }}
+            >
+              The{" "}
+              <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+                "24/7"
+              </span>{" "}
+              problem.
+            </h2>
+            <MarkerUnderline />
+          </div>
           <p
             className="body-lg mt-6"
             style={{ color: "rgba(255,255,255,0.75)" }}
