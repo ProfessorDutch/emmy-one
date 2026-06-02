@@ -622,6 +622,7 @@ function TwentyFourSeven() {
             </span>{" "}
             problem.
           </h2>
+          <MarkerUnderline width={180} />
           <p
             className="body-lg mt-6"
             style={{ color: "rgba(255,255,255,0.75)" }}
