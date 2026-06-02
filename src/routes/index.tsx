@@ -31,6 +31,35 @@ export const Route = createFileRoute("/")({
 
 const PHONE = "(888) 555-1212";
 
+function MarkerUnderline({
+  width = 200,
+  className = "",
+}: {
+  width?: number;
+  className?: string;
+}) {
+  return (
+    <svg
+      aria-hidden
+      className={`block mt-4 ${className}`}
+      width={width}
+      height={16}
+      viewBox="0 0 200 16"
+      fill="none"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M3 9 C 35 3, 80 14, 120 7 S 180 5, 197 9"
+        stroke="var(--color-ember)"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        opacity="0.92"
+      />
+    </svg>
+  );
+}
+
 function Index() {
   return (
     <main className="bg-background text-foreground overflow-x-hidden">
