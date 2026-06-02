@@ -405,13 +405,14 @@ function PhoneList() {
           {/* Copy */}
           <div className="md:col-span-6 order-1 md:order-2">
             <p className="eyebrow mb-6">The shortlist</p>
-            <h2 className="section-opener mb-8">
+            <h2 className="section-opener mb-3">
               Every company on this page is qualified.
               <br />
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
                 Every single one.
               </span>
             </h2>
+            <MarkerUnderline width={200} className="mb-8" />
             <p className="body-lg mb-6 max-w-[520px]">
               The person with the collapsed wall isn't comparing. They're not
               reading reviews. They have a yard full of mud and they need someone
