@@ -732,19 +732,25 @@ function Proof() {
           <div className="md:col-span-6">
             <p className="eyebrow mb-6">What 47 looks like</p>
             <p
-              className="font-display-italic mb-8"
+              className="font-display mb-8"
               style={{
-                fontSize: "clamp(24px, 2.6vw, 32px)",
-                lineHeight: 1.2,
+                fontSize: "clamp(30px, 4vw, 48px)",
+                lineHeight: 1.08,
+                letterSpacing: "-0.02em",
               }}
             >
-              Forty-seven yards.
-              <br />
-              Forty-seven homeowners who stopped dialing.
+              47 homeowners who called a company
+              {" "}
+              <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+                and got exactly what they wanted.
+              </span>
+              {" "}
+              An appointment.
             </p>
             <p className="body-lg mb-6">
-              They got help. Emmy answered, asked the right questions, and booked
-              the appointment. They have no idea what Emmy is. They don't care.
+              Emmy answered while the office was on another line. Asked the right
+              questions. Booked the job. The homeowner has no idea what Emmy is.
+              They don't care.
             </p>
             <p className="body-lg">
               The question isn't how many calls you're getting. It's{" "}
