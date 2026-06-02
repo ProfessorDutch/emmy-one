@@ -449,49 +449,87 @@ function CallSequence() {
   ];
 
   return (
-    <section className="relative bg-white overflow-hidden">
-      {/* Top image band */}
-      <div className="relative w-full">
-        <img
-          src={manCalling}
-          alt="A worried man on the edge of his bed at dawn, phone pressed to his ear, mid-call"
-          loading="lazy"
-          width={1920}
-          height={1080}
-          className="w-full h-[50svh] md:h-[72svh] object-cover object-center"
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.75) 100%)",
-          }}
-        />
-        <div className="absolute bottom-0 left-0 right-0 p-5 md:p-12">
-          <p className="eyebrow mb-3" style={{ color: "var(--color-ember)" }}>
-            Chapter two
-          </p>
-          <p
-            className="font-display text-white max-w-[760px]"
-            style={{ fontSize: "clamp(26px, 3.2vw, 40px)", lineHeight: 1.15 }}
-          >
-            He starts dialing.
-          </p>
+    <section className="relative bg-white section">
+      <div className="mx-auto max-w-[1180px] px-5 md:px-10">
+        {/* Header: chapter intro paired with a small image inset for visual continuity */}
+        <div className="grid md:grid-cols-[1fr_360px] gap-10 md:gap-14 items-end mb-12 md:mb-16">
+          <div>
+            <p className="eyebrow mb-4">Chapter two</p>
+            <h2
+              className="font-display"
+              style={{
+                fontSize: "clamp(34px, 5vw, 60px)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.02em",
+              }}
+            >
+              He starts dialing.
+            </h2>
+            <p className="body-soft mt-5 max-w-[520px]">
+              4:11 a.m. The top four search results, in order. One call after
+              another.
+            </p>
+          </div>
+          <img
+            src={manCalling}
+            alt="A worried man on the edge of his bed at dawn, phone pressed to his ear"
+            loading="lazy"
+            width={720}
+            height={480}
+            className="w-full aspect-[3/2] object-cover rounded-sm hidden md:block"
+          />
         </div>
-      </div>
 
-      <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-28">
-        <div className="max-w-[840px]">
+        {/* Unified call-log artifact: header strip, rows, and verdict all in one frame */}
+        <div
+          className="rounded-sm overflow-hidden"
+          style={{
+            border: "1px solid var(--color-border)",
+            background: "var(--color-paper)",
+          }}
+        >
+          <div
+            className="flex items-center justify-between px-5 md:px-7 py-3 border-b"
+            style={{
+              borderColor: "var(--color-border)",
+              background: "var(--color-muted)",
+            }}
+          >
+            <p
+              className="text-[11px]"
+              style={{
+                fontFamily: "var(--font-sans)",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "var(--color-muted-foreground)",
+              }}
+            >
+              Call log · Tuesday 4:11 a.m.
+            </p>
+            <span
+              className="text-[11px]"
+              style={{
+                fontFamily: "var(--font-sans)",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "var(--color-muted-foreground)",
+              }}
+            >
+              4 attempts
+            </span>
+          </div>
+
           {rows.map((r) => (
             <div
               key={r.n}
-              className="grid grid-cols-[40px_1fr] md:grid-cols-[60px_220px_1fr] gap-3 md:gap-8 items-baseline py-7 border-b"
+              className="grid grid-cols-[36px_1fr] md:grid-cols-[56px_240px_1fr] gap-3 md:gap-8 items-center px-5 md:px-7 py-5 md:py-6 border-b last:border-b-0"
               style={{ borderColor: "var(--color-border)" }}
             >
               <p
-                className="font-display-italic"
+                className="text-[14px] tabular-nums"
                 style={{
-                  fontSize: 22,
+                  fontFamily: "var(--font-sans)",
+                  fontWeight: 500,
                   color: r.fail
                     ? "var(--color-muted-foreground)"
                     : "var(--color-ember)",
@@ -501,13 +539,13 @@ function CallSequence() {
               </p>
               <div>
                 <p
-                  className="text-[15px] font-semibold"
-                  style={{ fontFamily: "var(--font-sans)" }}
+                  className="text-[15px] md:text-[16px]"
+                  style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
                 >
                   {r.label}
                 </p>
                 <p
-                  className="text-[13px]"
+                  className="text-[12px] md:text-[13px] tabular-nums mt-0.5"
                   style={{
                     fontFamily: "var(--font-sans)",
                     color: "var(--color-muted-foreground)",
@@ -516,44 +554,65 @@ function CallSequence() {
                   {r.phone}
                 </p>
               </div>
-              <p
-                className="text-[18px] md:text-[22px] col-start-2 md:col-start-3"
-                style={{
-                  fontFamily: r.fail ? "var(--font-sans)" : "var(--font-display)",
-                  fontStyle: r.fail ? "normal" : "italic",
-                  fontWeight: r.fail ? 300 : 400,
-                  color: r.fail
-                    ? "var(--color-muted-foreground)"
-                    : "var(--color-ember)",
-                }}
-              >
-                {r.result}
-              </p>
+              <div className="col-start-2 md:col-start-3 flex items-start gap-3">
+                <span
+                  aria-hidden
+                  className="inline-block mt-2 shrink-0"
+                  style={{
+                    width: 8,
+                    height: 8,
+                    borderRadius: 999,
+                    background: r.fail
+                      ? "var(--color-ash)"
+                      : "var(--color-ember)",
+                  }}
+                />
+                <p
+                  className="text-[16px] md:text-[18px]"
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontWeight: r.fail ? 400 : 600,
+                    color: r.fail
+                      ? "var(--color-muted-foreground)"
+                      : "var(--color-ink)",
+                  }}
+                >
+                  {r.result}
+                </p>
+              </div>
             </div>
           ))}
-        </div>
 
-        <div className="max-w-[840px] mt-20 md:mt-24">
-          <p className="body-lg mb-10 max-w-[640px]">
-            The search is over. Not because the fourth company was better. Not
-            because they had more reviews.
-          </p>
-          <p
-            className="font-display"
-            style={{
-              fontSize: "clamp(28px, 3.6vw, 44px)",
-              lineHeight: 1.06,
-              letterSpacing: "-0.02em",
-            }}
+          {/* Verdict sits inside the same frame — visually tied to the data above */}
+          <div
+            className="px-5 md:px-7 py-8 md:py-10"
+            style={{ background: "var(--color-muted)" }}
           >
-            The other three didn't
-            <br className="hidden md:block" />
-            {" "}lose on quality.
-            <br />
-            <span className="font-display" style={{ color: "var(--color-ember)" }}>
-              They just weren't there.
-            </span>
-          </p>
+            <p
+              className="text-[11px] mb-3"
+              style={{
+                fontFamily: "var(--font-sans)",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "var(--color-muted-foreground)",
+              }}
+            >
+              Verdict
+            </p>
+            <p
+              className="font-display"
+              style={{
+                fontSize: "clamp(24px, 3vw, 36px)",
+                lineHeight: 1.15,
+                letterSpacing: "-0.02em",
+              }}
+            >
+              The other three didn't lose on quality.{" "}
+              <span style={{ color: "var(--color-ember)" }}>
+                They just weren't there.
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
