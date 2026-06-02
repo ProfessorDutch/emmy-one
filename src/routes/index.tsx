@@ -772,17 +772,16 @@ function Proof() {
                 letterSpacing: "-0.02em",
               }}
             >
-              47 homeowners who called a company
+              47 homeowners who hired the company
               {" "}
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                and got exactly what they wanted.
+                instead of the next name on the list.
               </span>
-              {" "}
-              An appointment.
             </p>
             <p className="body-lg mb-6">
               Emmy answered while the office was on another line. Asked the right
-              questions. Booked the job. The homeowner has no idea what Emmy is.
+              questions. Booked the appointment. The crew showed up, gave the
+              estimate, signed the job. The homeowner has no idea what Emmy is.
               They don't care.
             </p>
             <p className="body-lg">
