@@ -701,8 +701,8 @@ function TwentyFourSeven() {
                 className="text-[17px] md:text-[19px]"
                 style={{
                   fontFamily: "var(--font-sans)",
-                  fontWeight: 300,
-                  color: "rgba(255,255,255,0.6)",
+                  fontWeight: 400,
+                  color: "rgba(255,255,255,0.82)",
                 }}
               >
                 {reality}
