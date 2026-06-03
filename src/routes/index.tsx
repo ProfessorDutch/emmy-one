@@ -109,14 +109,14 @@ function Hero() {
             <h1 className="hero-type" style={{ color: "white" }}>
               Your retaining wall gave way.
               <br />
-              <span className="font-display-italic" style={{ color: "rgba(255,255,255,0.75)" }}>
+              <span className="font-display-italic" style={{ color: "rgba(255,255,255,0.9)" }}>
                 You don't know how much of the yard went with it.
               </span>
             </h1>
 
             <p
               className="body-lg mt-8 max-w-[560px]"
-              style={{ color: "rgba(255,255,255,0.72)" }}
+              style={{ color: "rgba(255,255,255,0.9)" }}
             >
               It rained hard last night. Your wife is at the back door. You've got
               a slope, a mess, and no idea who to call.
@@ -466,7 +466,7 @@ function CallSequence() {
               He starts dialing.
             </h2>
             <p className="body-soft mt-5 max-w-[520px]">
-              4:11 a.m. The top four search results, in order. One call after
+              6:11 a.m. The top four search results, in order. One call after
               another.
             </p>
           </div>
@@ -504,7 +504,7 @@ function CallSequence() {
                 color: "var(--color-muted-foreground)",
               }}
             >
-              Call log · Tuesday 4:11 a.m.
+              Call log · Tuesday 6:11 a.m.
             </p>
             <span
               className="text-[11px]"
@@ -625,9 +625,9 @@ function CallSequence() {
 
 function TwentyFourSeven() {
   const rows = [
-    ['"Call us anytime."', "Forwards to an answering service."],
-    ['"We always pick up."', "Message taken. Someone will call you back."],
-    ['"24/7 emergency service."', "No appointment. No next step. No help."],
+    ['"We always pick up."', "Rang out after six rings."],
+    ['"Call us anytime."', "Voicemail. Mailbox full."],
+    ['"Live answering, 24/7."', "Message taken. No appointment. No callback time."],
   ];
 
   return (
@@ -661,7 +661,7 @@ function TwentyFourSeven() {
             >
               The{" "}
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                "24/7"
+                promise
               </span>{" "}
               problem.
             </h2>
@@ -669,10 +669,11 @@ function TwentyFourSeven() {
           </div>
           <p
             className="body-lg mt-6"
-            style={{ color: "rgba(255,255,255,0.75)" }}
+            style={{ color: "rgba(255,255,255,0.88)" }}
           >
-            Half the companies on that list advertise round-the-clock service.
-            Here's what that actually looks like.
+            Benchmark wasn't the only company that said they'd answer. Every
+            site on that search page made the same promise. Here's what the
+            other three actually sounded like at 6 a.m.
           </p>
         </div>
 
@@ -700,8 +701,8 @@ function TwentyFourSeven() {
                 className="text-[17px] md:text-[19px]"
                 style={{
                   fontFamily: "var(--font-sans)",
-                  fontWeight: 300,
-                  color: "rgba(255,255,255,0.6)",
+                  fontWeight: 400,
+                  color: "rgba(255,255,255,0.82)",
                 }}
               >
                 {reality}
@@ -713,7 +714,7 @@ function TwentyFourSeven() {
         <div className="max-w-[640px] mt-16">
           <p
             className="body-lg"
-            style={{ color: "rgba(255,255,255,0.78)" }}
+            style={{ color: "rgba(255,255,255,0.9)" }}
           >
             The person with the collapsed wall doesn't need a message taken. He
             needs an appointment. The moment he realizes nobody can actually help
@@ -968,7 +969,7 @@ function CTA() {
             className="font-display-italic mb-14 md:mb-20"
             style={{
               fontSize: "clamp(20px, 2vw, 24px)",
-              color: "rgba(255,255,255,0.7)",
+              color: "rgba(255,255,255,0.88)",
               lineHeight: 1.4,
             }}
           >
