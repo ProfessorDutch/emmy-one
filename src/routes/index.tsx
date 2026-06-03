@@ -620,7 +620,7 @@ function CallSequence() {
 }
 
 /* ============================================================
-   24/7 — Hard side-by-side. Empty office image dominates.
+   NEXT STEP — Hard side-by-side. Empty office image dominates.
    ============================================================ */
 
 function TwentyFourSeven() {
@@ -815,7 +815,7 @@ function Proof() {
               style={{
                 fontSize: "clamp(30px, 4vw, 48px)",
                 lineHeight: 1.08,
-                letterSpacing: "-0.02em",
+                letterSpacing: 0,
               }}
             >
               47 homeowners who hired the company
@@ -968,7 +968,7 @@ function CTA() {
             className="font-display-italic mb-14 md:mb-20"
             style={{
               fontSize: "clamp(20px, 2vw, 24px)",
-              color: "rgba(255,255,255,0.7)",
+              color: "rgba(255,255,255,0.84)",
               lineHeight: 1.4,
             }}
           >
@@ -989,7 +989,7 @@ function CTA() {
           </a>
           <p
             className="mt-6 body-soft"
-            style={{ color: "rgba(255,255,255,0.55)", marginBottom: 0 }}
+            style={{ color: "rgba(255,255,255,0.78)", marginBottom: 0 }}
           >
             Emmy answers 24 hours a day.
           </p>
@@ -1001,7 +1001,7 @@ function CTA() {
 
           <p
             className="mt-12 body-soft max-w-[520px] mx-auto"
-            style={{ color: "rgba(255,255,255,0.55)" }}
+            style={{ color: "rgba(255,255,255,0.78)" }}
           >
             No pitch. No demo. No salesperson. Just the experience your customers
             have every time your phone rings unanswered.
