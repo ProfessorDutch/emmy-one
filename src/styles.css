@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: "Playfair Display", Georgia, serif;
+  --font-display: "DM Sans", system-ui, sans-serif;
   --font-sans: "DM Sans", system-ui, sans-serif;
 
   --color-background: var(--background);
@@ -31,7 +31,7 @@
   --ink: oklch(0.14 0 0);
   /* Warm grey scale */
   --muted: oklch(0.96 0.003 60);
-  --muted-foreground: oklch(0.48 0.005 60);
+  --muted-foreground: oklch(0.36 0.005 60);
   --ash: oklch(0.92 0.003 60);
   /* Bold orange accent */
   --accent: oklch(0.68 0.205 41);
@@ -67,14 +67,14 @@
 @layer components {
   .font-display {
     font-family: var(--font-display);
-    font-weight: 400;
-    letter-spacing: -0.015em;
+    font-weight: 500;
+    letter-spacing: 0;
   }
   .font-display-italic {
     font-family: var(--font-display);
-    font-weight: 400;
-    font-style: italic;
-    letter-spacing: -0.015em;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0;
   }
 
   .eyebrow {
@@ -97,26 +97,26 @@
 
   .hero-type {
     font-family: var(--font-display);
-    font-weight: 400;
+    font-weight: 500;
     font-size: clamp(36px, 6.2vw, 68px);
     line-height: 1.06;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
   }
 
   .section-opener {
     font-family: var(--font-display);
-    font-weight: 400;
+    font-weight: 500;
     font-size: clamp(30px, 4.4vw, 44px);
     line-height: 1.1;
-    letter-spacing: -0.018em;
+    letter-spacing: 0;
   }
 
   .stat-num {
     font-family: var(--font-display);
-    font-weight: 400;
+    font-weight: 600;
     font-size: clamp(80px, 16vw, 160px);
     line-height: 0.9;
-    letter-spacing: -0.04em;
+    letter-spacing: 0;
   }
 
   .body-lg {
@@ -128,7 +128,7 @@
 
   .body-soft {
     font-family: var(--font-sans);
-    font-weight: 300;
+    font-weight: 400;
     font-size: clamp(17px, 1.4vw, 20px);
     line-height: 1.6;
     color: var(--color-muted-foreground);
