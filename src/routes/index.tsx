@@ -116,7 +116,7 @@ function Hero() {
 
             <p
               className="body-lg mt-8 max-w-[560px]"
-              style={{ color: "rgba(255,255,255,0.72)" }}
+              style={{ color: "rgba(255,255,255,0.9)" }}
             >
               It rained hard last night. Your wife is at the back door. You've got
               a slope, a mess, and no idea who to call.
