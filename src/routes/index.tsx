@@ -109,14 +109,14 @@ function Hero() {
             <h1 className="hero-type" style={{ color: "white" }}>
               Your retaining wall gave way.
               <br />
-              <span className="font-display-italic" style={{ color: "rgba(255,255,255,0.75)" }}>
+              <span className="font-display-italic" style={{ color: "rgba(255,255,255,0.84)" }}>
                 You don't know how much of the yard went with it.
               </span>
             </h1>
 
             <p
               className="body-lg mt-8 max-w-[560px]"
-              style={{ color: "rgba(255,255,255,0.72)" }}
+              style={{ color: "rgba(255,255,255,0.82)" }}
             >
               It rained hard last night. Your wife is at the back door. You've got
               a slope, a mess, and no idea who to call.
@@ -171,12 +171,12 @@ function SearchScene() {
           </p>
           <p
             className="font-display text-white max-w-[820px]"
-            style={{ fontSize: "clamp(32px, 4.6vw, 56px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
+            style={{ fontSize: "clamp(32px, 4.6vw, 56px)", lineHeight: 1.08, letterSpacing: 0 }}
           >
             This isn't a project.
             <br />
             <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-              This is an emergency.
+              This needs a human.
             </span>
           </p>
         </div>
@@ -198,7 +198,7 @@ function SearchScene() {
               You find a page that looks like this.
             </p>
             <p className="body-soft max-w-[560px]">
-              Four companies. All qualified. All claiming 24/7. All a tap away.
+              Four companies. All qualified. All promising fast help. All a tap away.
             </p>
           </div>
         </div>
@@ -285,7 +285,7 @@ function PhoneList() {
                 {/* sponsored label */}
                 <div className="px-4 pt-4 pb-2">
                   <p
-                    className="text-[10px] font-medium uppercase tracking-wider text-[#888]"
+                    className="text-[10px] font-medium uppercase tracking-wider text-[#555]"
                     style={{ fontFamily: "var(--font-sans)" }}
                   >
                     Sponsored · 4 results
@@ -374,7 +374,7 @@ function PhoneList() {
 
                 <div className="pt-3 pb-4 text-center">
                   <p
-                    className="text-[10px] text-[#888]"
+                    className="text-[10px] text-[#555]"
                     style={{ fontFamily: "var(--font-sans)" }}
                   >
                     See more results
@@ -460,13 +460,13 @@ function CallSequence() {
               style={{
                 fontSize: "clamp(34px, 5vw, 60px)",
                 lineHeight: 1.05,
-                letterSpacing: "-0.02em",
+                letterSpacing: 0,
               }}
             >
               He starts dialing.
             </h2>
             <p className="body-soft mt-5 max-w-[520px]">
-              4:11 a.m. The top four search results, in order. One call after
+              6:11 a.m. The top four search results, in order. One call after
               another.
             </p>
           </div>
@@ -504,7 +504,7 @@ function CallSequence() {
                 color: "var(--color-muted-foreground)",
               }}
             >
-              Call log · Tuesday 4:11 a.m.
+              Call log · Tuesday 6:11 a.m.
             </p>
             <span
               className="text-[11px]"
@@ -604,7 +604,7 @@ function CallSequence() {
               style={{
                 fontSize: "clamp(24px, 3vw, 36px)",
                 lineHeight: 1.15,
-                letterSpacing: "-0.02em",
+                letterSpacing: 0,
               }}
             >
               The other three didn't lose on quality.{" "}
@@ -620,14 +620,14 @@ function CallSequence() {
 }
 
 /* ============================================================
-   24/7 — Hard side-by-side. Empty office image dominates.
+   NEXT STEP — Hard side-by-side. Empty office image dominates.
    ============================================================ */
 
 function TwentyFourSeven() {
   const rows = [
-    ['"Call us anytime."', "Forwards to an answering service."],
-    ['"We always pick up."', "Message taken. Someone will call you back."],
-    ['"24/7 emergency service."', "No appointment. No next step. No help."],
+    ['"Fast estimates."', "Rings until it times out."],
+    ['"Same-day callbacks."', "Message taken. Someone will call you back."],
+    ['"Call now for help."', "No appointment. No next step. No help."],
   ];
 
   return (
@@ -661,7 +661,7 @@ function TwentyFourSeven() {
             >
               The{" "}
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                "24/7"
+                next-step
               </span>{" "}
               problem.
             </h2>
@@ -669,10 +669,10 @@ function TwentyFourSeven() {
           </div>
           <p
             className="body-lg mt-6"
-            style={{ color: "rgba(255,255,255,0.75)" }}
+            style={{ color: "rgba(255,255,255,0.84)" }}
           >
-            Half the companies on that list advertise round-the-clock service.
-            Here's what that actually looks like.
+            He already found qualified companies. The gap isn't skill. It's whether
+            anyone gives him a clear next step while he's ready to book.
           </p>
         </div>
 
@@ -700,8 +700,8 @@ function TwentyFourSeven() {
                 className="text-[17px] md:text-[19px]"
                 style={{
                   fontFamily: "var(--font-sans)",
-                  fontWeight: 300,
-                  color: "rgba(255,255,255,0.6)",
+                  fontWeight: 400,
+                  color: "rgba(255,255,255,0.78)",
                 }}
               >
                 {reality}
@@ -713,7 +713,7 @@ function TwentyFourSeven() {
         <div className="max-w-[640px] mt-16">
           <p
             className="body-lg"
-            style={{ color: "rgba(255,255,255,0.78)" }}
+            style={{ color: "rgba(255,255,255,0.84)" }}
           >
             The person with the collapsed wall doesn't need a message taken. He
             needs an appointment. The moment he realizes nobody can actually help
@@ -815,7 +815,7 @@ function Proof() {
               style={{
                 fontSize: "clamp(30px, 4vw, 48px)",
                 lineHeight: 1.08,
-                letterSpacing: "-0.02em",
+                letterSpacing: 0,
               }}
             >
               47 homeowners who hired the company
@@ -968,7 +968,7 @@ function CTA() {
             className="font-display-italic mb-14 md:mb-20"
             style={{
               fontSize: "clamp(20px, 2vw, 24px)",
-              color: "rgba(255,255,255,0.7)",
+              color: "rgba(255,255,255,0.84)",
               lineHeight: 1.4,
             }}
           >
@@ -981,7 +981,7 @@ function CTA() {
             style={{
               fontSize: "clamp(44px, 7.5vw, 88px)",
               color: "var(--color-ember)",
-              letterSpacing: "-0.025em",
+              letterSpacing: 0,
               lineHeight: 1,
             }}
           >
@@ -989,7 +989,7 @@ function CTA() {
           </a>
           <p
             className="mt-6 body-soft"
-            style={{ color: "rgba(255,255,255,0.55)", marginBottom: 0 }}
+            style={{ color: "rgba(255,255,255,0.78)", marginBottom: 0 }}
           >
             Emmy answers 24 hours a day.
           </p>
@@ -1001,7 +1001,7 @@ function CTA() {
 
           <p
             className="mt-12 body-soft max-w-[520px] mx-auto"
-            style={{ color: "rgba(255,255,255,0.55)" }}
+            style={{ color: "rgba(255,255,255,0.78)" }}
           >
             No pitch. No demo. No salesperson. Just the experience your customers
             have every time your phone rings unanswered.
@@ -1046,7 +1046,7 @@ function Footer() {
         </p>
         <p
           className="text-[11px] tracking-widest uppercase"
-          style={{ color: "rgba(255,255,255,0.4)", fontWeight: 500 }}
+          style={{ color: "rgba(255,255,255,0.68)", fontWeight: 500 }}
         >
           © {new Date().getFullYear()} — Every call answered
         </p>
