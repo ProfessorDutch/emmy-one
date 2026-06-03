@@ -981,7 +981,7 @@ function CTA() {
             style={{
               fontSize: "clamp(44px, 7.5vw, 88px)",
               color: "var(--color-ember)",
-              letterSpacing: "-0.025em",
+              letterSpacing: 0,
               lineHeight: 1,
             }}
           >
@@ -1046,7 +1046,7 @@ function Footer() {
         </p>
         <p
           className="text-[11px] tracking-widest uppercase"
-          style={{ color: "rgba(255,255,255,0.4)", fontWeight: 500 }}
+          style={{ color: "rgba(255,255,255,0.68)", fontWeight: 500 }}
         >
           © {new Date().getFullYear()} — Every call answered
         </p>
