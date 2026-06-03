@@ -171,7 +171,7 @@ function SearchScene() {
           </p>
           <p
             className="font-display text-white max-w-[820px]"
-            style={{ fontSize: "clamp(32px, 4.6vw, 56px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
+            style={{ fontSize: "clamp(32px, 4.6vw, 56px)", lineHeight: 1.08, letterSpacing: 0 }}
           >
             This isn't a project.
             <br />
@@ -460,7 +460,7 @@ function CallSequence() {
               style={{
                 fontSize: "clamp(34px, 5vw, 60px)",
                 lineHeight: 1.05,
-                letterSpacing: "-0.02em",
+                letterSpacing: 0,
               }}
             >
               He starts dialing.
@@ -604,7 +604,7 @@ function CallSequence() {
               style={{
                 fontSize: "clamp(24px, 3vw, 36px)",
                 lineHeight: 1.15,
-                letterSpacing: "-0.02em",
+                letterSpacing: 0,
               }}
             >
               The other three didn't lose on quality.{" "}
