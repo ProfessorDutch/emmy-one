@@ -31,7 +31,7 @@
   --ink: oklch(0.14 0 0);
   /* Warm grey scale */
   --muted: oklch(0.96 0.003 60);
-  --muted-foreground: oklch(0.36 0.005 60);
+  --muted-foreground: oklch(0.48 0.005 60);
   --ash: oklch(0.92 0.003 60);
   /* Bold orange accent */
   --accent: oklch(0.68 0.205 41);
@@ -71,10 +71,10 @@
     letter-spacing: -0.015em;
   }
   .font-display-italic {
-    font-family: var(--font-sans);
-    font-weight: 600;
-    font-style: normal;
-    letter-spacing: -0.005em;
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -0.015em;
   }
 
   .eyebrow {
