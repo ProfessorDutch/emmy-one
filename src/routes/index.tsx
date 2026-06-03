@@ -109,7 +109,7 @@ function Hero() {
             <h1 className="hero-type" style={{ color: "white" }}>
               Your retaining wall gave way.
               <br />
-              <span className="font-display-italic" style={{ color: "rgba(255,255,255,0.75)" }}>
+              <span className="font-display-italic" style={{ color: "rgba(255,255,255,0.9)" }}>
                 You don't know how much of the yard went with it.
               </span>
             </h1>
