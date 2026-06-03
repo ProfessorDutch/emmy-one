@@ -714,7 +714,7 @@ function TwentyFourSeven() {
         <div className="max-w-[640px] mt-16">
           <p
             className="body-lg"
-            style={{ color: "rgba(255,255,255,0.78)" }}
+            style={{ color: "rgba(255,255,255,0.9)" }}
           >
             The person with the collapsed wall doesn't need a message taken. He
             needs an appointment. The moment he realizes nobody can actually help
