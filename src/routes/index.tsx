@@ -466,7 +466,7 @@ function CallSequence() {
               He starts dialing.
             </h2>
             <p className="body-soft mt-5 max-w-[520px]">
-              4:11 a.m. The top four search results, in order. One call after
+              6:11 a.m. The top four search results, in order. One call after
               another.
             </p>
           </div>
