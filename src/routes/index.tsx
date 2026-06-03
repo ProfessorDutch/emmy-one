@@ -285,7 +285,7 @@ function PhoneList() {
                 {/* sponsored label */}
                 <div className="px-4 pt-4 pb-2">
                   <p
-                    className="text-[10px] font-medium uppercase tracking-wider text-[#888]"
+                    className="text-[10px] font-medium uppercase tracking-wider text-[#555]"
                     style={{ fontFamily: "var(--font-sans)" }}
                   >
                     Sponsored · 4 results
@@ -374,7 +374,7 @@ function PhoneList() {
 
                 <div className="pt-3 pb-4 text-center">
                   <p
-                    className="text-[10px] text-[#888]"
+                    className="text-[10px] text-[#555]"
                     style={{ fontFamily: "var(--font-sans)" }}
                   >
                     See more results
@@ -466,7 +466,7 @@ function CallSequence() {
               He starts dialing.
             </h2>
             <p className="body-soft mt-5 max-w-[520px]">
-              4:11 a.m. The top four search results, in order. One call after
+              6:11 a.m. The top four search results, in order. One call after
               another.
             </p>
           </div>
@@ -504,7 +504,7 @@ function CallSequence() {
                 color: "var(--color-muted-foreground)",
               }}
             >
-              Call log · Tuesday 4:11 a.m.
+              Call log · Tuesday 6:11 a.m.
             </p>
             <span
               className="text-[11px]"
