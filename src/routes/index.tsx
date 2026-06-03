@@ -625,9 +625,9 @@ function CallSequence() {
 
 function TwentyFourSeven() {
   const rows = [
-    ['"Call us anytime."', "Forwards to an answering service."],
-    ['"We always pick up."', "Message taken. Someone will call you back."],
-    ['"24/7 emergency service."', "No appointment. No next step. No help."],
+    ['"Fast estimates."', "Rings until it times out."],
+    ['"Same-day callbacks."', "Message taken. Someone will call you back."],
+    ['"Call now for help."', "No appointment. No next step. No help."],
   ];
 
   return (
@@ -661,7 +661,7 @@ function TwentyFourSeven() {
             >
               The{" "}
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                "24/7"
+                next-step
               </span>{" "}
               problem.
             </h2>
@@ -669,10 +669,10 @@ function TwentyFourSeven() {
           </div>
           <p
             className="body-lg mt-6"
-            style={{ color: "rgba(255,255,255,0.75)" }}
+            style={{ color: "rgba(255,255,255,0.84)" }}
           >
-            Half the companies on that list advertise round-the-clock service.
-            Here's what that actually looks like.
+            He already found qualified companies. The gap isn't skill. It's whether
+            anyone gives him a clear next step while he's ready to book.
           </p>
         </div>
 
@@ -700,8 +700,8 @@ function TwentyFourSeven() {
                 className="text-[17px] md:text-[19px]"
                 style={{
                   fontFamily: "var(--font-sans)",
-                  fontWeight: 300,
-                  color: "rgba(255,255,255,0.6)",
+                  fontWeight: 400,
+                  color: "rgba(255,255,255,0.78)",
                 }}
               >
                 {reality}
@@ -713,7 +713,7 @@ function TwentyFourSeven() {
         <div className="max-w-[640px] mt-16">
           <p
             className="body-lg"
-            style={{ color: "rgba(255,255,255,0.78)" }}
+            style={{ color: "rgba(255,255,255,0.84)" }}
           >
             The person with the collapsed wall doesn't need a message taken. He
             needs an appointment. The moment he realizes nobody can actually help
