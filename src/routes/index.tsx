@@ -969,7 +969,7 @@ function CTA() {
             className="font-display-italic mb-14 md:mb-20"
             style={{
               fontSize: "clamp(20px, 2vw, 24px)",
-              color: "rgba(255,255,255,0.7)",
+              color: "rgba(255,255,255,0.88)",
               lineHeight: 1.4,
             }}
           >
