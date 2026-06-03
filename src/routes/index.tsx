@@ -504,7 +504,7 @@ function CallSequence() {
                 color: "var(--color-muted-foreground)",
               }}
             >
-              Call log · Tuesday 4:11 a.m.
+              Call log · Tuesday 6:11 a.m.
             </p>
             <span
               className="text-[11px]"
