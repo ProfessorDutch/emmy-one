@@ -109,14 +109,14 @@ function Hero() {
             <h1 className="hero-type" style={{ color: "white" }}>
               Your retaining wall gave way.
               <br />
-              <span className="font-display-italic" style={{ color: "rgba(255,255,255,0.75)" }}>
+              <span className="font-display-italic" style={{ color: "rgba(255,255,255,0.84)" }}>
                 You don't know how much of the yard went with it.
               </span>
             </h1>
 
             <p
               className="body-lg mt-8 max-w-[560px]"
-              style={{ color: "rgba(255,255,255,0.72)" }}
+              style={{ color: "rgba(255,255,255,0.82)" }}
             >
               It rained hard last night. Your wife is at the back door. You've got
               a slope, a mess, and no idea who to call.
@@ -176,7 +176,7 @@ function SearchScene() {
             This isn't a project.
             <br />
             <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-              This is an emergency.
+              This needs a human.
             </span>
           </p>
         </div>
@@ -198,7 +198,7 @@ function SearchScene() {
               You find a page that looks like this.
             </p>
             <p className="body-soft max-w-[560px]">
-              Four companies. All qualified. All claiming 24/7. All a tap away.
+              Four companies. All qualified. All promising fast help. All a tap away.
             </p>
           </div>
         </div>
