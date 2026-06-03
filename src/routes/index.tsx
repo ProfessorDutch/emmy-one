@@ -661,7 +661,7 @@ function TwentyFourSeven() {
             >
               The{" "}
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                "24/7"
+                promise
               </span>{" "}
               problem.
             </h2>
@@ -669,10 +669,11 @@ function TwentyFourSeven() {
           </div>
           <p
             className="body-lg mt-6"
-            style={{ color: "rgba(255,255,255,0.75)" }}
+            style={{ color: "rgba(255,255,255,0.88)" }}
           >
-            Half the companies on that list advertise round-the-clock service.
-            Here's what that actually looks like.
+            Benchmark wasn't the only company that said they'd answer. Every
+            site on that search page made the same promise. Here's what the
+            other three actually sounded like at 6 a.m.
           </p>
         </div>
 
