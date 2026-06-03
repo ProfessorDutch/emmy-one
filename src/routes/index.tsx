@@ -625,9 +625,9 @@ function CallSequence() {
 
 function TwentyFourSeven() {
   const rows = [
-    ['"Call us anytime."', "Forwards to an answering service."],
-    ['"We always pick up."', "Message taken. Someone will call you back."],
-    ['"24/7 emergency service."', "No appointment. No next step. No help."],
+    ['"We always pick up."', "Rang out after six rings."],
+    ['"Call us anytime."', "Voicemail. Mailbox full."],
+    ['"Live answering, 24/7."', "Message taken. No appointment. No callback time."],
   ];
 
   return (
