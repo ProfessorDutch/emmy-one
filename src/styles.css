@@ -71,10 +71,10 @@
     letter-spacing: -0.015em;
   }
   .font-display-italic {
-    font-family: var(--font-display);
-    font-weight: 400;
-    font-style: italic;
-    letter-spacing: -0.015em;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: -0.005em;
   }
 
   .eyebrow {
