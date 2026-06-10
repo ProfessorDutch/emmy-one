@@ -803,67 +803,67 @@ function Proof() {
 
       </div>
 
-      {/* Coverage map with overlaid text */}
-      <div className="relative w-full mt-20 md:mt-28">
+      {/* Coverage map — left, feathered into white; text reads on the right */}
+      <div className="relative w-full overflow-hidden mt-20 md:mt-28">
         <img
           src={coverageMap}
           alt="Map of Woodstock, Georgia with a 30-mile radius and dozens of glowing dots marking job locations"
           loading="lazy"
           width={1920}
           height={1080}
-          className="block w-full h-auto"
+          aria-hidden="true"
+          className="absolute inset-y-0 left-0 h-full w-full md:w-[68%] object-cover object-left pointer-events-none select-none"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(to right, #000 0%, #000 55%, transparent 95%)",
+            maskImage:
+              "linear-gradient(to right, #000 0%, #000 55%, transparent 95%)",
+            opacity: 0.95,
+          }}
         />
-        <div className="absolute inset-0 flex items-center pointer-events-none">
-          <div className="mx-auto max-w-[1280px] w-full px-5 md:px-10">
-            <div className="grid md:grid-cols-12 gap-6 md:gap-12 items-start">
-              <div
-                className="md:col-span-5 rounded-lg p-5 md:p-7 pointer-events-auto"
+        {/* Soft white wash on mobile so text stays legible over the map */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 md:hidden pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(180deg, color-mix(in oklab, #fff 70%, transparent) 0%, #fff 70%)",
+          }}
+        />
+        <div className="relative mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-36">
+          <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+            <div className="hidden md:block md:col-span-6" />
+            <div className="md:col-span-6">
+              <p className="eyebrow mb-6">What 47 looks like</p>
+              <p
+                className="font-display mb-8"
                 style={{
-                  background:
-                    "color-mix(in oklab, var(--color-paper) 90%, transparent)",
-                  backdropFilter: "blur(3px)",
+                  fontSize: "clamp(28px, 3.4vw, 44px)",
+                  lineHeight: 1.08,
+                  letterSpacing: "-0.02em",
                 }}
               >
-                <p className="eyebrow mb-4">What 47 looks like</p>
-                <p
-                  className="font-display"
-                  style={{
-                    fontSize: "clamp(22px, 2.6vw, 38px)",
-                    lineHeight: 1.1,
-                    letterSpacing: "-0.02em",
-                  }}
+                47 homeowners who hired the company{" "}
+                <span
+                  className="font-display-italic"
+                  style={{ color: "var(--color-ember)" }}
                 >
-                  47 homeowners who hired the company{" "}
-                  <span
-                    className="font-display-italic"
-                    style={{ color: "var(--color-ember)" }}
-                  >
-                    instead of the next name on the list.
-                  </span>
-                </p>
-              </div>
-              <div
-                className="md:col-span-6 md:col-start-7 rounded-lg p-5 md:p-7 pointer-events-auto"
-                style={{
-                  background:
-                    "color-mix(in oklab, var(--color-paper) 90%, transparent)",
-                  backdropFilter: "blur(3px)",
-                }}
-              >
-                <p className="body-lg mb-4">
-                  Emmy answered while the office was on another line. Asked the
-                  right questions. Booked the appointment. The crew showed up,
-                  gave the estimate, signed the job. The homeowner has no idea
-                  what Emmy is. They don't care.
-                </p>
-                <p className="body-lg" style={{ marginBottom: 0 }}>
-                  The question isn't how many calls you're getting. It's{" "}
-                  <span style={{ color: "var(--color-ember)" }}>
-                    how many of the real ones are going to the next company on
-                    the list while yours rings out.
-                  </span>
-                </p>
-              </div>
+                  instead of the next name on the list.
+                </span>
+              </p>
+              <p className="body-lg mb-5">
+                Emmy answered while the office was on another line. Asked the
+                right questions. Booked the appointment. The crew showed up,
+                gave the estimate, signed the job. The homeowner has no idea
+                what Emmy is. They don't care.
+              </p>
+              <p className="body-lg" style={{ marginBottom: 0 }}>
+                The question isn't how many calls you're getting. It's{" "}
+                <span style={{ color: "var(--color-ember)" }}>
+                  how many of the real ones are going to the next company on
+                  the list while yours rings out.
+                </span>
+              </p>
             </div>
           </div>
         </div>
