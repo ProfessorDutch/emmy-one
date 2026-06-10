@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroAlarm from "@/assets/hero-alarm-607.jpg";
 import collapsedWallAsset from "@/assets/collapsed-wall-hero.png.asset.json";
 import manCalling from "@/assets/man-calling.jpg";
@@ -1021,6 +1021,26 @@ function CTA() {
               Now you know exactly how that feels.
             </span>
           </p>
+
+          <div className="mt-14 md:mt-20">
+            <Link
+              to="/whats-next"
+              className="inline-flex items-center justify-center font-sans transition-opacity hover:opacity-90"
+              style={{
+                background: "var(--color-ember)",
+                color: "white",
+                padding: "22px 56px",
+                borderRadius: 999,
+                fontSize: 14,
+                letterSpacing: "0.22em",
+                fontWeight: 500,
+                textTransform: "uppercase",
+                boxShadow: "0 18px 40px -18px rgba(204,85,40,0.6)",
+              }}
+            >
+              What's next
+            </Link>
+          </div>
         </div>
       </div>
     </section>

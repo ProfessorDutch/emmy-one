@@ -18,7 +18,11 @@
   --color-ink: var(--ink);
   --color-paper: var(--paper);
   --color-ember: var(--ember);
+  --color-ember-deep: var(--ember-deep);
   --color-night: var(--night);
+  --color-night-soft: var(--night-soft);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
   --color-ash: var(--ash);
 }
 
@@ -37,10 +41,14 @@
   --accent: oklch(0.68 0.205 41);
   --accent-foreground: oklch(1 0 0);
   --ember: oklch(0.68 0.205 41);
+  --ember-deep: oklch(0.54 0.18 38);
   /* Borders */
   --border: oklch(0.9 0.003 60);
   /* Deep black for high-contrast sections */
   --night: oklch(0.12 0 0);
+  --night-soft: oklch(0.18 0.005 40);
+  --cream: oklch(0.965 0.018 70);
+  --cream-deep: oklch(0.92 0.028 68);
 }
 
 @layer base {
@@ -148,5 +156,13 @@
     width: 48px;
     height: 2px;
     background: var(--color-ember);
+  }
+
+  .pricing-number {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(56px, 9vw, 124px);
+    line-height: 1;
+    letter-spacing: -0.03em;
   }
 }
