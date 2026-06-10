@@ -14,8 +14,6 @@ export default defineConfig({
   },
   // Build for Netlify Functions instead of the default Cloudflare Workers target.
   nitro: {
-    config: {
-      preset: "netlify",
-    },
+    preset: "netlify",
   },
 });
