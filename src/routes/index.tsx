@@ -801,33 +801,39 @@ function Proof() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-12 gap-10 md:gap-16 mt-20 md:mt-28 items-center">
-          <div className="md:col-span-6">
-            <img
-              src={coverageMap}
-              alt="Map of Woodstock, Georgia with a 30-mile radius showing dozens of job locations as glowing dots"
-              loading="lazy"
-              width={1920}
-              height={1080}
-              className="w-full h-auto object-cover"
-            />
-          </div>
-          <div className="md:col-span-6">
+      </div>
+
+      {/* Full-bleed coverage map */}
+      <div className="w-full mt-20 md:mt-28">
+        <img
+          src={coverageMap}
+          alt="Map of Woodstock, Georgia with a 30-mile radius and dozens of glowing dots marking job locations"
+          loading="lazy"
+          width={1920}
+          height={1080}
+          className="block w-full h-auto"
+        />
+      </div>
+
+      <div className="mx-auto max-w-[1280px] px-5 md:px-10 pt-16 md:pt-24">
+        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
+          <div className="md:col-span-5">
             <p className="eyebrow mb-6">What 47 looks like</p>
             <p
-              className="font-display mb-8"
+              className="font-display"
               style={{
                 fontSize: "clamp(30px, 4vw, 48px)",
                 lineHeight: 1.08,
                 letterSpacing: "-0.02em",
               }}
             >
-              47 homeowners who hired the company
-              {" "}
+              47 homeowners who hired the company{" "}
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
                 instead of the next name on the list.
               </span>
             </p>
+          </div>
+          <div className="md:col-span-6 md:col-start-7">
             <p className="body-lg mb-6">
               Emmy answered while the office was on another line. Asked the right
               questions. Booked the appointment. The crew showed up, gave the
