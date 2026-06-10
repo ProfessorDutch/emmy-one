@@ -804,7 +804,7 @@ function Proof() {
       </div>
 
       {/* Coverage map — left, feathered into white; text reads on the right */}
-      <div className="relative w-full overflow-hidden mt-20 md:mt-28">
+      <div className="relative w-full overflow-hidden">
         <img
           src={coverageMap}
           alt="Map of Woodstock, Georgia with a 30-mile radius and dozens of glowing dots marking job locations"
