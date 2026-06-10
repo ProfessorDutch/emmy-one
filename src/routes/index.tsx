@@ -1,12 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroAlarm from "@/assets/hero-alarm-607.jpg";
-import collapsedWallAsset from "@/assets/collapsed-wall-hero.png.asset.json";
+import collapsedWall from "@/assets/collapsed-wall-hero.png";
 import manCalling from "@/assets/man-calling.jpg";
 import emptyOffice from "@/assets/empty-office-ringing.jpg";
 import crewFixing from "@/assets/crew-fixing.jpg";
 import phoneIncoming from "@/assets/phone-incoming.jpg";
-
-const collapsedWall = collapsedWallAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -476,7 +474,7 @@ function CallSequence() {
             loading="lazy"
             width={720}
             height={480}
-            className="w-full aspect-[3/2] object-cover rounded-sm hidden md:block"
+            className="w-full aspect-[3/2] object-cover rounded-sm"
           />
         </div>
 
