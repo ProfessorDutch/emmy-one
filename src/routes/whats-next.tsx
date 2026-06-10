@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import heroImg from "@/assets/whats-next-hero.jpg";
 import img01 from "@/assets/ae-missed-calls.jpg";
 import netImg from "@/assets/ae-safety-net.jpg";
 import img03 from "@/assets/ae-03-homeowner.jpg";
@@ -143,17 +144,19 @@ function WhatsNext() {
       {/* HERO */}
       <section className="relative min-h-[100svh] flex flex-col bg-night text-white overflow-hidden">
         <img
-          src={img09}
+          src={heroImg}
           alt=""
-          aria-hidden
+          fetchPriority="high"
+          width={1920}
+          height={1080}
           className="absolute inset-0 h-full w-full object-cover"
-          style={{ opacity: 0.12, filter: "saturate(0.6) brightness(0.7)" }}
+          style={{ opacity: 0.55 }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(120% 90% at 50% 50%, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.92) 100%)",
+              "linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.6) 40%, rgba(10,10,10,0.95) 100%)",
           }}
         />
         <div className="relative z-10 px-5 md:px-10 pt-6 md:pt-8 flex items-center justify-between">
