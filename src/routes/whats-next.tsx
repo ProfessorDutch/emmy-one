@@ -157,14 +157,13 @@ function WhatsNext() {
           }}
         />
         <div className="relative z-10 px-5 md:px-10 pt-6 md:pt-8 flex items-center justify-between">
-          <p className="font-display tracking-tight text-[20px] md:text-[22px]">MeetEmmy</p>
+          <Link to="/" className="font-display tracking-tight text-[20px] md:text-[22px] hover:opacity-80 transition-opacity">MeetEmmy</Link>
           <p className="eyebrow">Page two</p>
         </div>
-        <div className="relative z-10 flex-1 flex items-end px-5 md:px-10 pb-20 md:pb-28 pt-24 md:pt-32">
+        <div className="relative z-10 flex-1 flex items-center px-5 md:px-10 pb-12 md:pb-16 pt-10 md:pt-12">
           <div className="mx-auto w-full max-w-[1280px]">
             <div className="max-w-[860px]">
-              <ChapterMark n="00" label="After the scene" />
-              <h1 className="hero-type mt-8">
+              <h1 className="hero-type">
                 You already knew something was missing.
                 <br />
                 <span className="font-display-italic" style={{ color: "rgba(255,255,255,0.7)" }}>
@@ -172,7 +171,7 @@ function WhatsNext() {
                 </span>
               </h1>
               <p
-                className="font-display-italic mt-12"
+                className="font-display-italic mt-10"
                 style={{ fontSize: "clamp(22px, 2.2vw, 30px)", color: "var(--color-ember)" }}
               >
                 Now you have.
