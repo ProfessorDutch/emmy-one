@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import heroImg from "@/assets/whats-next-hero.jpg";
 import img01 from "@/assets/ae-missed-calls.jpg";
 import netImg from "@/assets/ae-safety-net.jpg";
@@ -37,11 +38,19 @@ function Field({
   name,
   type = "text",
   placeholder,
+  value,
+  onChange,
+  required,
+  maxLength,
 }: {
   label: string;
   name: string;
   type?: string;
   placeholder?: string;
+  value: string;
+  onChange: (v: string) => void;
+  required?: boolean;
+  maxLength?: number;
 }) {
   return (
     <label className="block">
@@ -55,6 +64,10 @@ function Field({
         name={name}
         type={type}
         placeholder={placeholder}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        required={required}
+        maxLength={maxLength}
         className="w-full bg-transparent font-sans"
         style={{
           borderBottom: "1px solid rgba(20,15,10,0.25)",
@@ -65,6 +78,145 @@ function Field({
         }}
       />
     </label>
+  );
+}
+
+const GHL_ENDPOINT = "https://emmy-call-flow-fix.lovable.app/api/public/ghl-lead";
+
+function EnrollmentForm() {
+  const [form, setForm] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    business_name: "",
+    website: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  function update<K extends keyof typeof form>(key: K, value: string) {
+    setForm((f) => ({ ...f, [key]: value }));
+  }
+
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    const first_name = form.first_name.trim();
+    const last_name = form.last_name.trim();
+    const email = form.email.trim();
+    const phone = form.phone.trim();
+    const business_name = form.business_name.trim();
+    const website = form.website.trim();
+    if (!first_name || !last_name || !email || !phone || !business_name || !website) {
+      setError("All fields are required.");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError("Please enter a valid email.");
+      return;
+    }
+    if (phone.replace(/\D/g, "").length < 10) {
+      setError("Please enter a valid phone number.");
+      return;
+    }
+    setError(null);
+    setLoading(true);
+    try {
+      const res = await fetch(GHL_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ first_name, last_name, email, phone, business_name, website }),
+      });
+      if (!res.ok) {
+        const t = await res.text();
+        throw new Error(t || "Submission failed");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Submission failed. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  if (submitted) {
+    return (
+      <div
+        className="bg-white p-7 md:p-10"
+        style={{ boxShadow: "0 30px 60px -32px rgba(20,15,10,0.25)" }}
+      >
+        <p className="eyebrow" style={{ color: "var(--color-ember)" }}>You're in</p>
+        <h3
+          className="font-display mt-4"
+          style={{ fontSize: "clamp(24px, 2.6vw, 32px)", lineHeight: 1.1, color: "var(--color-ink)" }}
+        >
+          Emmy is being configured for {form.business_name}.
+        </h3>
+        <p className="body-soft mt-4">
+          We'll reach {form.first_name} at {form.email} within 24 hours to finish setup.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form
+      onSubmit={onSubmit}
+      className="bg-white p-7 md:p-10"
+      style={{ boxShadow: "0 30px 60px -32px rgba(20,15,10,0.25)" }}
+    >
+      <div className="grid sm:grid-cols-2 gap-5">
+        <Field label="First name" name="first_name" placeholder="Jordan" required maxLength={50} value={form.first_name} onChange={(v) => update("first_name", v)} />
+        <Field label="Last name" name="last_name" placeholder="Reyes" required maxLength={50} value={form.last_name} onChange={(v) => update("last_name", v)} />
+        <Field label="Email" name="email" type="email" placeholder="jordan@reyesplumbing.com" required maxLength={255} value={form.email} onChange={(v) => update("email", v)} />
+        <Field label="Business phone" name="phone" type="tel" placeholder="(555) 123-4567" required maxLength={25} value={form.phone} onChange={(v) => update("phone", v)} />
+        <Field label="Business name" name="business_name" placeholder="Reyes Plumbing" required maxLength={150} value={form.business_name} onChange={(v) => update("business_name", v)} />
+        <Field label="Website" name="website" placeholder="reyesplumbing.com" required maxLength={255} value={form.website} onChange={(v) => update("website", v)} />
+      </div>
+      {error && (
+        <p
+          className="mt-5"
+          style={{
+            fontSize: 12,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            color: "var(--color-ember-deep)",
+          }}
+        >
+          {error}
+        </p>
+      )}
+      <button
+        type="submit"
+        disabled={loading}
+        className="mt-8 w-full inline-flex items-center justify-center font-sans disabled:opacity-60"
+        style={{
+          background: "var(--color-ember)",
+          color: "white",
+          padding: "20px 32px",
+          borderRadius: 999,
+          fontSize: 14,
+          letterSpacing: "0.22em",
+          fontWeight: 500,
+          textTransform: "uppercase",
+          boxShadow: "0 18px 40px -18px rgba(204,85,40,0.55)",
+        }}
+      >
+        {loading ? "Sending…" : "Say yes — start enrollment"}
+      </button>
+      <p
+        className="mt-5 text-center"
+        style={{
+          fontSize: 12,
+          letterSpacing: "0.12em",
+          textTransform: "uppercase",
+          color: "var(--color-muted-foreground)",
+        }}
+      >
+        No card. No commitment until Emmy goes live.
+      </p>
+    </form>
   );
 }
 
@@ -907,63 +1059,7 @@ function WhatsNext() {
               </p>
             </div>
             <div className="md:col-span-7">
-              <form
-                onSubmit={(e) => e.preventDefault()}
-                className="bg-white p-7 md:p-10"
-                style={{ boxShadow: "0 30px 60px -32px rgba(20,15,10,0.25)" }}
-              >
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <Field label="Your name" name="name" placeholder="Jordan Reyes" />
-                  <Field label="Business name" name="business" placeholder="Reyes Plumbing" />
-                  <Field
-                    label="Business phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="(555) 123-4567"
-                  />
-                  <Field
-                    label="Email"
-                    name="email"
-                    type="email"
-                    placeholder="jordan@reyesplumbing.com"
-                  />
-                  <div className="sm:col-span-2">
-                    <Field
-                      label="Service area (zip or city)"
-                      name="area"
-                      placeholder="Austin, TX"
-                    />
-                  </div>
-                </div>
-                <button
-                  type="submit"
-                  className="mt-8 w-full inline-flex items-center justify-center font-sans"
-                  style={{
-                    background: "var(--color-ember)",
-                    color: "white",
-                    padding: "20px 32px",
-                    borderRadius: 999,
-                    fontSize: 14,
-                    letterSpacing: "0.22em",
-                    fontWeight: 500,
-                    textTransform: "uppercase",
-                    boxShadow: "0 18px 40px -18px rgba(204,85,40,0.55)",
-                  }}
-                >
-                  Say yes — start enrollment
-                </button>
-                <p
-                  className="mt-5 text-center"
-                  style={{
-                    fontSize: 12,
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "var(--color-muted-foreground)",
-                  }}
-                >
-                  No card. No commitment until Emmy goes live.
-                </p>
-              </form>
+              <EnrollmentForm />
             </div>
           </div>
         </div>
