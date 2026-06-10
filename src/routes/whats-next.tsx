@@ -1059,63 +1059,7 @@ function WhatsNext() {
               </p>
             </div>
             <div className="md:col-span-7">
-              <form
-                onSubmit={(e) => e.preventDefault()}
-                className="bg-white p-7 md:p-10"
-                style={{ boxShadow: "0 30px 60px -32px rgba(20,15,10,0.25)" }}
-              >
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <Field label="Your name" name="name" placeholder="Jordan Reyes" />
-                  <Field label="Business name" name="business" placeholder="Reyes Plumbing" />
-                  <Field
-                    label="Business phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="(555) 123-4567"
-                  />
-                  <Field
-                    label="Email"
-                    name="email"
-                    type="email"
-                    placeholder="jordan@reyesplumbing.com"
-                  />
-                  <div className="sm:col-span-2">
-                    <Field
-                      label="Service area (zip or city)"
-                      name="area"
-                      placeholder="Austin, TX"
-                    />
-                  </div>
-                </div>
-                <button
-                  type="submit"
-                  className="mt-8 w-full inline-flex items-center justify-center font-sans"
-                  style={{
-                    background: "var(--color-ember)",
-                    color: "white",
-                    padding: "20px 32px",
-                    borderRadius: 999,
-                    fontSize: 14,
-                    letterSpacing: "0.22em",
-                    fontWeight: 500,
-                    textTransform: "uppercase",
-                    boxShadow: "0 18px 40px -18px rgba(204,85,40,0.55)",
-                  }}
-                >
-                  Say yes — start enrollment
-                </button>
-                <p
-                  className="mt-5 text-center"
-                  style={{
-                    fontSize: 12,
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "var(--color-muted-foreground)",
-                  }}
-                >
-                  No card. No commitment until Emmy goes live.
-                </p>
-              </form>
+              <EnrollmentForm />
             </div>
           </div>
         </div>
