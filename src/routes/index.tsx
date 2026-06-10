@@ -4,6 +4,7 @@ import collapsedWall from "@/assets/collapsed-wall-hero.png";
 import manCalling from "@/assets/dialing-glow.jpg";
 import emptyOffice from "@/assets/empty-office-ringing.jpg";
 import crewFixing from "@/assets/crew-fixing.jpg";
+import coverageMap from "@/assets/coverage-map.jpg";
 import phoneIncoming from "@/assets/phone-incoming.jpg";
 
 export const Route = createFileRoute("/")({
