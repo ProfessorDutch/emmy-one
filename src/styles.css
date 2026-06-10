@@ -18,7 +18,11 @@
   --color-ink: var(--ink);
   --color-paper: var(--paper);
   --color-ember: var(--ember);
+  --color-ember-deep: var(--ember-deep);
   --color-night: var(--night);
+  --color-night-soft: var(--night-soft);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
   --color-ash: var(--ash);
 }
 
