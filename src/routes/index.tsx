@@ -874,9 +874,10 @@ function Emmy() {
             everyone has gone home.
           </p>
           <p className="body-soft">
-            Not a call center. Not a message service. Emmy asks the right
-            questions and books the appointment. The person with the problem
-            gets a next step. A scheduled appointment.
+            She isn't a call center. She isn't a message service. She was built
+            around the psychology of someone in crisis — what they need to hear,
+            how long they'll wait, what it takes for them to say yes to a time.
+            Then she books the appointment.
           </p>
         </div>
 
