@@ -804,8 +804,8 @@ function Proof() {
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 mt-20 md:mt-28 items-center">
           <div className="md:col-span-6">
             <img
-              src={crewFixing}
-              alt="A masonry crew rebuilding a residential retaining wall at golden hour"
+              src={coverageMap}
+              alt="Map of Woodstock, Georgia with a 30-mile radius showing dozens of job locations as glowing dots"
               loading="lazy"
               width={1920}
               height={1080}
