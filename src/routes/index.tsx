@@ -803,8 +803,8 @@ function Proof() {
 
       </div>
 
-      {/* Full-bleed coverage map */}
-      <div className="w-full mt-20 md:mt-28">
+      {/* Coverage map with overlaid text */}
+      <div className="relative w-full mt-20 md:mt-28">
         <img
           src={coverageMap}
           alt="Map of Woodstock, Georgia with a 30-mile radius and dozens of glowing dots marking job locations"
@@ -813,40 +813,58 @@ function Proof() {
           height={1080}
           className="block w-full h-auto"
         />
-      </div>
-
-      <div className="mx-auto max-w-[1280px] px-5 md:px-10 pt-16 md:pt-24">
-        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
-          <div className="md:col-span-5">
-            <p className="eyebrow mb-6">What 47 looks like</p>
-            <p
-              className="font-display"
-              style={{
-                fontSize: "clamp(30px, 4vw, 48px)",
-                lineHeight: 1.08,
-                letterSpacing: "-0.02em",
-              }}
-            >
-              47 homeowners who hired the company{" "}
-              <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                instead of the next name on the list.
-              </span>
-            </p>
-          </div>
-          <div className="md:col-span-6 md:col-start-7">
-            <p className="body-lg mb-6">
-              Emmy answered while the office was on another line. Asked the right
-              questions. Booked the appointment. The crew showed up, gave the
-              estimate, signed the job. The homeowner has no idea what Emmy is.
-              They don't care.
-            </p>
-            <p className="body-lg">
-              The question isn't how many calls you're getting. It's{" "}
-              <span style={{ color: "var(--color-ember)" }}>
-                how many of the real ones are going to the next company on the
-                list while yours rings out.
-              </span>
-            </p>
+        <div className="absolute inset-0 flex items-center pointer-events-none">
+          <div className="mx-auto max-w-[1280px] w-full px-5 md:px-10">
+            <div className="grid md:grid-cols-12 gap-6 md:gap-12 items-start">
+              <div
+                className="md:col-span-5 rounded-lg p-5 md:p-7 pointer-events-auto"
+                style={{
+                  background:
+                    "color-mix(in oklab, var(--color-paper) 90%, transparent)",
+                  backdropFilter: "blur(3px)",
+                }}
+              >
+                <p className="eyebrow mb-4">What 47 looks like</p>
+                <p
+                  className="font-display"
+                  style={{
+                    fontSize: "clamp(22px, 2.6vw, 38px)",
+                    lineHeight: 1.1,
+                    letterSpacing: "-0.02em",
+                  }}
+                >
+                  47 homeowners who hired the company{" "}
+                  <span
+                    className="font-display-italic"
+                    style={{ color: "var(--color-ember)" }}
+                  >
+                    instead of the next name on the list.
+                  </span>
+                </p>
+              </div>
+              <div
+                className="md:col-span-6 md:col-start-7 rounded-lg p-5 md:p-7 pointer-events-auto"
+                style={{
+                  background:
+                    "color-mix(in oklab, var(--color-paper) 90%, transparent)",
+                  backdropFilter: "blur(3px)",
+                }}
+              >
+                <p className="body-lg mb-4">
+                  Emmy answered while the office was on another line. Asked the
+                  right questions. Booked the appointment. The crew showed up,
+                  gave the estimate, signed the job. The homeowner has no idea
+                  what Emmy is. They don't care.
+                </p>
+                <p className="body-lg" style={{ marginBottom: 0 }}>
+                  The question isn't how many calls you're getting. It's{" "}
+                  <span style={{ color: "var(--color-ember)" }}>
+                    how many of the real ones are going to the next company on
+                    the list while yours rings out.
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
