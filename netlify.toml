@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist/client"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Nitro's `netlify` preset emits the SSR handler as a Netlify Function and
+# writes the required _redirects into dist/client. No manual redirect rules
+# are needed here.
