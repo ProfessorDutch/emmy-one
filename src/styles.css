@@ -41,8 +41,6 @@
   --accent: oklch(0.68 0.205 41);
   --accent-foreground: oklch(1 0 0);
   --ember: oklch(0.68 0.205 41);
-  /* Borders */
-  --ember: oklch(0.68 0.205 41);
   --ember-deep: oklch(0.54 0.18 38);
   /* Borders */
   --border: oklch(0.9 0.003 60);
