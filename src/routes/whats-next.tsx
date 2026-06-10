@@ -1039,7 +1039,7 @@ function WhatsNext() {
         <div className="mx-auto max-w-[980px] px-5 md:px-10 py-24 md:py-36">
           <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
             <div className="md:col-span-5">
-              <ChapterMark n="10" label="Say yes" />
+              <ChapterMark n="10" label="What happens next" />
               <h2
                 className="font-display mt-8"
                 style={{
@@ -1049,14 +1049,16 @@ function WhatsNext() {
                   color: "var(--color-ink)",
                 }}
               >
-                Tell us where to send{" "}
+                We handle setup{" "}
                 <span className="font-display-italic" style={{ color: "var(--color-ember-deep)" }}>
-                  Emmy.
+                  completely.
                 </span>
               </h2>
-              <p className="body-soft mt-6 max-w-[380px]">
-                We configure her for your business. She's live within 24 to 48 hours.
-              </p>
+              <div className="body-soft mt-6 max-w-[380px] space-y-4">
+                <p>We integrate Emmy into your calendar. We set up the missed call safety net system.</p>
+                <p>She books the appointment on your calendar and emails you a full transcript of every call with all of the booking details.</p>
+                <p>Fully automated. Ready in 48 hours.</p>
+              </div>
             </div>
             <div className="md:col-span-7">
               <EnrollmentForm />
