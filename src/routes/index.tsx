@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroAlarm from "@/assets/hero-alarm-607.jpg";
 import collapsedWall from "@/assets/collapsed-wall-hero.png";
-import manCalling from "@/assets/man-calling.jpg";
+import manCalling from "@/assets/dialing-glow.jpg";
 import emptyOffice from "@/assets/empty-office-ringing.jpg";
 import crewFixing from "@/assets/crew-fixing.jpg";
 import phoneIncoming from "@/assets/phone-incoming.jpg";
@@ -447,12 +447,21 @@ function CallSequence() {
   ];
 
   return (
-    <section className="relative bg-white section">
-      <div className="mx-auto max-w-[1180px] px-5 md:px-10">
-        {/* Header: chapter intro paired with a small image inset for visual continuity */}
-        <div className="grid md:grid-cols-[1fr_360px] gap-10 md:gap-14 items-end mb-12 md:mb-16">
-          <div>
-            <p className="eyebrow mb-4">Chapter two</p>
+    <section className="relative bg-white">
+      {/* Full-bleed cinematic image — sets the mood for the chapter */}
+      <div className="relative w-full bg-night">
+        <img
+          src={manCalling}
+          alt="A man at 4 a.m. in bed, face lit by the cold glow of a phone screen"
+          loading="lazy"
+          width={1920}
+          height={1080}
+          className="w-full h-[60svh] md:h-[85svh] object-cover"
+        />
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 px-5 md:px-10 pb-10 md:pb-16">
+          <div className="mx-auto max-w-[1180px] text-white">
+            <p className="eyebrow mb-4" style={{ color: "var(--color-ember)" }}>Chapter two</p>
             <h2
               className="font-display"
               style={{
@@ -463,20 +472,16 @@ function CallSequence() {
             >
               He starts dialing.
             </h2>
-            <p className="body-soft mt-5 max-w-[520px]">
+            <p className="body-soft mt-5 max-w-[520px]" style={{ color: "rgba(255,255,255,0.78)" }}>
               4:11 a.m. The top four search results, in order. One call after
               another.
             </p>
           </div>
-          <img
-            src={manCalling}
-            alt="A worried man on the edge of his bed at dawn, phone pressed to his ear"
-            loading="lazy"
-            width={720}
-            height={480}
-            className="w-full aspect-[3/2] object-cover rounded-sm"
-          />
         </div>
+      </div>
+
+      <div className="mx-auto max-w-[1180px] px-5 md:px-10 section">
+
 
         {/* Unified call-log artifact: header strip, rows, and verdict all in one frame */}
         <div
