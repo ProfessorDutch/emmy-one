@@ -474,7 +474,7 @@ function CallSequence() {
             loading="lazy"
             width={720}
             height={480}
-            className="w-full aspect-[3/2] object-cover rounded-sm hidden md:block"
+            className="w-full aspect-[3/2] object-cover rounded-sm"
           />
         </div>
 
