@@ -452,7 +452,7 @@ function CallSequence() {
       <div className="relative w-full bg-night">
         <img
           src={manCalling}
-          alt="A man at 4 a.m. in bed, face lit by the cold glow of a phone screen"
+          alt="A man at 7 a.m. in bed, face lit by the cold glow of a phone screen"
           loading="lazy"
           width={1920}
           height={1080}
@@ -473,7 +473,7 @@ function CallSequence() {
               He starts dialing.
             </h2>
             <p className="body-soft mt-5 max-w-[520px]" style={{ color: "rgba(255,255,255,0.78)" }}>
-              4:11 a.m. The top four search results, in order. One call after
+              7:11 a.m. The top four search results, in order. One call after
               another.
             </p>
           </div>
@@ -507,7 +507,7 @@ function CallSequence() {
                 color: "var(--color-muted-foreground)",
               }}
             >
-              Call log · Tuesday 4:11 a.m.
+              Call log · Tuesday 7:11 a.m.
             </p>
             <span
               className="text-[11px]"
