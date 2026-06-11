@@ -7,6 +7,7 @@ import netImg from "@/assets/ae-safety-net.jpg";
 import img03 from "@/assets/ae-03-homeowner.jpg";
 import img06 from "@/assets/ae-lights-on-map.jpg";
 import img07 from "@/assets/ae-07-truck-dawn.jpg";
+import img07Fleet from "@/assets/ae-07-fleet-dawn.jpg";
 import img08 from "@/assets/ae-08-phone-down.jpg";
 import img09 from "@/assets/ae-09-aerial-dawn.jpg";
 
@@ -736,8 +737,8 @@ function WhatsNext() {
       <section className="bg-night-soft text-white">
         <div className="relative w-full">
           <img
-            src={img07}
-            alt="A crew truck pulling into a residential driveway at dawn"
+            src={img07Fleet}
+            alt="A small fleet of service work trucks lined up at a shop at dawn, headlights on"
             loading="lazy"
             width={1920}
             height={1100}
