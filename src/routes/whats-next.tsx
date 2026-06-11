@@ -490,15 +490,19 @@ function WhatsNext() {
           />
           <div className="absolute bottom-0 left-0 right-0 p-5 md:p-12">
             <div className="mx-auto max-w-[1280px]">
+              <Eyebrow className="text-white/70">6:00 AM · One lit pin</Eyebrow>
               <p
-                className="font-display text-white max-w-[900px]"
+                className="font-display text-white max-w-[900px] mt-4"
                 style={{
                   fontSize: "clamp(28px, 4vw, 48px)",
                   lineHeight: 1.06,
                   letterSpacing: "-0.02em",
                 }}
               >
-                The six seconds nobody talks about.
+                Fifteen seconds.{" "}
+                <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+                  That's the window.
+                </span>
               </p>
             </div>
           </div>
