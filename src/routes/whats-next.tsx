@@ -737,8 +737,8 @@ function WhatsNext() {
       <section className="bg-night-soft text-white">
         <div className="relative w-full">
           <img
-            src={img07}
-            alt="A crew truck pulling into a residential driveway at dawn"
+            src={img07Fleet}
+            alt="A small fleet of service work trucks lined up at a shop at dawn, headlights on"
             loading="lazy"
             width={1920}
             height={1100}
