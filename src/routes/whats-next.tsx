@@ -518,7 +518,7 @@ function WhatsNext() {
             </div>
             <div className="md:col-span-7 space-y-6 md:pt-3">
               <p className="body-lg max-w-[560px]">
-                She was built for the six seconds after someone decides they need help and before
+                She was built for the 15 seconds after someone decides they need help and before
                 they decide who gets the job.
               </p>
               <p className="body-soft max-w-[560px]">
