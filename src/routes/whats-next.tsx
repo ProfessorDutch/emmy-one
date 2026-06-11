@@ -590,33 +590,32 @@ function WhatsNext() {
         </div>
       </section>
 
-      {/* SECTION FIVE — THE WHITELIST */}
+      {/* SECTION FIVE — PROMINENCE */}
       <section className="relative bg-cream">
         <div
           className="absolute inset-x-0 top-0 h-[3px]"
           style={{ background: "var(--color-ember)" }}
         />
-        <div className="mx-auto max-w-[1180px] px-5 md:px-10 py-28 md:py-44">
-          <div className="grid md:grid-cols-12 gap-10 md:gap-20 items-start">
-            <div className="md:col-span-4">
-              <ChapterMark n="05" label="The whitelist" />
-              <h2
-                className="font-display mt-8"
-                style={{
-                  fontSize: "clamp(34px, 4.6vw, 56px)",
-                  lineHeight: 1.05,
-                  letterSpacing: "-0.02em",
-                  color: "var(--color-ink)",
-                }}
-              >
-                A record.
-                <br />
-                <span className="font-display-italic" style={{ color: "var(--color-ember-deep)" }}>
-                  Not a list.
-                </span>
-              </h2>
-            </div>
-            <div className="md:col-span-8">
+        <div className="mx-auto max-w-[980px] px-5 md:px-10 py-28 md:py-40">
+          <ChapterMark n="05" label="Prominence" />
+
+          <h2
+            className="font-display mt-10"
+            style={{
+              fontSize: "clamp(44px, 7vw, 96px)",
+              lineHeight: 1,
+              letterSpacing: "-0.03em",
+              color: "var(--color-ink)",
+            }}
+          >
+            Can I{" "}
+            <span className="font-display-italic" style={{ color: "var(--color-ember-deep)" }}>
+              trust you?
+            </span>
+          </h2>
+
+          <div className="mt-16 md:mt-20 grid md:grid-cols-12 gap-10 md:gap-16">
+            <div className="md:col-span-5">
               <p
                 className="eyebrow"
                 style={{ color: "var(--color-ember-deep)", letterSpacing: "0.22em" }}
@@ -626,92 +625,85 @@ function WhatsNext() {
               <p
                 className="font-display mt-4"
                 style={{
-                  fontSize: "clamp(22px, 2vw, 28px)",
-                  lineHeight: 1.35,
+                  fontSize: "clamp(22px, 2.1vw, 30px)",
+                  lineHeight: 1.3,
                   color: "var(--color-ink)",
                 }}
               >
-                The whitelist is the search engine's approved-vendor list — the businesses
-                Google, Angi, and Yelp consider safe to send an appointment-seeker to when the
-                moment is on the line.
+                Angi. Yelp. Google. Every platform with someone in crisis, holding a short list of
+                who they can hand the moment to.
               </p>
+            </div>
 
-              <div
-                className="mt-10 relative"
-                style={{
-                  background: "white",
-                  borderLeft: "4px solid var(--color-ember)",
-                  padding: "28px 28px 28px 32px",
-                  boxShadow: "0 24px 50px -28px rgba(20,15,10,0.25)",
-                }}
+            <div className="md:col-span-7 md:border-l md:pl-12" style={{ borderColor: "rgba(204,85,40,0.35)" }}>
+              <p
+                className="eyebrow"
+                style={{ color: "var(--color-ember-deep)", letterSpacing: "0.22em" }}
               >
-                <p
-                  className="eyebrow"
-                  style={{ color: "var(--color-ember-deep)", letterSpacing: "0.22em" }}
-                >
-                  The shift
-                </p>
-                <p
-                  className="font-display mt-3"
-                  style={{
-                    fontSize: "clamp(24px, 2.6vw, 34px)",
-                    lineHeight: 1.2,
-                    letterSpacing: "-0.015em",
-                    color: "var(--color-ink)",
-                  }}
-                >
-                  They're not tracking your reviews.{" "}
-                  <mark
-                    style={{
-                      background: "linear-gradient(180deg, transparent 55%, rgba(204,85,40,0.28) 55%)",
-                      color: "var(--color-ink)",
-                      padding: "0 4px",
-                    }}
-                    className="font-display-italic"
-                  >
-                    They're tracking your outcomes.
-                  </mark>
-                </p>
-              </div>
-
-              <div className="mt-12 grid sm:grid-cols-3 gap-6 max-w-[640px]">
-                {["Answers.", "Books.", "Delivers."].map((w, i) => (
-                  <div
-                    key={w}
-                    className="border-t pt-4"
-                    style={{ borderColor: "rgba(204,85,40,0.35)" }}
-                  >
-                    <p
-                      className="eyebrow"
-                      style={{ color: "var(--color-ember-deep)" }}
-                    >
-                      0{i + 1}
-                    </p>
-                    <p
-                      className="font-display mt-2"
-                      style={{ fontSize: "clamp(22px, 2vw, 28px)", color: "var(--color-ink)" }}
-                    >
-                      {w}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <p className="body-lg mt-12 max-w-[560px]" style={{ color: "var(--color-ink)" }}>
-                That's the business that gets the next call. And the one after that.
-              </p>
-              <p className="body-soft mt-4 max-w-[560px]">
-                You don't apply to the whitelist. You build your way onto it. One answered call at
-                a time.
+                The shift
               </p>
               <p
-                className="font-display-italic mt-10"
-                style={{ fontSize: "clamp(22px, 2.2vw, 30px)", color: "var(--color-ember-deep)" }}
+                className="font-display mt-4"
+                style={{
+                  fontSize: "clamp(26px, 3vw, 40px)",
+                  lineHeight: 1.15,
+                  letterSpacing: "-0.02em",
+                  color: "var(--color-ink)",
+                }}
               >
-                Emmy is how you build it.
+                They're not tracking your reviews.{" "}
+                <span
+                  className="font-display-italic"
+                  style={{ color: "var(--color-ember-deep)" }}
+                >
+                  They're tracking your outcomes.
+                </span>
               </p>
             </div>
           </div>
+
+          <div className="mt-20 md:mt-24 flex flex-wrap items-baseline gap-x-6 md:gap-x-10 gap-y-3">
+            {["Answer.", "Appointment.", "Review."].map((w) => (
+              <span
+                key={w}
+                className="font-display"
+                style={{
+                  fontSize: "clamp(34px, 5vw, 64px)",
+                  letterSpacing: "-0.02em",
+                  color: "var(--color-ink)",
+                  lineHeight: 1,
+                }}
+              >
+                {w}
+              </span>
+            ))}
+          </div>
+
+          <p
+            className="font-display mt-16 md:mt-20 max-w-[820px]"
+            style={{
+              fontSize: "clamp(24px, 2.6vw, 36px)",
+              lineHeight: 1.2,
+              letterSpacing: "-0.015em",
+              color: "var(--color-ink)",
+            }}
+          >
+            That's the business that gets the call{" "}
+            <span className="font-display-italic" style={{ color: "var(--color-ember-deep)" }}>
+              when the moment is on the line.
+            </span>
+          </p>
         </div>
+
+        {/* Gradient transition into the dark question section */}
+        <div
+          aria-hidden
+          className="h-24 md:h-32"
+          style={{
+            background:
+              "linear-gradient(180deg, var(--color-cream) 0%, rgba(18,18,18,0.0) 0%, rgba(18,18,18,0.6) 70%, rgba(10,10,10,1) 100%)",
+          }}
+        />
       </section>
 
       {/* SECTION SIX — THE QUESTION */}
