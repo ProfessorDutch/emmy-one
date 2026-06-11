@@ -490,7 +490,7 @@ function WhatsNext() {
           />
           <div className="absolute bottom-0 left-0 right-0 p-5 md:p-12">
             <div className="mx-auto max-w-[1280px]">
-              <Eyebrow className="text-white/70">6:00 AM · One lit pin</Eyebrow>
+              <Eyebrow>6:00 AM · One lit pin</Eyebrow>
               <p
                 className="font-display text-white max-w-[900px] mt-4"
                 style={{
