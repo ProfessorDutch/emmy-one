@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { ArrowLeft } from "lucide-react";
 import heroImg from "@/assets/whats-next-hero.jpg";
 import img01 from "@/assets/ae-missed-calls.jpg";
 import netImg from "@/assets/ae-safety-net.jpg";
@@ -312,8 +313,14 @@ function WhatsNext() {
           }}
         />
         <div className="relative z-10 px-5 md:px-10 pt-6 md:pt-8 flex items-center justify-between">
-          <Link to="/" className="font-display tracking-tight text-[20px] md:text-[22px] hover:opacity-80 transition-opacity">MeetEmmy</Link>
+          <Link to="/" className="relative z-50 inline-flex items-center min-h-[44px] px-2 -mx-2 font-display tracking-tight text-[20px] md:text-[22px] hover:opacity-80 transition-opacity">MeetEmmy</Link>
           <p className="eyebrow">Page two</p>
+        </div>
+        <div className="relative z-10 px-5 md:px-10 pt-2 pb-4">
+          <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium min-h-[44px] hover:opacity-80 transition-opacity" style={{ color: "rgba(255,255,255,0.65)" }}>
+            <ArrowLeft className="h-4 w-4" />
+            Back
+          </Link>
         </div>
         <div className="relative z-10 flex-1 flex items-center px-5 md:px-10 pb-12 md:pb-16 pt-10 md:pt-12">
           <div className="mx-auto w-full max-w-[1280px]">
@@ -1066,6 +1073,14 @@ function WhatsNext() {
           </div>
         </div>
       </section>
+      <div className="bg-cream px-5 md:px-10 py-8">
+        <div className="mx-auto max-w-[980px]">
+          <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium min-h-[44px] hover:opacity-80 transition-opacity" style={{ color: "var(--color-ink)" }}>
+            <ArrowLeft className="h-4 w-4" />
+            Back to story
+          </Link>
+        </div>
+      </div>
     </main>
   );
 }
