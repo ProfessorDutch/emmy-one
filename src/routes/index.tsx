@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const PHONE = "(888) 555-1212";
+const PHONE = "(844) 321-3669";
 
 function MarkerUnderline({ className = "" }: { className?: string }) {
   return (
