@@ -512,8 +512,8 @@ function WhatsNext() {
             <div className="md:col-span-5">
               <ChapterMark n="03" label="The First A-Ha" />
               <h2 className="section-opener mt-8">
-                Emmy wasn't built to{" "}
-                <span className="font-display-italic">answer phones.</span>
+                Is this an{" "}
+                <span className="font-display-italic">emergency?</span>
               </h2>
             </div>
             <div className="md:col-span-7 space-y-6 md:pt-3">
