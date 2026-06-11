@@ -1001,7 +1001,7 @@ function CTA() {
               lineHeight: 1.4,
             }}
           >
-            Don't introduce yourself. Just tell Emmy you have a problem.
+            Hear what it sounds like as the customer. Book an appointment. Receive a copy of the full call transcript.
           </p>
 
           <a
