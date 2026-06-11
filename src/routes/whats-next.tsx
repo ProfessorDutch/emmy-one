@@ -591,119 +591,100 @@ function WhatsNext() {
       </section>
 
       {/* SECTION FIVE — PROMINENCE */}
-      <section className="relative bg-cream">
-        <div
-          className="absolute inset-x-0 top-0 h-[3px]"
-          style={{ background: "var(--color-ember)" }}
-        />
-        <div className="mx-auto max-w-[980px] px-5 md:px-10 py-28 md:py-40">
-          <ChapterMark n="05" label="Prominence" />
-
-          <h2
-            className="font-display mt-10"
+      <section className="bg-white">
+        <div className="relative w-full">
+          <img
+            src={img07}
+            alt="A service truck idling at dawn, headlights on, ready before anyone else"
+            loading="lazy"
+            width={1600}
+            height={1100}
+            className="w-full h-[55svh] md:h-[78svh] object-cover"
+          />
+          <div
+            className="absolute inset-0"
             style={{
-              fontSize: "clamp(44px, 7vw, 96px)",
-              lineHeight: 1,
-              letterSpacing: "-0.03em",
-              color: "var(--color-ink)",
+              background:
+                "linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.65) 100%)",
             }}
-          >
-            Can I{" "}
-            <span className="font-display-italic" style={{ color: "var(--color-ember-deep)" }}>
-              trust you?
-            </span>
-          </h2>
-
-          <div className="mt-16 md:mt-20 grid md:grid-cols-12 gap-10 md:gap-16">
-            <div className="md:col-span-5">
+          />
+          <div className="absolute bottom-0 left-0 right-0 p-5 md:p-12">
+            <div className="mx-auto max-w-[1280px]">
+              <Eyebrow>Answer · Appointment · Review</Eyebrow>
               <p
-                className="eyebrow"
-                style={{ color: "var(--color-ember-deep)", letterSpacing: "0.22em" }}
-              >
-                What it actually is
-              </p>
-              <p
-                className="font-display mt-4"
+                className="font-display text-white max-w-[820px] mt-3"
                 style={{
-                  fontSize: "clamp(22px, 2.1vw, 30px)",
-                  lineHeight: 1.3,
-                  color: "var(--color-ink)",
-                }}
-              >
-                Angi. Yelp. Google. Every platform with someone in crisis, holding a short list of
-                who they can hand the moment to.
-              </p>
-            </div>
-
-            <div className="md:col-span-7 md:border-l md:pl-12" style={{ borderColor: "rgba(204,85,40,0.35)" }}>
-              <p
-                className="eyebrow"
-                style={{ color: "var(--color-ember-deep)", letterSpacing: "0.22em" }}
-              >
-                The shift
-              </p>
-              <p
-                className="font-display mt-4"
-                style={{
-                  fontSize: "clamp(26px, 3vw, 40px)",
-                  lineHeight: 1.15,
+                  fontSize: "clamp(28px, 4vw, 48px)",
+                  lineHeight: 1.06,
                   letterSpacing: "-0.02em",
-                  color: "var(--color-ink)",
                 }}
               >
-                They're not tracking your reviews.{" "}
-                <span
-                  className="font-display-italic"
-                  style={{ color: "var(--color-ember-deep)" }}
-                >
-                  They're tracking your outcomes.
+                The business that gets the call{" "}
+                <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+                  when the moment is on the line.
                 </span>
               </p>
             </div>
           </div>
-
-          <div className="mt-20 md:mt-24 flex flex-wrap items-baseline gap-x-6 md:gap-x-10 gap-y-3">
-            {["Answer.", "Appointment.", "Review."].map((w) => (
-              <span
-                key={w}
-                className="font-display"
-                style={{
-                  fontSize: "clamp(34px, 5vw, 64px)",
-                  letterSpacing: "-0.02em",
-                  color: "var(--color-ink)",
-                  lineHeight: 1,
-                }}
-              >
-                {w}
-              </span>
-            ))}
-          </div>
-
-          <p
-            className="font-display mt-16 md:mt-20 max-w-[820px]"
-            style={{
-              fontSize: "clamp(24px, 2.6vw, 36px)",
-              lineHeight: 1.2,
-              letterSpacing: "-0.015em",
-              color: "var(--color-ink)",
-            }}
-          >
-            That's the business that gets the call{" "}
-            <span className="font-display-italic" style={{ color: "var(--color-ember-deep)" }}>
-              when the moment is on the line.
-            </span>
-          </p>
         </div>
 
-        {/* Gradient transition into the dark question section */}
-        <div
-          aria-hidden
-          className="h-24 md:h-32"
-          style={{
-            background:
-              "linear-gradient(180deg, var(--color-cream) 0%, rgba(18,18,18,0.0) 0%, rgba(18,18,18,0.6) 70%, rgba(10,10,10,1) 100%)",
-          }}
-        />
+        <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
+          <div className="grid md:grid-cols-12 gap-10 md:gap-20 items-start">
+            <div className="md:col-span-5">
+              <ChapterMark n="05" label="Prominence" />
+              <h2 className="section-opener mt-8">
+                Can I{" "}
+                <span className="font-display-italic">trust you?</span>
+              </h2>
+            </div>
+            <div className="md:col-span-7 space-y-6 md:pt-3">
+              <p className="body-lg max-w-[560px]">
+                Angi. Yelp. Google. Every platform with someone in crisis is holding a short list of
+                who they can hand the moment to.
+              </p>
+              <p className="body-soft max-w-[560px]">
+                They're not tracking your reviews. They're tracking your outcomes — the quiet record
+                of what actually happened after the call connected.
+              </p>
+              <p
+                className="font-display-italic pt-2"
+                style={{ fontSize: "clamp(22px, 2.2vw, 30px)", color: "var(--color-ember)" }}
+              >
+                Answer. Appointment. Review.
+              </p>
+            </div>
+          </div>
+
+          {/* Outcome triad — quiet hairline cards */}
+          <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-px bg-[rgba(20,15,10,0.12)] border-y border-[rgba(20,15,10,0.12)]">
+            {[
+              { n: "01", k: "Answer", v: "Picked up. Live. Before the next name on the list." },
+              { n: "02", k: "Appointment", v: "Booked on the calendar — not promised, not pending." },
+              { n: "03", k: "Review", v: "Closed loop. The outcome that earns the next call." },
+            ].map((item) => (
+              <div key={item.n} className="bg-white px-6 md:px-8 py-10 md:py-12">
+                <p
+                  className="eyebrow-muted"
+                  style={{ letterSpacing: "0.22em", color: "var(--color-ember-deep)" }}
+                >
+                  {item.n}
+                </p>
+                <p
+                  className="font-display mt-5"
+                  style={{
+                    fontSize: "clamp(28px, 3vw, 40px)",
+                    lineHeight: 1,
+                    letterSpacing: "-0.02em",
+                    color: "var(--color-ink)",
+                  }}
+                >
+                  {item.k}
+                </p>
+                <p className="body-soft mt-4">{item.v}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* SECTION SIX — THE QUESTION */}
