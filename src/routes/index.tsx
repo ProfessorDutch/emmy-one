@@ -812,7 +812,7 @@ function Proof() {
           width={1920}
           height={1080}
           aria-hidden="true"
-          className="absolute inset-y-0 left-0 h-full w-full md:w-[68%] object-cover object-left pointer-events-none select-none"
+          className="absolute inset-y-0 left-0 h-full w-full md:w-[68%] object-cover object-center md:object-left pointer-events-none select-none"
           style={{
             WebkitMaskImage:
               "linear-gradient(to right, #000 0%, #000 55%, transparent 95%)",
