@@ -490,20 +490,15 @@ function WhatsNext() {
           />
           <div className="absolute bottom-0 left-0 right-0 p-5 md:p-12">
             <div className="mx-auto max-w-[1280px]">
-              <Eyebrow>6:00 AM · One lit pin</Eyebrow>
               <p
-                className="font-display text-white max-w-[760px] mt-3"
+                className="font-display text-white max-w-[900px]"
                 style={{
                   fontSize: "clamp(28px, 4vw, 48px)",
                   lineHeight: 1.06,
                   letterSpacing: "-0.02em",
                 }}
               >
-                Fifteen seconds.
-                <br />
-                <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                  That's the window.
-                </span>
+                The six seconds nobody talks about.
               </p>
             </div>
           </div>
@@ -511,7 +506,7 @@ function WhatsNext() {
         <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
           <div className="grid md:grid-cols-12 gap-10 md:gap-20 items-start">
             <div className="md:col-span-5">
-              <ChapterMark n="03" label="The first a-ha" />
+              <ChapterMark n="03" label="The First A-Ha" />
               <h2 className="section-opener mt-8">
                 Emmy wasn't built to{" "}
                 <span className="font-display-italic">answer phones.</span>
@@ -519,19 +514,19 @@ function WhatsNext() {
             </div>
             <div className="md:col-span-7 space-y-6 md:pt-3">
               <p className="body-lg max-w-[560px]">
-                She was built around the psychology of someone in crisis. What they need to hear.
-                How long they'll wait. What it takes for them to say yes to a time.
+                She was built for the six seconds after someone decides they need help and before
+                they decide who gets the job.
               </p>
               <p className="body-soft max-w-[560px]">
                 Google knows this. It's why prominence exists as a ranking factor. In milliseconds,
-                Google is asking one question. Which business is most likely to pick up right now
-                and get this person to an appointment.
+                Google is asking one question. Which business is most likely to pick up right now and
+                get this person to an appointment.
               </p>
               <p
                 className="font-display-italic pt-2"
                 style={{ fontSize: "clamp(22px, 2.2vw, 30px)", color: "var(--color-ember)" }}
               >
-                Emmy is the answer to that question. Every single time.
+                Someone in crisis doesn't wait.
               </p>
             </div>
           </div>
