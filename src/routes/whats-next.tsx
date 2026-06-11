@@ -1073,6 +1073,14 @@ function WhatsNext() {
           </div>
         </div>
       </section>
+      <div className="bg-cream px-5 md:px-10 py-8">
+        <div className="mx-auto max-w-[980px]">
+          <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium min-h-[44px] hover:opacity-80 transition-opacity" style={{ color: "var(--color-ink)" }}>
+            <ArrowLeft className="h-4 w-4" />
+            Back to story
+          </Link>
+        </div>
+      </div>
     </main>
   );
 }
