@@ -567,6 +567,7 @@ function WhatsNext() {
                     It's ranking presence.
                   </span>
                 </h2>
+                <MarkerUnderline className="w-24 md:w-32" />
               </div>
               <div className="md:col-span-5 space-y-5">
                 <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
