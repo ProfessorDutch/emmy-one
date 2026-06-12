@@ -229,13 +229,22 @@ function ChapterMark({ n, label }: { n: string; label: string }) {
         className="font-display-italic"
         style={{ fontSize: 28, color: "var(--color-ember)", lineHeight: 1 }}
       >
-        {n}
+        Chapter {n}
       </span>
       <span className="rule-orange" />
       <p className="eyebrow" style={{ letterSpacing: "0.22em" }}>
         {label}
       </p>
     </div>
+  );
+}
+
+function MarkerUnderline({ className = "" }: { className?: string }) {
+  return (
+    <div
+      aria-hidden
+      className={`block mt-1 h-2 rounded-full bg-[var(--color-ember)] opacity-90 ${className}`}
+    />
   );
 }
 
@@ -351,25 +360,12 @@ function WhatsNext() {
             <div className="md:col-span-7 relative">
               <img
                 src={img01}
-                alt="A phone face-up on a workbench, screen lit with the word Answered"
+                alt="A phone face-up on a workbench, screen showing a recent calls list"
                 loading="lazy"
                 width={1600}
                 height={1100}
                 className="w-full h-[60svh] md:h-[78svh] object-cover"
               />
-              <div
-                className="absolute left-5 bottom-5 md:left-8 md:bottom-8"
-                style={{
-                  background: "rgba(10,10,10,0.78)",
-                  color: "white",
-                  padding: "10px 14px",
-                  letterSpacing: "0.22em",
-                  fontSize: 11,
-                  textTransform: "uppercase",
-                }}
-              >
-                Answered
-              </div>
             </div>
             <div className="md:col-span-5">
               <ChapterMark n="01" label="The find" />
@@ -379,6 +375,7 @@ function WhatsNext() {
                   leaving.
                 </span>
               </h2>
+              <MarkerUnderline className="w-24 md:w-32" />
               <div className="mt-10 space-y-6 max-w-[520px]">
                 <p className="body-lg">
                   Every time the phone rang and nobody picked up, they moved to the next name.
@@ -441,6 +438,7 @@ function WhatsNext() {
               deployment ready.
             </span>
           </h2>
+          <div className="mt-1 flex justify-center"><MarkerUnderline className="w-24 md:w-32" /></div>
           <div className="mt-12 space-y-6">
             <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
               Your staff runs your business. They always have. Emmy catches what the moment doesn't
@@ -514,8 +512,9 @@ function WhatsNext() {
               <ChapterMark n="03" label="The First A-Ha" />
               <h2 className="section-opener mt-8">
                 Is this an{" "}
-                <span className="font-display-italic">emergency?</span>
+                <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>emergency?</span>
               </h2>
+              <MarkerUnderline className="w-24 md:w-32" />
             </div>
             <div className="md:col-span-7 space-y-6 md:pt-3">
               <p className="body-lg max-w-[560px]">
@@ -568,6 +567,7 @@ function WhatsNext() {
                     It's ranking presence.
                   </span>
                 </h2>
+                <MarkerUnderline className="w-24 md:w-32" />
               </div>
               <div className="md:col-span-5 space-y-5">
                 <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
@@ -634,8 +634,9 @@ function WhatsNext() {
               <ChapterMark n="05" label="Prominence" />
               <h2 className="section-opener mt-8">
                 Can I{" "}
-                <span className="font-display-italic">trust you?</span>
+                <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>trust you?</span>
               </h2>
+              <MarkerUnderline className="w-24 md:w-32" />
             </div>
             <div className="md:col-span-7 space-y-6 md:pt-3">
               <p className="body-lg max-w-[560px]">
@@ -761,6 +762,7 @@ function WhatsNext() {
                   brings.
                 </span>
               </h2>
+              <MarkerUnderline className="w-24 md:w-32" />
             </div>
             <div className="md:col-span-6">
               <p className="body-lg max-w-[520px]" style={{ color: "rgba(255,255,255,0.85)" }}>
@@ -816,6 +818,7 @@ function WhatsNext() {
                   first.
                 </span>
               </h2>
+              <MarkerUnderline className="w-24 md:w-32" />
               <p className="body-lg mt-8 max-w-[440px]" style={{ color: "var(--color-ink)" }}>
                 Before the funnel. Before the campaigns. Before any of it.
               </p>
@@ -919,6 +922,7 @@ function WhatsNext() {
                 </span>{" "}
                 By us.
               </h2>
+              <MarkerUnderline className="w-24 md:w-32" />
               <div className="mt-10 space-y-5">
                 <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
                   Live within 24 to 48 hours.
