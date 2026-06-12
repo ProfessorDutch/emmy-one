@@ -438,6 +438,7 @@ function WhatsNext() {
               deployment ready.
             </span>
           </h2>
+          <div className="mt-1 flex justify-center"><MarkerUnderline className="w-24 md:w-32" /></div>
           <div className="mt-12 space-y-6">
             <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
               Your staff runs your business. They always have. Emmy catches what the moment doesn't
