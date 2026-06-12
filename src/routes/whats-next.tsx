@@ -510,7 +510,7 @@ function WhatsNext() {
               <ChapterMark n="03" label="The First A-Ha" />
               <h2 className="section-opener mt-8">
                 Is this an{" "}
-                <span className="font-display-italic">emergency?</span>
+                <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>emergency?</span>
               </h2>
             </div>
             <div className="md:col-span-7 space-y-6 md:pt-3">
