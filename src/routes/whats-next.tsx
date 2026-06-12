@@ -375,6 +375,7 @@ function WhatsNext() {
                   leaving.
                 </span>
               </h2>
+              <MarkerUnderline className="w-24 md:w-32" />
               <div className="mt-10 space-y-6 max-w-[520px]">
                 <p className="body-lg">
                   Every time the phone rang and nobody picked up, they moved to the next name.
