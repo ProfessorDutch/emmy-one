@@ -922,6 +922,7 @@ function WhatsNext() {
                 </span>{" "}
                 By us.
               </h2>
+              <MarkerUnderline className="w-24 md:w-32" />
               <div className="mt-10 space-y-5">
                 <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
                   Live within 24 to 48 hours.
