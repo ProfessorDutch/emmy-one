@@ -762,6 +762,7 @@ function WhatsNext() {
                   brings.
                 </span>
               </h2>
+              <MarkerUnderline className="w-24 md:w-32" />
             </div>
             <div className="md:col-span-6">
               <p className="body-lg max-w-[520px]" style={{ color: "rgba(255,255,255,0.85)" }}>
