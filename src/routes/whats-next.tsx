@@ -514,6 +514,7 @@ function WhatsNext() {
                 Is this an{" "}
                 <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>emergency?</span>
               </h2>
+              <MarkerUnderline className="w-24 md:w-32" />
             </div>
             <div className="md:col-span-7 space-y-6 md:pt-3">
               <p className="body-lg max-w-[560px]">
