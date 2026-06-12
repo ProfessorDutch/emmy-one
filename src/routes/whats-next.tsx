@@ -229,13 +229,22 @@ function ChapterMark({ n, label }: { n: string; label: string }) {
         className="font-display-italic"
         style={{ fontSize: 28, color: "var(--color-ember)", lineHeight: 1 }}
       >
-        {n}
+        Chapter {n}
       </span>
       <span className="rule-orange" />
       <p className="eyebrow" style={{ letterSpacing: "0.22em" }}>
         {label}
       </p>
     </div>
+  );
+}
+
+function MarkerUnderline({ className = "" }: { className?: string }) {
+  return (
+    <div
+      aria-hidden
+      className={`block mt-1 h-2 rounded-full bg-[var(--color-ember)] opacity-90 ${className}`}
+    />
   );
 }
 
