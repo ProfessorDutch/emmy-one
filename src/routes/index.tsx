@@ -473,6 +473,7 @@ function CallSequence() {
             >
               He starts dialing.
             </h2>
+            <MarkerUnderline className="w-24 md:w-32" />
             <p className="body-soft mt-5 max-w-[520px]" style={{ color: "rgba(255,255,255,0.78)" }}>
               7:11 a.m. The top four search results, in order. One call after
               another.
