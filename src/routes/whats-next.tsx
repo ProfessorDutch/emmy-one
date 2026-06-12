@@ -818,6 +818,7 @@ function WhatsNext() {
                   first.
                 </span>
               </h2>
+              <MarkerUnderline className="w-24 md:w-32" />
               <p className="body-lg mt-8 max-w-[440px]" style={{ color: "var(--color-ink)" }}>
                 Before the funnel. Before the campaigns. Before any of it.
               </p>
