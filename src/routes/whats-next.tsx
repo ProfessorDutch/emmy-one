@@ -360,25 +360,12 @@ function WhatsNext() {
             <div className="md:col-span-7 relative">
               <img
                 src={img01}
-                alt="A phone face-up on a workbench, screen lit with the word Answered"
+                alt="A phone face-up on a workbench, screen showing a recent calls list"
                 loading="lazy"
                 width={1600}
                 height={1100}
                 className="w-full h-[60svh] md:h-[78svh] object-cover"
               />
-              <div
-                className="absolute left-5 bottom-5 md:left-8 md:bottom-8"
-                style={{
-                  background: "rgba(10,10,10,0.78)",
-                  color: "white",
-                  padding: "10px 14px",
-                  letterSpacing: "0.22em",
-                  fontSize: 11,
-                  textTransform: "uppercase",
-                }}
-              >
-                Answered
-              </div>
             </div>
             <div className="md:col-span-5">
               <ChapterMark n="01" label="The find" />
