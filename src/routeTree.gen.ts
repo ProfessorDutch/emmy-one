@@ -9,14 +9,8 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WhatsNextRouteImport } from './routes/whats-next'
 import { Route as IndexRouteImport } from './routes/index'
 
-const WhatsNextRoute = WhatsNextRouteImport.update({
-  id: '/whats-next',
-  path: '/whats-next',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -25,39 +19,28 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/whats-next': typeof WhatsNextRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/whats-next': typeof WhatsNextRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/whats-next': typeof WhatsNextRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/whats-next'
+  fullPaths: '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/whats-next'
-  id: '__root__' | '/' | '/whats-next'
+  to: '/'
+  id: '__root__' | '/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  WhatsNextRoute: typeof WhatsNextRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/whats-next': {
-      id: '/whats-next'
-      path: '/whats-next'
-      fullPath: '/whats-next'
-      preLoaderRoute: typeof WhatsNextRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -70,7 +53,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  WhatsNextRoute: WhatsNextRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
