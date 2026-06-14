@@ -15,8 +15,9 @@ import img07 from "@/assets/ae-07-truck-dawn.jpg";
 import img07Fleet from "@/assets/ae-07-fleet-dawn.jpg";
 import img08 from "@/assets/ae-08-phone-down.jpg";
 import img09 from "@/assets/ae-09-aerial-dawn.jpg";
+import phoneAppointmentAsset from "@/assets/phone-tims-tree-appointment-mobile.jpg.asset.json";
 
-const phoneAppointment = "/phone-tims-tree-appointment-mobile.jpg";
+const phoneAppointment = phoneAppointmentAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
