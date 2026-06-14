@@ -1069,7 +1069,7 @@ function Rail({ active = 1 }: { active?: 1 | 2 | 3 | 4 }) {
     { n: "01", label: "The net" },
     { n: "02", label: "Conversion" },
     { n: "03", label: "Footprint" },
-    { n: "04", label: "The system" },
+    { n: "04", label: "Expansion" },
   ];
   return (
     <div className="w-full">
