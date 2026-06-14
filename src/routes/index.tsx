@@ -7,7 +7,7 @@ import emptyOffice from "@/assets/empty-office-ringing.jpg";
 import coverageMap from "@/assets/coverage-map.jpg";
 import phoneIncoming from "@/assets/phone-incoming.jpg";
 import heroImg from "@/assets/whats-next-hero.jpg";
-import img01 from "@/assets/ae-missed-calls.jpg";
+import img01 from "@/assets/phone-tims-tree.png";
 import netImg from "@/assets/ae-safety-net.jpg";
 import img03 from "@/assets/ae-03-homeowner.jpg";
 import img06 from "@/assets/ae-lights-on-map.jpg";
