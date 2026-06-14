@@ -689,14 +689,16 @@ function TheFind() {
     <section className="bg-white">
       <div className="mx-auto max-w-[1320px] px-5 md:px-10 py-20 md:py-32">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
-          <div className="md:col-span-7 relative">
+          <div className="md:col-span-7 relative flex justify-center" style={{ background: "var(--color-muted, #f5f1ea)" }}>
             <img
               src={phoneAppointment.url}
               alt="A phone showing the Recents call list — Tim's Tree and Landscaping answered at 6:39, a 2:19 appointment call"
-              loading="lazy"
-              width={1600}
-              height={1100}
-              className="w-full h-[60svh] md:h-[78svh] object-contain"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width={1320}
+              height={1980}
+              className="max-w-full h-auto max-h-[70svh] md:max-h-[80svh] w-auto object-contain"
             />
           </div>
           <div className="md:col-span-5">
@@ -959,6 +961,11 @@ function MeetEmmy() {
           <p className="body-lg mb-6">
             At 6 AM they aren't looking for information. They're in crisis.
           </p>
+          <div className="my-8 flex items-start gap-4 border-l-2 pl-5 md:pl-6" style={{ borderColor: "var(--color-ember)" }}>
+            <p className="font-display-italic" style={{ fontSize: "clamp(24px, 3vw, 38px)", lineHeight: 1.15, color: "var(--color-ember)" }}>
+              "Is there a tree down on the property?"
+            </p>
+          </div>
           <p className="body-lg mb-6">
             Emmy was built for that moment. Not for your office. For the fifteen seconds after someone decides they need help — and before they decide who gets the job.
           </p>
@@ -1067,7 +1074,7 @@ function Rail({ active = 1 }: { active?: 1 | 2 | 3 | 4 }) {
     { n: "01", label: "The net" },
     { n: "02", label: "Conversion" },
     { n: "03", label: "Footprint" },
-    { n: "04", label: "The system" },
+    { n: "04", label: "Expansion" },
   ];
   return (
     <div className="w-full">
@@ -1145,7 +1152,7 @@ function TheStages() {
               <span style={{ color: "white" }}>Stage three</span> builds the footprint. You're not on the list. You're the first call.
             </p>
             <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
-              <span style={{ color: "white" }}>Stage four.</span> The full system. Running.
+              <span style={{ color: "white" }}>Stage four.</span> Expansion. The full system. Running.
             </p>
           </div>
           <div className="md:col-span-5 md:border-l md:pl-10 border-white/10">
