@@ -1457,7 +1457,7 @@ function EnrollmentForm() {
         {loading ? "Sending…" : "Say yes — start enrollment"}
       </button>
       <p className="mt-5 text-center" style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-muted-foreground)" }}>
-        No card. No commitment until Emmy goes live.
+        No card. No commitment. No contract.
       </p>
     </form>
   );
