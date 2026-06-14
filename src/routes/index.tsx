@@ -1147,7 +1147,7 @@ function TheStages() {
               <span style={{ color: "white" }}>Stage three</span> builds the footprint. You're not on the list. You're the first call.
             </p>
             <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
-              <span style={{ color: "white" }}>Stage four.</span> The full system. Running.
+              <span style={{ color: "white" }}>Stage four.</span> Expansion. The full system. Running.
             </p>
           </div>
           <div className="md:col-span-5 md:border-l md:pl-10 border-white/10">
