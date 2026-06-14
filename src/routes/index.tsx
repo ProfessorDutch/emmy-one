@@ -958,18 +958,67 @@ function MeetEmmy() {
           <p className="body-lg mb-6">
             At 6 AM they aren't looking for information. They're in crisis.
           </p>
-          <p className="body-lg mb-6">
+          <p className="body-lg">
             Emmy was built for that moment. Not for your office. For the fifteen seconds after someone decides they need help — and before they decide who gets the job.
           </p>
-          <p className="body-soft mb-6">
-            She isn't a call center. She isn't a message service. She is crisis management. Built around the psychology of someone in crisis — what they need to hear, how long they'll wait, what it takes for them to say yes to a time.
-          </p>
-          <p className="body-soft mb-6">
-            Then she books the appointment.
-          </p>
-          <p className="body-soft">
-            She's where the infrastructure starts. The appointment is the foundation. Everything else is built on top of it.
-          </p>
+        </div>
+
+        {/* Who she is — staged definition */}
+        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start mb-20 md:mb-28">
+          <div className="md:col-span-5">
+            <p className="eyebrow" style={{ color: "var(--color-muted-foreground)" }}>What she is</p>
+          </div>
+          <div className="md:col-span-7">
+            <p
+              className="font-display"
+              style={{
+                fontSize: "clamp(28px, 3.4vw, 44px)",
+                lineHeight: 1.15,
+                letterSpacing: "-0.015em",
+              }}
+            >
+              <span style={{ color: "var(--color-muted-foreground)" }}>She isn't a call center.</span>
+              <br />
+              <span style={{ color: "var(--color-muted-foreground)" }}>She isn't a message service.</span>
+              <br />
+              <span className="font-display-italic" style={{ color: "var(--color-ink)" }}>
+                She is crisis management.
+              </span>
+            </p>
+            <p className="body-soft mt-8 max-w-[560px]">
+              Built around the psychology of someone in crisis — what they need to hear, how long they'll wait, what it takes for them to say yes to a time.
+            </p>
+            <p className="body-lg mt-6 max-w-[560px]" style={{ color: "var(--color-ink)" }}>
+              Then she books the appointment.
+            </p>
+          </div>
+        </div>
+
+        {/* Infrastructure pull — sets up Chapter 12 */}
+        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start mb-20 md:mb-24">
+          <div className="md:col-span-5">
+            <span className="rule-orange block" />
+            <p className="eyebrow mt-5" style={{ color: "var(--color-ember)" }}>The foundation</p>
+          </div>
+          <div className="md:col-span-7">
+            <p
+              className="font-display"
+              style={{
+                fontSize: "clamp(26px, 3vw, 38px)",
+                lineHeight: 1.2,
+                letterSpacing: "-0.015em",
+                color: "var(--color-ink)",
+              }}
+            >
+              She's where the{" "}
+              <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>infrastructure</span>{" "}
+              starts.
+              <br />
+              <span style={{ color: "var(--color-muted-foreground)" }}>The appointment is the foundation.</span>
+              <br />
+              <span style={{ color: "var(--color-muted-foreground)" }}>Everything else is built on top of it.</span>
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[var(--color-border)] border-y" style={{ borderColor: "var(--color-border)" }}>
