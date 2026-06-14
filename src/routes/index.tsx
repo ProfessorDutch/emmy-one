@@ -694,7 +694,7 @@ function Shift() {
 
 function TheFind() {
   return (
-    <section className="bg-white">
+    <section id="the-find" className="bg-white scroll-mt-0">
       <div className="mx-auto max-w-[1320px] px-5 md:px-10 py-20 md:py-32">
         <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
           <div className="md:col-span-5 md:col-start-8">
