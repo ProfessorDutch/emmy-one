@@ -961,6 +961,11 @@ function MeetEmmy() {
           <p className="body-lg mb-6">
             At 6 AM they aren't looking for information. They're in crisis.
           </p>
+          <div className="my-8 flex items-start gap-4 border-l-2 pl-5 md:pl-6" style={{ borderColor: "var(--color-ember)" }}>
+            <p className="font-display-italic" style={{ fontSize: "clamp(24px, 3vw, 38px)", lineHeight: 1.15, color: "var(--color-ember)" }}>
+              "Is there a tree down on the property?"
+            </p>
+          </div>
           <p className="body-lg mb-6">
             Emmy was built for that moment. Not for your office. For the fifteen seconds after someone decides they need help — and before they decide who gets the job.
           </p>
