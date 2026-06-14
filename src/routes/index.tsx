@@ -539,9 +539,9 @@ function TwentyFourSeven() {
 
 function Proof() {
   const stats = [
-    { n: "409", label: "calls they missed", note: "The overflow. Calls that went to voicemail, rang out, or hit the answering service while the team was busy or off the clock." },
-    { n: "105", label: "appointments booked", note: "Emmy picked up the calls the company couldn't, asked the right questions, and put the homeowner on the schedule." },
-    { n: "47", label: "closed deals", note: "Signed contracts. Real revenue. From the calls the company was never going to answer in the first place." },
+    { n: "981", label: "calls they missed", note: "Voicemail. Rang out. Answering service. Gone." },
+    { n: "105", label: "6 AM moments answered.", note: "The overflow. Caught before they reached the next name on the list." },
+    { n: "47", label: "jobs that never left.", note: "Signed contracts. Real revenue. From calls that were going to the next name on the list." },
   ];
 
   return (
@@ -616,12 +616,12 @@ function Proof() {
                 </span>
               </p>
               <p className="body-lg mb-5">
-                Emmy answered while the office was on another line. Asked the right questions. Booked the appointment. The crew showed up, gave the estimate, signed the job. The homeowner has no idea what Emmy is. They don't care.
+                The phone got answered. The right questions got asked. The appointment got booked. The crew showed up, gave the estimate, signed the job. The homeowner has no idea what answered. They don't care.
               </p>
               <p className="body-lg" style={{ marginBottom: 0 }}>
                 The question isn't how many calls you're getting. It's{" "}
                 <span style={{ color: "var(--color-ember)" }}>
-                  how many of the real ones are going to the next company on the list while yours rings out.
+                  how many of the real ones are going to the next name on the list while yours rings out.
                 </span>
               </p>
             </div>
@@ -716,9 +716,7 @@ function TheFind() {
               <div className="pt-2 flex items-start gap-3">
                 <span className="rule-orange mt-3" />
                 <p className="font-display-italic" style={{ fontSize: "clamp(22px, 2.2vw, 30px)", lineHeight: 1.2 }}>
-                  That's what was missing.
-                  <br />
-                  <span style={{ color: "var(--color-ember)" }}>Now it's not.</span>
+                  <span style={{ color: "var(--color-ember)" }}>They stopped calling at 6:39.</span>
                 </p>
               </div>
             </div>
@@ -1213,7 +1211,7 @@ function Pricing() {
                 We get paid when the call becomes an appointment.
                 <br />
                 <span style={{ color: "var(--color-ember-deep)" }}>
-                  Same thing Emmy's focused on.
+                  That's the alignment.
                 </span>
               </p>
             </div>
