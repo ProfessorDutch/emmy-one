@@ -696,7 +696,7 @@ function TheFind() {
               loading="lazy"
               width={1600}
               height={1100}
-              className="w-full h-[60svh] md:h-[78svh] object-cover"
+              className="w-full h-[60svh] md:h-[78svh] object-contain"
             />
           </div>
           <div className="md:col-span-5">
