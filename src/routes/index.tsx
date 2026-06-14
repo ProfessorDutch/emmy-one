@@ -19,6 +19,14 @@ import phoneAppointment from "@/assets/phone-tims-tree-appointment-mobile.jpg.as
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: phoneAppointment.url,
+        type: "image/jpeg",
+      },
+    ],
     meta: [
       { title: "MeetEmmy — Every call answered. Every hour of the day." },
       {
