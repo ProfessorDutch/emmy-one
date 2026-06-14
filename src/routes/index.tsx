@@ -15,6 +15,7 @@ import img07 from "@/assets/ae-07-truck-dawn.jpg";
 import img07Fleet from "@/assets/ae-07-fleet-dawn.jpg";
 import img08 from "@/assets/ae-08-phone-down.jpg";
 import img09 from "@/assets/ae-09-aerial-dawn.jpg";
+import phoneAppointment from "@/assets/phone-tims-tree-appointment.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -690,8 +691,8 @@ function TheFind() {
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
           <div className="md:col-span-7 relative">
             <img
-              src={img01}
-              alt="A phone face-up on a workbench, screen showing a recent calls list"
+              src={phoneAppointment.url}
+              alt="A phone showing the Recents call list — Tim's Tree and Landscaping answered at 6:39, a 2:19 appointment call"
               loading="lazy"
               width={1600}
               height={1100}
@@ -1456,7 +1457,7 @@ function EnrollmentForm() {
         {loading ? "Sending…" : "Say yes — start enrollment"}
       </button>
       <p className="mt-5 text-center" style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-muted-foreground)" }}>
-        No card. No commitment until Emmy goes live.
+        No card. No commitment. No contract.
       </p>
     </form>
   );
