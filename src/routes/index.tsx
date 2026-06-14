@@ -15,7 +15,7 @@ import img07 from "@/assets/ae-07-truck-dawn.jpg";
 import img07Fleet from "@/assets/ae-07-fleet-dawn.jpg";
 import img08 from "@/assets/ae-08-phone-down.jpg";
 import img09 from "@/assets/ae-09-aerial-dawn.jpg";
-import phoneAppointment from "@/assets/phone-tims-tree-appointment-mobile.jpg.asset.json";
+import phoneAppointment from "@/assets/phone-tims-tree-appointment-mobile.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
       {
         rel: "preload",
         as: "image",
-        href: phoneAppointment.url,
+        href: phoneAppointment,
         type: "image/jpeg",
       },
     ],
@@ -697,16 +697,16 @@ function TheFind() {
     <section className="bg-white">
       <div className="mx-auto max-w-[1320px] px-5 md:px-10 py-20 md:py-32">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
-          <div className="md:col-span-7 relative flex justify-center" style={{ background: "var(--color-muted, #f5f1ea)" }}>
+          <div className="md:col-span-7 relative flex justify-center overflow-hidden" style={{ background: "var(--color-muted, #f5f1ea)" }}>
             <img
-              src={phoneAppointment.url}
+              src={phoneAppointment}
               alt="A phone showing the Recents call list — Tim's Tree and Landscaping answered at 6:39, a 2:19 appointment call"
               loading="eager"
               fetchPriority="high"
               decoding="async"
               width={900}
               height={1298}
-              className="max-w-full h-auto max-h-[70svh] md:max-h-[80svh] w-auto object-contain"
+              className="block w-full h-[62svh] md:h-[80svh] object-contain"
             />
           </div>
           <div className="md:col-span-5">
