@@ -691,10 +691,10 @@ function TheFind() {
           <div className="md:col-span-7 relative">
             <img
               src={img01}
-              alt="A phone face-up on a workbench, screen showing a recent calls list"
+              alt="A hand holding an iPhone showing a Recents call list — four missed contractors in red, and Tim's Tree and Landscaping as a completed 2:19 outgoing call at 6:39 AM"
               loading="lazy"
               width={1600}
-              height={1100}
+              height={2000}
               className="w-full h-[60svh] md:h-[78svh] object-cover"
             />
           </div>
