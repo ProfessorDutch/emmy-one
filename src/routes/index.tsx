@@ -691,8 +691,8 @@ function TheFind() {
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
           <div className="md:col-span-7 relative">
             <img
-              src={img01}
-              alt="A phone face-up on a workbench, screen showing a recent calls list"
+              src={phoneAppointment.url}
+              alt="A phone showing the Recents call list — Tim's Tree and Landscaping answered at 6:39, a 2:19 appointment call"
               loading="lazy"
               width={1600}
               height={1100}
