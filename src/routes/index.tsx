@@ -689,14 +689,16 @@ function TheFind() {
     <section className="bg-white">
       <div className="mx-auto max-w-[1320px] px-5 md:px-10 py-20 md:py-32">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
-          <div className="md:col-span-7 relative">
+          <div className="md:col-span-7 relative flex justify-center" style={{ background: "var(--color-muted, #f5f1ea)" }}>
             <img
               src={phoneAppointment.url}
               alt="A phone showing the Recents call list — Tim's Tree and Landscaping answered at 6:39, a 2:19 appointment call"
-              loading="lazy"
-              width={1600}
-              height={1100}
-              className="w-full h-[60svh] md:h-[78svh] object-contain"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width={1320}
+              height={1980}
+              className="max-w-full h-auto max-h-[70svh] md:max-h-[80svh] w-auto object-contain"
             />
           </div>
           <div className="md:col-span-5">
