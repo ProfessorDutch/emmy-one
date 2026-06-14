@@ -769,7 +769,7 @@ function FirstAHa() {
           </div>
           <div className="md:col-span-7 space-y-6 md:pt-3">
             <p className="body-lg max-w-[560px]">
-              She was built for the 15 seconds after someone decides they need help and before they decide who gets the job.
+              Fifteen seconds. That's how long someone in crisis gives you before they move to the next one.
             </p>
             <p className="body-soft max-w-[560px]">
               Google knows this. It's why prominence exists as a ranking factor. In milliseconds, Google is asking one question. Which business is most likely to pick up right now and get this person to an appointment.
@@ -958,10 +958,19 @@ function MeetEmmy() {
           <p className="eyebrow mb-6">Chapter ten</p>
           <h2 className="section-opener mb-8">Meet Emmy.</h2>
           <p className="body-lg mb-6">
-            Emmy is not here to replace your staff. Your people run your business. Emmy catches what they miss — the call that comes in while your scheduler is on another line, while your crew is on a job, while everyone has gone home.
+            At 6 AM they aren't looking for information. They're in crisis.
+          </p>
+          <p className="body-lg mb-6">
+            Emmy was built for that moment. Not for your office. For the fifteen seconds after someone decides they need help — and before they decide who gets the job.
+          </p>
+          <p className="body-soft mb-6">
+            She isn't a call center. She isn't a message service. She is crisis management. Built around the psychology of someone in crisis — what they need to hear, how long they'll wait, what it takes for them to say yes to a time.
+          </p>
+          <p className="body-soft mb-6">
+            Then she books the appointment.
           </p>
           <p className="body-soft">
-            She isn't a call center. She isn't a message service. She was built around the psychology of someone in crisis — what they need to hear, how long they'll wait, what it takes for them to say yes to a time. Then she books the appointment.
+            She's where the infrastructure starts. The appointment is the foundation. Everything else is built on top of it.
           </p>
         </div>
 
@@ -977,12 +986,6 @@ function MeetEmmy() {
             </div>
           ))}
         </div>
-
-        <p className="font-display-italic mt-16 max-w-[640px]" style={{ fontSize: "clamp(22px, 2.4vw, 30px)", lineHeight: 1.25 }}>
-          The person with the problem just wants help.
-          <br />
-          <span style={{ color: "var(--color-ember)" }}>Emmy makes sure they get it.</span>
-        </p>
       </div>
     </section>
   );
@@ -1017,17 +1020,21 @@ function TheNet() {
       <div className="relative mx-auto max-w-[760px] px-5 md:px-10 py-28 md:py-44 text-center">
         <Eyebrow>Chapter eleven · The net</Eyebrow>
         <h2 className="section-opener mt-8">
-          Emmy is{" "}
+          Your staff runs{" "}
           <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-            deployment ready.
+            your business.
           </span>
         </h2>
         <div className="mt-12 space-y-6">
           <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
-            Your staff runs your business. They always have. Emmy catches what the moment doesn't allow them to.
+            Emmy catches what the moment doesn't allow them to.
           </p>
-          <p className="body-soft" style={{ color: "rgba(255,255,255,0.55)" }}>
-            The call that comes in while your scheduler is on another line. While your crew is on a job. While everyone has gone home.
+          <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
+            The call that comes in while your scheduler is on another line.
+            <br />
+            While your crew is on a job.
+            <br />
+            While everyone has gone home.
           </p>
         </div>
         <div className="mt-14 mx-auto max-w-[520px] py-10 border-y border-white/10">
@@ -1041,8 +1048,11 @@ function TheNet() {
             </span>
           </p>
         </div>
-        <p className="body-soft mt-10" style={{ color: "rgba(255,255,255,0.55)" }}>
-          Every time. Without adding anything to your plate.
+        <p className="body-soft mt-10" style={{ color: "rgba(255,255,255,0.65)" }}>
+          Every time.
+        </p>
+        <p className="font-display-italic mt-12" style={{ fontSize: "clamp(22px, 2.4vw, 30px)", color: "var(--color-ember)", lineHeight: 1.2 }}>
+          Stage one. The net is in place.
         </p>
       </div>
     </section>
