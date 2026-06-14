@@ -697,7 +697,7 @@ function TheFind() {
     <section className="bg-white">
       <div className="mx-auto max-w-[1320px] px-5 md:px-10 py-20 md:py-32">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
-          <div className="md:col-span-7 relative flex justify-center overflow-hidden" style={{ background: "var(--color-muted, #f5f1ea)" }}>
+          <div className="md:col-span-7 relative w-full bg-muted overflow-hidden">
             <img
               src={phoneAppointment}
               alt="A phone showing the Recents call list — Tim's Tree and Landscaping answered at 6:39, a 2:19 appointment call"
@@ -706,7 +706,7 @@ function TheFind() {
               decoding="async"
               width={900}
               height={1298}
-              className="block w-full h-[62svh] md:h-[80svh] object-contain"
+              className="w-full h-auto object-cover"
             />
           </div>
           <div className="md:col-span-5">
