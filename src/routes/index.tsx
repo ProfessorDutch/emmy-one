@@ -696,20 +696,20 @@ function Shift() {
 function TheFind() {
   return (
     <section className="bg-white">
+      <div className="relative w-full bg-muted overflow-hidden">
+        <img
+          src={phoneAppointment}
+          alt="A phone showing the Recents call list — Tim's Tree and Landscaping answered at 6:39, a 2:19 appointment call"
+          loading="eager"
+          fetchPriority="high"
+          decoding="sync"
+          width={900}
+          height={1298}
+          className="w-full h-[58svh] md:h-[78svh] object-cover object-center"
+        />
+      </div>
       <div className="mx-auto max-w-[1320px] px-5 md:px-10 py-20 md:py-32">
-        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
-          <div className="md:col-span-7 relative w-full bg-muted overflow-hidden">
-            <img
-              src={phoneAppointment}
-              alt="A phone showing the Recents call list — Tim's Tree and Landscaping answered at 6:39, a 2:19 appointment call"
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              width={900}
-              height={1298}
-              className="w-full h-auto object-cover"
-            />
-          </div>
+        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <div className="md:col-span-5">
             <ChapterMark n="05" label="The find" />
             <h2 className="section-opener mt-8">
@@ -733,6 +733,7 @@ function TheFind() {
               </div>
             </div>
           </div>
+          <div className="md:col-span-7" />
         </div>
       </div>
     </section>
