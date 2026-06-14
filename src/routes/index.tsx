@@ -15,9 +15,7 @@ import img07 from "@/assets/ae-07-truck-dawn.jpg";
 import img07Fleet from "@/assets/ae-07-fleet-dawn.jpg";
 import img08 from "@/assets/ae-08-phone-down.jpg";
 import img09 from "@/assets/ae-09-aerial-dawn.jpg";
-import phoneAppointmentAsset from "@/assets/phone-tims-tree-appointment-mobile.jpg.asset.json";
-
-const phoneAppointment = phoneAppointmentAsset.url;
+import phoneAppointment from "@/assets/phone-tims-tree-appointment-mobile.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -696,10 +694,10 @@ function Shift() {
 
 function TheFind() {
   return (
-    <section className="bg-white">
+    <section id="the-find" className="bg-white scroll-mt-0">
       <div className="mx-auto max-w-[1320px] px-5 md:px-10 py-20 md:py-32">
-        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
-          <div className="md:col-span-5">
+        <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
+          <div className="md:col-span-5 md:col-start-8">
             <ChapterMark n="05" label="The find" />
             <h2 className="section-opener mt-8">
               The appointment was already{" "}
@@ -722,19 +720,16 @@ function TheFind() {
               </div>
             </div>
           </div>
-          <div className="md:col-span-7 md:order-first">
-            <div className="relative w-full bg-muted overflow-hidden flex items-center justify-center min-h-[56svh] md:min-h-[78svh] px-3 py-5 md:px-8 md:py-10">
-              <img
-                src={phoneAppointment}
-                alt="A phone showing the Recents call list — Tim's Tree and Landscaping answered at 6:39, a 2:19 appointment call"
-                loading="eager"
-                fetchPriority="high"
-                decoding="sync"
-                width={900}
-                height={1298}
-                className="block w-auto h-auto max-w-full max-h-[68svh] md:max-h-[82svh] object-contain object-top"
-              />
-            </div>
+          <div className="md:col-span-7 md:col-start-1 md:row-start-1 flex justify-center md:justify-start">
+            <img
+              src={phoneAppointment}
+              alt="A phone showing the Recents call list — Tim's Tree and Landscaping answered at 6:39, a 2:19 appointment call"
+              loading="eager"
+              fetchPriority="high"
+              width={900}
+              height={1298}
+              className="block w-full max-w-[360px] md:max-w-[520px] h-auto object-contain"
+            />
           </div>
         </div>
       </div>
