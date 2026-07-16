@@ -1201,7 +1201,7 @@ function Pricing() {
       <div className="mx-auto max-w-[1180px] px-5 md:px-10 py-28 md:py-40">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <div className="md:col-span-5">
-            <ChapterMark n="14" label="Stage one · The safety net" />
+            <ChapterMark n="13" label="Stage one · The safety net" />
             <h2 className="section-opener mt-8" style={{ color: "var(--color-ink)" }}>
               The safety net comes{" "}
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
