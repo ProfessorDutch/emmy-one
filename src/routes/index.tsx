@@ -98,7 +98,7 @@ function Index() {
       {/* ACT FIVE — The Solution */}
       <MeetEmmy />
       <TheNet />
-      <TheList />
+      
       <TheStages />
       <Pricing />
 
