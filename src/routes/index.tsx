@@ -1602,7 +1602,7 @@ function Close() {
         width={1920}
         height={1200}
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ opacity: 0.5 }}
+        style={{ opacity: 0.5, objectPosition: "center 75%" }}
       />
       <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(10,10,10,0.8) 0%, rgba(10,10,10,0.55) 45%, rgba(10,10,10,0.98) 100%)" }} />
       <div className="relative z-10 flex-1 flex items-center justify-center px-5 md:px-10 py-24">
