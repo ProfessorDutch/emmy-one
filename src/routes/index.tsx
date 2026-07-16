@@ -918,6 +918,54 @@ function Prominence() {
 }
 
 /* ============================================================
+   THE NAME — the reveal at the peak
+   ============================================================ */
+
+function TheName() {
+  return (
+    <section className="relative bg-night text-white overflow-hidden">
+      <div className="absolute inset-x-0 top-0 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(204,85,40,0.5), transparent)" }} />
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse 55% 60% at 50% 50%, rgba(204,85,40,0.14) 0%, rgba(12,12,12,0) 70%)" }}
+      />
+      <div className="relative mx-auto max-w-[880px] px-5 md:px-10 py-28 md:py-44 text-center">
+        <Eyebrow>Chapter nine · The name</Eyebrow>
+        <p className="font-display mt-10" style={{ fontSize: "clamp(24px, 3.2vw, 40px)", lineHeight: 1.18, letterSpacing: "-0.01em", color: "rgba(255,255,255,0.9)" }}>
+          That short list every platform is holding?
+        </p>
+        <p className="font-display mt-6" style={{ fontSize: "clamp(24px, 3.2vw, 40px)", lineHeight: 1.18, letterSpacing: "-0.01em", color: "rgba(255,255,255,0.9)" }}>
+          It has a name.
+        </p>
+        <h2 className="section-opener mt-14">
+          <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+            The Emergency Whitelist.
+          </span>
+        </h2>
+        <div className="mt-16 mx-auto max-w-[620px] py-10 border-y border-white/10 space-y-6">
+          <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
+            You can't buy your way onto it.
+          </p>
+          <p className="font-display" style={{ fontSize: "clamp(22px, 2.4vw, 30px)", lineHeight: 1.25, color: "white" }}>
+            It accepts one currency —{" "}
+            <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+              crisis response.
+            </span>
+          </p>
+          <p className="body-soft" style={{ color: "rgba(255,255,255,0.7)" }}>
+            Answered. Booked. Showed up.
+          </p>
+        </div>
+        <p className="font-display-italic mt-14" style={{ fontSize: "clamp(22px, 2.4vw, 30px)", color: "rgba(255,255,255,0.75)", lineHeight: 1.3 }}>
+          It builds the way credit builds. One moment at a time.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
    THE QUESTION — where would Google send them?
    ============================================================ */
 
