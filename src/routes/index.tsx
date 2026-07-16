@@ -421,6 +421,7 @@ function CallSequence() {
           width={1920}
           height={1080}
           className="w-full h-[60svh] md:h-[85svh] object-cover"
+          style={{ objectPosition: "65% center" }}
         />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
         <div className="absolute inset-x-0 bottom-0 px-5 md:px-10 pb-10 md:pb-16">
