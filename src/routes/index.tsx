@@ -93,6 +93,7 @@ function Index() {
 
       {/* ACT FOUR — The Framework */}
       <Prominence />
+      <TheName />
       <TheQuestion />
 
       {/* ACT FIVE — The Solution */}
@@ -917,6 +918,54 @@ function Prominence() {
 }
 
 /* ============================================================
+   THE NAME — the reveal at the peak
+   ============================================================ */
+
+function TheName() {
+  return (
+    <section className="relative bg-night text-white overflow-hidden">
+      <div className="absolute inset-x-0 top-0 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(204,85,40,0.5), transparent)" }} />
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse 55% 60% at 50% 50%, rgba(204,85,40,0.14) 0%, rgba(12,12,12,0) 70%)" }}
+      />
+      <div className="relative mx-auto max-w-[880px] px-5 md:px-10 py-28 md:py-44 text-center">
+        <Eyebrow>Chapter nine · The name</Eyebrow>
+        <p className="font-display mt-10" style={{ fontSize: "clamp(24px, 3.2vw, 40px)", lineHeight: 1.18, letterSpacing: "-0.01em", color: "rgba(255,255,255,0.9)" }}>
+          That short list every platform is holding?
+        </p>
+        <p className="font-display mt-6" style={{ fontSize: "clamp(24px, 3.2vw, 40px)", lineHeight: 1.18, letterSpacing: "-0.01em", color: "rgba(255,255,255,0.9)" }}>
+          It has a name.
+        </p>
+        <h2 className="section-opener mt-14">
+          <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+            The Emergency Whitelist.
+          </span>
+        </h2>
+        <div className="mt-16 mx-auto max-w-[620px] py-10 border-y border-white/10 space-y-6">
+          <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
+            You can't buy your way onto it.
+          </p>
+          <p className="font-display" style={{ fontSize: "clamp(22px, 2.4vw, 30px)", lineHeight: 1.25, color: "white" }}>
+            It accepts one currency —{" "}
+            <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+              crisis response.
+            </span>
+          </p>
+          <p className="body-soft" style={{ color: "rgba(255,255,255,0.7)" }}>
+            Answered. Booked. Showed up.
+          </p>
+        </div>
+        <p className="font-display-italic mt-14" style={{ fontSize: "clamp(22px, 2.4vw, 30px)", color: "rgba(255,255,255,0.75)", lineHeight: 1.3 }}>
+          It builds the way credit builds. One moment at a time.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
    THE QUESTION — where would Google send them?
    ============================================================ */
 
@@ -935,7 +984,7 @@ function TheQuestion() {
         />
         <div className="absolute inset-0" style={{ background: "radial-gradient(70% 80% at 50% 55%, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.85) 80%)" }} />
         <div className="relative z-10 px-5 md:px-10 py-28 max-w-[1080px] text-center">
-          <Eyebrow>Chapter nine · The question</Eyebrow>
+          <Eyebrow>Chapter ten · The question</Eyebrow>
           <p className="font-display mt-10 text-white" style={{ fontSize: "clamp(28px, 4.2vw, 54px)", lineHeight: 1.12, letterSpacing: "-0.02em" }}>
             If you were Google, and you had fifteen thousand people a year searching for what you do —
           </p>
@@ -964,7 +1013,7 @@ function MeetEmmy() {
     <section className="relative" style={{ background: "var(--color-muted)" }}>
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
         <div className="max-w-[760px] mb-16">
-          <p className="eyebrow mb-6">Chapter ten</p>
+          <p className="eyebrow mb-6">Chapter eleven</p>
           <h2 className="section-opener mb-8">Meet Emmy.</h2>
           <p className="body-lg mb-6">
             At 6 AM they aren't looking for information. They're in crisis.
@@ -1032,7 +1081,7 @@ function TheNet() {
         style={{ background: "radial-gradient(ellipse 60% 55% at 50% 45%, rgba(12,12,12,0.85) 0%, rgba(12,12,12,0.55) 45%, rgba(12,12,12,0) 80%)" }}
       />
       <div className="relative mx-auto max-w-[760px] px-5 md:px-10 py-28 md:py-44 text-center">
-        <Eyebrow>Chapter eleven · The net</Eyebrow>
+        <Eyebrow>Chapter twelve · The net</Eyebrow>
         <h2 className="section-opener mt-8">
           Your staff runs{" "}
           <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
@@ -1134,27 +1183,21 @@ function TheStages() {
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 pt-4 pb-24 md:pb-36 -mt-24 md:-mt-32 relative z-10">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-end">
           <div className="md:col-span-6">
-            <ChapterMark n="12" label="The list" />
+            <ChapterMark n="13" label="The stages" />
             <h2 className="section-opener mt-8">
-              Google keeps a different list for that person.
+              The whitelist isn't the finish line.
               <br />
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                The Emergency Whitelist.
+                It's the beginning.
               </span>
             </h2>
           </div>
           <div className="md:col-span-6 space-y-6">
             <p className="body-lg max-w-[520px]" style={{ color: "rgba(255,255,255,0.85)" }}>
-              You've spent years building Google's trust. The reviews. The ranking. The ads. When someone has time to compare companies, Google puts your business in front of them — and you earned that.
-            </p>
-            <p className="body-lg max-w-[520px]" style={{ color: "rgba(255,255,255,0.85)" }}>
-              But the person comparing companies isn't the only one searching.
+              A whitelist position isn't a status. It's a record — moment by moment, call by call, appointment by appointment.
             </p>
             <p className="body-soft max-w-[520px]" style={{ color: "rgba(255,255,255,0.65)" }}>
-              There's another search. It comes in at 6 AM, after the storm, after something gives way. That person isn't comparing anything. Their card is already out. They've already decided to spend the money. The only thing left to decide is who picks up.
-            </p>
-            <p className="body-soft max-w-[520px]" style={{ color: "rgba(255,255,255,0.65)" }}>
-              You can't buy your way onto it. You can't review your way onto it. It accepts one currency — crisis response. Answered. Booked. Showed up.
+              The road has four stages. Each one is earned by the one before it.
             </p>
           </div>
         </div>
@@ -1163,9 +1206,6 @@ function TheStages() {
         </div>
         <div className="mt-20 md:mt-28 grid md:grid-cols-12 gap-10">
           <div className="md:col-span-7 max-w-[640px] space-y-6">
-            <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
-              It builds the way credit builds. One moment at a time.
-            </p>
             <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
               <span style={{ color: "white" }}>Crisis managed.</span> The net goes in. Every call answered. Every appointment booked.
             </p>
@@ -1178,10 +1218,13 @@ function TheStages() {
           </div>
           <div className="md:col-span-5 md:border-l md:pl-10 border-white/10">
             <p className="font-display-italic" style={{ fontSize: "clamp(24px, 2.6vw, 32px)", color: "white", lineHeight: 1.2 }}>
-              Stage One is the Safety Net.
+              Nobody starts at stage two.
             </p>
-            <p className="font-display-italic mt-4" style={{ fontSize: "clamp(22px, 2.2vw, 30px)", color: "var(--color-ember)", lineHeight: 1.25 }}>
-              It's the only door in.
+            <p className="body-soft mt-4" style={{ color: "rgba(255,255,255,0.65)" }}>
+              Google doesn't count what hasn't happened yet.
+            </p>
+            <p className="font-display-italic mt-6" style={{ fontSize: "clamp(22px, 2.2vw, 30px)", color: "var(--color-ember)", lineHeight: 1.25 }}>
+              The net is the only door in.
             </p>
           </div>
         </div>
@@ -1201,7 +1244,7 @@ function Pricing() {
       <div className="mx-auto max-w-[1180px] px-5 md:px-10 py-28 md:py-40">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <div className="md:col-span-5">
-            <ChapterMark n="13" label="Stage one · The safety net" />
+            <ChapterMark n="14" label="Stage one · The safety net" />
             <h2 className="section-opener mt-8" style={{ color: "var(--color-ink)" }}>
               The safety net comes{" "}
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
@@ -1509,7 +1552,7 @@ function Enrollment() {
           </div>
           <div className="md:col-span-6 flex items-center px-5 md:px-16 py-20 md:py-28">
             <div className="max-w-[480px]">
-              <ChapterMark n="14" label="Enrollment" />
+              <ChapterMark n="15" label="Enrollment" />
               <h2 className="section-opener mt-8">
                 Configured for{" "}
                 <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
@@ -1562,7 +1605,7 @@ function Enrollment() {
         <div className="mx-auto max-w-[980px] px-5 md:px-10 py-24 md:py-36">
           <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
             <div className="md:col-span-5">
-              <ChapterMark n="15" label="What happens next" />
+              <ChapterMark n="16" label="What happens next" />
               <h2 className="font-display mt-8" style={{ fontSize: "clamp(30px, 3.4vw, 44px)", lineHeight: 1.08, letterSpacing: "-0.02em", color: "var(--color-ink)" }}>
                 We handle setup{" "}
                 <span className="font-display-italic" style={{ color: "var(--color-ember-deep)" }}>
