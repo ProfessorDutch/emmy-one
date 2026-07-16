@@ -1549,6 +1549,7 @@ function Enrollment() {
             width={1600}
             height={1600}
             className="absolute inset-0 h-full w-full object-cover"
+            style={{ objectPosition: "center 65%" }}
           />
         </div>
         <div className="md:col-span-6 flex items-center px-5 md:px-16 py-20 md:py-28">
