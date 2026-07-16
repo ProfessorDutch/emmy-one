@@ -98,7 +98,7 @@ function Index() {
       {/* ACT FIVE — The Solution */}
       <MeetEmmy />
       <TheNet />
-      <TheList />
+      
       <TheStages />
       <Pricing />
 
@@ -1077,69 +1077,6 @@ function TheNet() {
    THE LIST — The Emergency Whitelist
    ============================================================ */
 
-function TheList() {
-  return (
-    <section className="bg-night text-white">
-      <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-28 md:py-40">
-        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
-          <div className="md:col-span-6">
-            <ChapterMark n="12" label="The list" />
-            <h2 className="section-opener mt-8">
-              Google keeps a different list for that person.
-              <br />
-              <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                The Emergency Whitelist.
-              </span>
-            </h2>
-          </div>
-          <div className="md:col-span-6 space-y-6">
-            <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
-              You've spent years building Google's trust. The reviews. The ranking. The ads. When someone has time to compare companies, Google puts your business in front of them — and you earned that.
-            </p>
-            <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
-              But the person comparing companies isn't the only one searching.
-            </p>
-            <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
-              There's another search. It comes in at 6 AM, after the storm, after something gives way. That person isn't comparing anything. Their card is already out. They've already decided to spend the money. The only thing left to decide is who picks up.
-            </p>
-            <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
-              You can't buy your way onto it. You can't review your way onto it. It accepts one currency — crisis response. Answered. Booked. Showed up.
-            </p>
-          </div>
-        </div>
-        <div className="mt-20 md:mt-28 grid md:grid-cols-12 gap-10">
-          <div className="md:col-span-7 space-y-6">
-            <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
-              It builds the way credit builds. One moment at a time.
-            </p>
-            <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
-              <span style={{ color: "white" }}>Crisis managed.</span> The net goes in. Every call answered. Every appointment booked.
-            </p>
-            <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
-              <span style={{ color: "white" }}>Trust signaled.</span> 6 AM moments accumulate. Your share of the emergency demand grows. You're not on the list anymore. You're the first call.
-            </p>
-            <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
-              <span style={{ color: "white" }}>Brand expanded.</span> The record becomes the story, and the story outgrows the location.
-            </p>
-          </div>
-          <div className="md:col-span-5 md:border-l md:pl-10 border-white/10">
-            <p className="font-display-italic" style={{ fontSize: "clamp(24px, 2.6vw, 32px)", color: "white", lineHeight: 1.2 }}>
-              Stage One is the Safety Net.
-            </p>
-            <p className="font-display-italic mt-4" style={{ fontSize: "clamp(22px, 2.2vw, 30px)", color: "var(--color-ember)", lineHeight: 1.25 }}>
-              It's the only door in.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ============================================================
-   THE STAGES
-   ============================================================ */
-
 function Rail({ active = 1 }: { active?: 1 | 2 | 3 | 4 }) {
   const stages = [
     { n: "01", label: "The net" },
@@ -1197,17 +1134,27 @@ function TheStages() {
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 pt-4 pb-24 md:pb-36 -mt-24 md:-mt-32 relative z-10">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-end">
           <div className="md:col-span-6">
-            <ChapterMark n="13" label="The stages" />
+            <ChapterMark n="12" label="The list" />
             <h2 className="section-opener mt-8">
-              Most businesses aren't ready for what stage one{" "}
+              Google keeps a different list for that person.
+              <br />
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                brings.
+                The Emergency Whitelist.
               </span>
             </h2>
           </div>
-          <div className="md:col-span-6">
+          <div className="md:col-span-6 space-y-6">
             <p className="body-lg max-w-[520px]" style={{ color: "rgba(255,255,255,0.85)" }}>
-              The volume is real. You'll grow into it. That's the right problem to have.
+              You've spent years building Google's trust. The reviews. The ranking. The ads. When someone has time to compare companies, Google puts your business in front of them — and you earned that.
+            </p>
+            <p className="body-lg max-w-[520px]" style={{ color: "rgba(255,255,255,0.85)" }}>
+              But the person comparing companies isn't the only one searching.
+            </p>
+            <p className="body-soft max-w-[520px]" style={{ color: "rgba(255,255,255,0.65)" }}>
+              There's another search. It comes in at 6 AM, after the storm, after something gives way. That person isn't comparing anything. Their card is already out. They've already decided to spend the money. The only thing left to decide is who picks up.
+            </p>
+            <p className="body-soft max-w-[520px]" style={{ color: "rgba(255,255,255,0.65)" }}>
+              You can't buy your way onto it. You can't review your way onto it. It accepts one currency — crisis response. Answered. Booked. Showed up.
             </p>
           </div>
         </div>
@@ -1217,21 +1164,24 @@ function TheStages() {
         <div className="mt-20 md:mt-28 grid md:grid-cols-12 gap-10">
           <div className="md:col-span-7 max-w-[640px] space-y-6">
             <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
-              When you do, <span style={{ color: "white" }}>stage two</span> closes the lead conversion gap. Every dollar already spent on leads, none of it falling through the same cracks Emmy just closed.
+              It builds the way credit builds. One moment at a time.
             </p>
             <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
-              <span style={{ color: "white" }}>Stage three</span> builds the footprint. You're not on the list. You're the first call.
+              <span style={{ color: "white" }}>Crisis managed.</span> The net goes in. Every call answered. Every appointment booked.
             </p>
             <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
-              <span style={{ color: "white" }}>Stage four.</span> Expansion. The full system. Running.
+              <span style={{ color: "white" }}>Trust signaled.</span> 6 AM moments accumulate. Your share of the emergency demand grows. You're not on the list anymore. You're the first call.
+            </p>
+            <p className="body-soft" style={{ color: "rgba(255,255,255,0.65)" }}>
+              <span style={{ color: "white" }}>Brand expanded.</span> The record becomes the story, and the story outgrows the location.
             </p>
           </div>
           <div className="md:col-span-5 md:border-l md:pl-10 border-white/10">
             <p className="font-display-italic" style={{ fontSize: "clamp(24px, 2.6vw, 32px)", color: "white", lineHeight: 1.2 }}>
-              But not today.
+              Stage One is the Safety Net.
             </p>
             <p className="font-display-italic mt-4" style={{ fontSize: "clamp(22px, 2.2vw, 30px)", color: "var(--color-ember)", lineHeight: 1.25 }}>
-              Today the appointment is the only thing that matters. It always was.
+              It's the only door in.
             </p>
           </div>
         </div>
@@ -1239,6 +1189,7 @@ function TheStages() {
     </section>
   );
 }
+
 
 /* ============================================================
    PRICING — Stage one · the safety net
@@ -1250,7 +1201,7 @@ function Pricing() {
       <div className="mx-auto max-w-[1180px] px-5 md:px-10 py-28 md:py-40">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <div className="md:col-span-5">
-            <ChapterMark n="14" label="Stage one · The safety net" />
+            <ChapterMark n="13" label="Stage one · The safety net" />
             <h2 className="section-opener mt-8" style={{ color: "var(--color-ink)" }}>
               The safety net comes{" "}
               <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
