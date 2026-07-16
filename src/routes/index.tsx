@@ -1537,94 +1537,52 @@ function EnrollmentForm() {
 
 function Enrollment() {
   return (
-    <>
-      <section className="bg-night text-white">
-        <div className="grid md:grid-cols-12 min-h-[90svh]">
-          <div className="md:col-span-6 relative min-h-[50svh]">
-            <img
-              src={img08}
-              alt="A phone face-down on a desk, a job site visible through the window behind it"
-              loading="lazy"
-              width={1600}
-              height={1600}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-          <div className="md:col-span-6 flex items-center px-5 md:px-16 py-20 md:py-28">
-            <div className="max-w-[480px]">
-              <ChapterMark n="15" label="Enrollment" />
-              <h2 className="section-opener mt-8">
-                Configured for{" "}
-                <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                  your business.
-                </span>{" "}
-                By us.
-              </h2>
-              <div className="mt-10 space-y-5">
-                <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
-                  Live within 24 to 48 hours.
-                </p>
-                <div className="py-6 border-y border-white/10 my-2">
-                  <p className="font-display" style={{ fontSize: "clamp(22px, 2.2vw, 28px)", lineHeight: 1.3 }}>
-                    She answers. She books. She reports.
-                    <br />
-                    <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
-                      You run your business.
-                    </span>
-                  </p>
-                </div>
-                <p className="body-soft" style={{ color: "rgba(255,255,255,0.6)" }}>
-                  Nothing added to your plate. Nothing to manage. Nothing to learn.
-                </p>
-              </div>
-              <div className="mt-14">
-                <a
-                  href="#enroll"
-                  className="inline-flex items-center justify-center font-sans"
-                  style={{
-                    background: "var(--color-ember)",
-                    color: "white",
-                    padding: "22px 56px",
-                    borderRadius: 999,
-                    fontSize: 15,
-                    letterSpacing: "0.18em",
-                    fontWeight: 500,
-                    textTransform: "uppercase",
-                    boxShadow: "0 18px 40px -18px rgba(204,85,40,0.6)",
-                  }}
-                >
-                  Say yes
-                </a>
-              </div>
-            </div>
-          </div>
+    <section id="enroll" className="bg-night text-white">
+      <div className="grid md:grid-cols-12">
+        <div className="md:col-span-6 relative min-h-[50svh] md:min-h-[100svh]">
+          <img
+            src={img08}
+            alt="A phone face-down on a desk, a job site visible through the window behind it"
+            loading="lazy"
+            width={1600}
+            height={1600}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
         </div>
-      </section>
-
-      <section id="enroll" className="relative bg-cream" style={{ borderTop: "3px solid var(--color-ember)" }}>
-        <div className="mx-auto max-w-[980px] px-5 md:px-10 py-24 md:py-36">
-          <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
-            <div className="md:col-span-5">
-              <ChapterMark n="16" label="What happens next" />
-              <h2 className="font-display mt-8" style={{ fontSize: "clamp(30px, 3.4vw, 44px)", lineHeight: 1.08, letterSpacing: "-0.02em", color: "var(--color-ink)" }}>
-                We handle setup{" "}
-                <span className="font-display-italic" style={{ color: "var(--color-ember-deep)" }}>
-                  completely.
-                </span>
-              </h2>
-              <div className="body-soft mt-6 max-w-[380px] space-y-4">
-                <p>We integrate Emmy into your calendar. We set up the missed call safety net system.</p>
-                <p>She books the appointment on your calendar and emails you a full transcript of every call with all of the booking details.</p>
-                <p>Fully automated. Ready in 48 hours.</p>
+        <div className="md:col-span-6 flex items-center px-5 md:px-16 py-20 md:py-28">
+          <div className="max-w-[520px] w-full">
+            <ChapterMark n="15" label="Enrollment" />
+            <h2 className="section-opener mt-8">
+              Configured for{" "}
+              <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+                your business.
+              </span>{" "}
+              By us.
+            </h2>
+            <div className="mt-10 space-y-5">
+              <p className="body-lg" style={{ color: "rgba(255,255,255,0.85)" }}>
+                Live within 24 to 48 hours.
+              </p>
+              <div className="py-6 border-y border-white/10 my-2">
+                <p className="font-display" style={{ fontSize: "clamp(22px, 2.2vw, 28px)", lineHeight: 1.3 }}>
+                  She answers. She books. She reports.
+                  <br />
+                  <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
+                    You run your business.
+                  </span>
+                </p>
               </div>
+              <p className="body-soft" style={{ color: "rgba(255,255,255,0.6)" }}>
+                Nothing added to your plate. Nothing to manage. Nothing to learn.
+              </p>
             </div>
-            <div className="md:col-span-7">
+            <div className="mt-12">
               <EnrollmentForm />
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
