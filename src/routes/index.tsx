@@ -503,7 +503,7 @@ function TwentyFourSeven() {
         width={1920}
         height={1080}
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ opacity: 0.45 }}
+        style={{ opacity: 0.45, objectPosition: "60% center" }}
       />
       <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.92) 100%)" }} />
 
