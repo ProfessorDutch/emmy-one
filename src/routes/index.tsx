@@ -755,6 +755,7 @@ function FirstAHa() {
           width={1600}
           height={1100}
           className="w-full h-[55svh] md:h-[78svh] object-cover"
+          style={{ objectPosition: "center 30%" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%)" }} />
         <div className="absolute bottom-0 left-0 right-0 p-5 md:p-12">
