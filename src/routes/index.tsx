@@ -126,7 +126,7 @@ function Hero() {
         width={1920}
         height={1080}
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ opacity: 0.55 }}
+        style={{ opacity: 0.55, objectPosition: "30% center" }}
       />
       <div
         className="absolute inset-0"
@@ -421,6 +421,7 @@ function CallSequence() {
           width={1920}
           height={1080}
           className="w-full h-[60svh] md:h-[85svh] object-cover"
+          style={{ objectPosition: "65% center" }}
         />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
         <div className="absolute inset-x-0 bottom-0 px-5 md:px-10 pb-10 md:pb-16">
@@ -502,7 +503,7 @@ function TwentyFourSeven() {
         width={1920}
         height={1080}
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ opacity: 0.45 }}
+        style={{ opacity: 0.45, objectPosition: "60% center" }}
       />
       <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.92) 100%)" }} />
 
@@ -657,7 +658,7 @@ function Shift() {
         width={1920}
         height={1080}
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ opacity: 0.55 }}
+        style={{ opacity: 0.55, objectPosition: "35% center" }}
       />
       <div
         className="absolute inset-0"
@@ -754,6 +755,7 @@ function FirstAHa() {
           width={1600}
           height={1100}
           className="w-full h-[55svh] md:h-[78svh] object-cover"
+          style={{ objectPosition: "center 30%" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%)" }} />
         <div className="absolute bottom-0 left-0 right-0 p-5 md:p-12">
@@ -980,7 +982,7 @@ function TheQuestion() {
           width={1920}
           height={1200}
           className="absolute inset-0 h-full w-full object-cover"
-          style={{ opacity: 0.7 }}
+          style={{ opacity: 0.7, objectPosition: "center 75%" }}
         />
         <div className="absolute inset-0" style={{ background: "radial-gradient(70% 80% at 50% 55%, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.85) 80%)" }} />
         <div className="relative z-10 px-5 md:px-10 py-28 max-w-[1080px] text-center">
@@ -1547,6 +1549,7 @@ function Enrollment() {
             width={1600}
             height={1600}
             className="absolute inset-0 h-full w-full object-cover"
+            style={{ objectPosition: "center 65%" }}
           />
         </div>
         <div className="md:col-span-6 flex items-center px-5 md:px-16 py-20 md:py-28">
@@ -1600,7 +1603,7 @@ function Close() {
         width={1920}
         height={1200}
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ opacity: 0.5 }}
+        style={{ opacity: 0.5, objectPosition: "center 75%" }}
       />
       <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(10,10,10,0.8) 0%, rgba(10,10,10,0.55) 45%, rgba(10,10,10,0.98) 100%)" }} />
       <div className="relative z-10 flex-1 flex items-center justify-center px-5 md:px-10 py-24">
