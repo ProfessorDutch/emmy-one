@@ -126,7 +126,7 @@ function Hero() {
         width={1920}
         height={1080}
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ opacity: 0.55 }}
+        style={{ opacity: 0.55, objectPosition: "30% center" }}
       />
       <div
         className="absolute inset-0"
