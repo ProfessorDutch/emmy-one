@@ -982,7 +982,7 @@ function TheQuestion() {
           width={1920}
           height={1200}
           className="absolute inset-0 h-full w-full object-cover"
-          style={{ opacity: 0.7 }}
+          style={{ opacity: 0.7, objectPosition: "center 75%" }}
         />
         <div className="absolute inset-0" style={{ background: "radial-gradient(70% 80% at 50% 55%, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.85) 80%)" }} />
         <div className="relative z-10 px-5 md:px-10 py-28 max-w-[1080px] text-center">
