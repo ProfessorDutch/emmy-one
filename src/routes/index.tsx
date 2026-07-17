@@ -723,7 +723,7 @@ function TheFind() {
               </div>
             </div>
           </div>
-          <div className="md:col-span-7 md:col-start-1 md:row-start-1 flex justify-center md:justify-start">
+          <div className="md:col-span-7 md:col-start-1 md:row-start-1 flex justify-center md:justify-start -mx-5 md:mx-0">
             <img
               src={phoneAppointment}
               alt="A phone showing the Recents call list — Tim's Tree and Landscaping answered at 6:39, a 2:19 appointment call"
@@ -731,7 +731,7 @@ function TheFind() {
               fetchPriority="high"
               width={900}
               height={1298}
-              className="block w-full max-w-[360px] md:max-w-[520px] h-auto object-contain"
+              className="block w-full max-w-none md:max-w-[520px] h-auto object-contain"
             />
           </div>
         </div>
