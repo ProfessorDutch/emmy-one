@@ -431,8 +431,8 @@ function CallSequence() {
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
         <div className="absolute inset-x-0 bottom-0 px-5 md:px-10 pb-10 md:pb-16">
           <div className="mx-auto max-w-[1180px] text-white">
-            <p className="eyebrow mb-4" style={{ color: "var(--color-ember)" }}>Chapter two</p>
-            <h2 className="font-display" style={{ fontSize: "clamp(34px, 5vw, 60px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
+            <ChapterMark n="02" label="He starts dialing" />
+            <h2 className="font-display mt-8" style={{ fontSize: "clamp(34px, 5vw, 60px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
               He starts dialing.
             </h2>
             <p className="body-soft mt-5 max-w-[520px]" style={{ color: "rgba(255,255,255,0.78)" }}>
