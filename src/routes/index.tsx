@@ -658,7 +658,7 @@ function Shift() {
         width={1920}
         height={1080}
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ opacity: 0.55, objectPosition: "35% center" }}
+        style={{ opacity: 0.65, objectPosition: "72% 68%" }}
       />
       <div
         className="absolute inset-0"
