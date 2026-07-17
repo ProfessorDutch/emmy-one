@@ -1307,7 +1307,7 @@ function DemoCTA() {
     <section className="relative overflow-hidden bg-night text-white" style={{ minHeight: "100svh" }}>
       <img
         src={phoneIncoming}
-        alt=""
+        alt="Incoming call ringing on a smartphone — Emmy answering a live customer call"
         loading="lazy"
         width={1920}
         height={1080}
