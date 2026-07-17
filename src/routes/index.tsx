@@ -514,8 +514,8 @@ function TwentyFourSeven() {
 
       <div className="relative z-10 mx-auto max-w-[1280px] px-5 md:px-10 py-24 md:py-36">
         <div className="max-w-[700px] mb-16 md:mb-24">
-          <p className="eyebrow mb-6" style={{ color: "var(--color-ember)" }}>Chapter three</p>
-          <h2 className="section-opener" style={{ color: "white" }}>
+          <ChapterMark n="03" label="The 24/7 problem" />
+          <h2 className="section-opener mt-8" style={{ color: "white" }}>
             The{" "}
             <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>"24/7"</span>{" "}
             problem.
