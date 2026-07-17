@@ -241,7 +241,7 @@ function SearchScene() {
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <div className="md:col-span-5">
-            <p className="eyebrow mb-6">Chapter one</p>
+            <ChapterMark n="01" label="The search" />
             <h2 className="section-opener">The search.</h2>
           </div>
           <div className="md:col-span-7">
