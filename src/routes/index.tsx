@@ -124,7 +124,7 @@ function Hero() {
     <section className="relative min-h-[100svh] flex flex-col bg-night text-white overflow-hidden">
       <img
         src={heroAlarm}
-        alt=""
+        alt="Alarm clock reading 6:07 AM on the morning of the emergency"
         fetchPriority="high"
         width={1920}
         height={1080}
