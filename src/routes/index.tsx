@@ -654,7 +654,7 @@ function Shift() {
     <section className="relative min-h-[100svh] flex flex-col bg-night text-white overflow-hidden">
       <img
         src={heroImg}
-        alt=""
+        alt="A planner, phone, and cup of hot coffee arranged on a table under lamplight at dusk"
         fetchPriority="high"
         width={1920}
         height={1080}
