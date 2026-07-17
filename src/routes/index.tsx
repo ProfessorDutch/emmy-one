@@ -20,7 +20,11 @@ import meetEmmyIcon from "@/assets/meetemmy-icon.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    meta: [
+      { property: "og:url", content: "https://meetemmy.com/" },
+    ],
     links: [
+      { rel: "canonical", href: "https://meetemmy.com/" },
       {
         rel: "preload",
         as: "image",
