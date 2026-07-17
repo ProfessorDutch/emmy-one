@@ -16,6 +16,7 @@ import img07Fleet from "@/assets/ae-07-fleet-dawn.jpg";
 import img08 from "@/assets/ae-08-phone-down.jpg";
 import img09 from "@/assets/ae-09-aerial-dawn.jpg";
 import phoneAppointment from "@/assets/phone-tims-tree-appointment-mobile.jpg";
+import meetEmmyIcon from "@/assets/meetemmy-icon.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
