@@ -144,9 +144,13 @@ function Hero() {
         >
           MeetEmmy
         </p>
-        <p className="eyebrow" style={{ color: "var(--color-ember)" }}>
-          A scene
-        </p>
+        <img
+          src={meetEmmyIcon.url}
+          alt="MeetEmmy"
+          className="h-9 md:h-11 w-auto"
+          width={44}
+          height={44}
+        />
       </div>
 
       <div className="relative z-10 flex-1 flex items-end px-5 md:px-10 pb-16 md:pb-24 pt-24 md:pt-32">
