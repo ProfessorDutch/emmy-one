@@ -21,18 +21,6 @@ import meetEmmyIcon from "@/assets/meetemmy-icon.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { property: "og:url", content: "https://meetemmy.com/" },
-    ],
-    links: [
-      { rel: "canonical", href: "https://meetemmy.com/" },
-      {
-        rel: "preload",
-        as: "image",
-        href: phoneAppointment,
-        type: "image/jpeg",
-      },
-    ],
-    meta: [
       { title: "MeetEmmy — Every call answered. Every hour of the day." },
       {
         name: "description",
@@ -46,6 +34,16 @@ export const Route = createFileRoute("/")({
           "They weren't choosing between you and a competitor. They were moving down a list until somebody helped them.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://meetemmy.com/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://meetemmy.com/" },
+      {
+        rel: "preload",
+        as: "image",
+        href: phoneAppointment,
+        type: "image/jpeg",
+      },
     ],
   }),
   component: Index,
