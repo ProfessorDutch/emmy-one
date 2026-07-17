@@ -1599,7 +1599,7 @@ function Close() {
     <section className="relative min-h-[80svh] flex flex-col bg-night text-white overflow-hidden">
       <img
         src={img09}
-        alt="Pre-dawn aerial view of a quiet residential neighborhood"
+        alt=""
         loading="lazy"
         width={1920}
         height={1200}
