@@ -609,17 +609,11 @@ function Proof() {
           width={1920}
           height={1080}
           aria-hidden="true"
-          className="absolute inset-y-0 left-0 h-full w-full md:w-[68%] object-cover object-center md:object-left pointer-events-none select-none scale-[1.6] md:scale-100"
+          className="absolute inset-y-0 left-0 h-full w-full md:w-[68%] object-cover object-center md:object-left pointer-events-none select-none opacity-25 md:opacity-100"
           style={{
             WebkitMaskImage: "linear-gradient(to right, #000 0%, #000 55%, transparent 95%)",
             maskImage: "linear-gradient(to right, #000 0%, #000 55%, transparent 95%)",
-            opacity: 1,
           }}
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 md:hidden pointer-events-none"
-          style={{ background: "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.55) 55%, rgba(255,255,255,0.9) 100%)" }}
         />
         <div className="relative mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-36">
           <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
