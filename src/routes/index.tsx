@@ -606,7 +606,7 @@ function Proof() {
       <div className="relative w-full overflow-hidden">
         <img
           src={coverageMap}
-          alt="Map of Woodstock, Georgia with a 30-mile radius and dozens of glowing dots marking job locations"
+          alt="Map of Woodstock, Georgia showing 47 signed jobs as glowing dots within a 30-mile service radius"
           loading="lazy"
           width={1920}
           height={1080}
