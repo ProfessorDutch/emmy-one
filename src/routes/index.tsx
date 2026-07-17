@@ -565,8 +565,8 @@ function Proof() {
     <section className="bg-white">
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
         <div className="max-w-[760px] mb-16 md:mb-20">
-          <p className="eyebrow mb-6">Chapter four</p>
-          <h2 className="section-opener mb-6">This isn't a theory.</h2>
+          <ChapterMark n="04" label="The proof" />
+          <h2 className="section-opener mt-8 mb-6">This isn't a theory.</h2>
           <p className="body-lg mb-5">
             A painting company thought they were answering their phones. They were — during business hours, when the office wasn't slammed.
           </p>
