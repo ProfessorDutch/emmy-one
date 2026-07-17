@@ -16,6 +16,7 @@ import img07Fleet from "@/assets/ae-07-fleet-dawn.jpg";
 import img08 from "@/assets/ae-08-phone-down.jpg";
 import img09 from "@/assets/ae-09-aerial-dawn.jpg";
 import phoneAppointment from "@/assets/phone-tims-tree-appointment-mobile.jpg";
+import meetEmmyIcon from "@/assets/meetemmy-icon.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -143,9 +144,13 @@ function Hero() {
         >
           MeetEmmy
         </p>
-        <p className="eyebrow" style={{ color: "var(--color-ember)" }}>
-          A scene
-        </p>
+        <img
+          src={meetEmmyIcon.url}
+          alt="MeetEmmy"
+          className="h-9 md:h-11 w-auto"
+          width={44}
+          height={44}
+        />
       </div>
 
       <div className="relative z-10 flex-1 flex items-end px-5 md:px-10 pb-16 md:pb-24 pt-24 md:pt-32">
@@ -236,8 +241,8 @@ function SearchScene() {
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <div className="md:col-span-5">
-            <p className="eyebrow mb-6">Chapter one</p>
-            <h2 className="section-opener">The search.</h2>
+            <ChapterMark n="01" label="The search" />
+            <h2 className="section-opener mt-8">The search.</h2>
           </div>
           <div className="md:col-span-7">
             <p className="body-lg mb-6 max-w-[560px]">
@@ -264,7 +269,7 @@ function PhoneList() {
     { name: "All-Star Concrete & Masonry", phone: "(770) 555-0142", rating: "4.9", reviews: 312, badge: "Top Pro" },
     { name: "ProWall Solutions", phone: "(770) 555-0188", rating: "4.8", reviews: 278, badge: "Top Pro" },
     { name: "Heritage Landscape & Stone", phone: "(770) 555-0207", rating: "4.9", reviews: 194, badge: "" },
-    { name: "Benchmark Hardscapes", phone: "(770) 555-0233", rating: "4.8", reviews: 156, badge: "Hired 12x" },
+    { name: "Tim's Tree and Landscaping", phone: "(844) 321-3669", rating: "4.8", reviews: 156, badge: "Hired 12x" },
   ];
 
   return (
@@ -408,7 +413,7 @@ function CallSequence() {
     { n: "01", label: "All-Star Concrete", phone: "(770) 555-0142", result: "No answer.", fail: true },
     { n: "02", label: "ProWall Solutions", phone: "(770) 555-0188", result: "Voicemail.", fail: true },
     { n: "03", label: "Heritage Landscape", phone: "(770) 555-0207", result: "Answering service. No appointment booked.", fail: true },
-    { n: "04", label: "Benchmark Hardscapes", phone: "(770) 555-0233", result: "Someone answers. Books the appointment. Done.", fail: false },
+    { n: "04", label: "Tim's Tree and Landscaping", phone: "(844) 321-3669", result: "Someone answers. Books the appointment. Done.", fail: false },
   ];
 
   return (
@@ -426,8 +431,8 @@ function CallSequence() {
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
         <div className="absolute inset-x-0 bottom-0 px-5 md:px-10 pb-10 md:pb-16">
           <div className="mx-auto max-w-[1180px] text-white">
-            <p className="eyebrow mb-4" style={{ color: "var(--color-ember)" }}>Chapter two</p>
-            <h2 className="font-display" style={{ fontSize: "clamp(34px, 5vw, 60px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
+            <ChapterMark n="02" label="He starts dialing" />
+            <h2 className="font-display mt-8" style={{ fontSize: "clamp(34px, 5vw, 60px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
               He starts dialing.
             </h2>
             <p className="body-soft mt-5 max-w-[520px]" style={{ color: "rgba(255,255,255,0.78)" }}>
@@ -509,8 +514,8 @@ function TwentyFourSeven() {
 
       <div className="relative z-10 mx-auto max-w-[1280px] px-5 md:px-10 py-24 md:py-36">
         <div className="max-w-[700px] mb-16 md:mb-24">
-          <p className="eyebrow mb-6" style={{ color: "var(--color-ember)" }}>Chapter three</p>
-          <h2 className="section-opener" style={{ color: "white" }}>
+          <ChapterMark n="03" label="The 24/7 problem" />
+          <h2 className="section-opener mt-8" style={{ color: "white" }}>
             The{" "}
             <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>"24/7"</span>{" "}
             problem.
@@ -560,8 +565,8 @@ function Proof() {
     <section className="bg-white">
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
         <div className="max-w-[760px] mb-16 md:mb-20">
-          <p className="eyebrow mb-6">Chapter four</p>
-          <h2 className="section-opener mb-6">This isn't a theory.</h2>
+          <ChapterMark n="04" label="The proof" />
+          <h2 className="section-opener mt-8 mb-6">This isn't a theory.</h2>
           <p className="body-lg mb-5">
             A painting company thought they were answering their phones. They were — during business hours, when the office wasn't slammed.
           </p>
@@ -604,17 +609,11 @@ function Proof() {
           width={1920}
           height={1080}
           aria-hidden="true"
-          className="absolute inset-y-0 left-0 h-full w-full md:w-[68%] object-cover object-center md:object-left pointer-events-none select-none scale-[1.6] md:scale-100"
+          className="absolute inset-y-0 left-0 h-full w-full md:w-[68%] object-cover object-center md:object-left pointer-events-none select-none opacity-25 md:opacity-100"
           style={{
             WebkitMaskImage: "linear-gradient(to right, #000 0%, #000 55%, transparent 95%)",
             maskImage: "linear-gradient(to right, #000 0%, #000 55%, transparent 95%)",
-            opacity: 1,
           }}
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 md:hidden pointer-events-none"
-          style={{ background: "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.55) 55%, rgba(255,255,255,0.9) 100%)" }}
         />
         <div className="relative mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-36">
           <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
@@ -933,7 +932,7 @@ function TheName() {
         style={{ background: "radial-gradient(ellipse 55% 60% at 50% 50%, rgba(204,85,40,0.14) 0%, rgba(12,12,12,0) 70%)" }}
       />
       <div className="relative mx-auto max-w-[880px] px-5 md:px-10 py-28 md:py-44 text-center">
-        <Eyebrow>Chapter nine · The name</Eyebrow>
+        <div className="flex justify-center"><ChapterMark n="09" label="The name" /></div>
         <p className="font-display mt-10" style={{ fontSize: "clamp(24px, 3.2vw, 40px)", lineHeight: 1.18, letterSpacing: "-0.01em", color: "rgba(255,255,255,0.9)" }}>
           That short list every platform is holding?
         </p>
@@ -986,7 +985,7 @@ function TheQuestion() {
         />
         <div className="absolute inset-0" style={{ background: "radial-gradient(70% 80% at 50% 55%, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.85) 80%)" }} />
         <div className="relative z-10 px-5 md:px-10 py-28 max-w-[1080px] text-center">
-          <Eyebrow>Chapter ten · The question</Eyebrow>
+          <div className="flex justify-center"><ChapterMark n="10" label="The question" /></div>
           <p className="font-display mt-10 text-white" style={{ fontSize: "clamp(28px, 4.2vw, 54px)", lineHeight: 1.12, letterSpacing: "-0.02em" }}>
             If you were Google, and you had fifteen thousand people a year searching for what you do —
           </p>
@@ -1015,8 +1014,8 @@ function MeetEmmy() {
     <section className="relative" style={{ background: "var(--color-muted)" }}>
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
         <div className="max-w-[760px] mb-16">
-          <p className="eyebrow mb-6">Chapter eleven</p>
-          <h2 className="section-opener mb-8">Meet Emmy.</h2>
+          <ChapterMark n="11" label="Meet Emmy" />
+          <h2 className="section-opener mt-8 mb-8">Meet Emmy.</h2>
           <p className="body-lg mb-6">
             At 6 AM they aren't looking for information. They're in crisis.
           </p>
@@ -1083,7 +1082,7 @@ function TheNet() {
         style={{ background: "radial-gradient(ellipse 60% 55% at 50% 45%, rgba(12,12,12,0.85) 0%, rgba(12,12,12,0.55) 45%, rgba(12,12,12,0) 80%)" }}
       />
       <div className="relative mx-auto max-w-[760px] px-5 md:px-10 py-28 md:py-44 text-center">
-        <Eyebrow>Chapter twelve · The net</Eyebrow>
+        <div className="flex justify-center"><ChapterMark n="12" label="The net" /></div>
         <h2 className="section-opener mt-8">
           Your staff runs{" "}
           <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
