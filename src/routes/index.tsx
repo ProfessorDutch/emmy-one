@@ -269,7 +269,7 @@ function PhoneList() {
     { name: "All-Star Concrete & Masonry", phone: "(770) 555-0142", rating: "4.9", reviews: 312, badge: "Top Pro" },
     { name: "ProWall Solutions", phone: "(770) 555-0188", rating: "4.8", reviews: 278, badge: "Top Pro" },
     { name: "Heritage Landscape & Stone", phone: "(770) 555-0207", rating: "4.9", reviews: 194, badge: "" },
-    { name: "Benchmark Hardscapes", phone: "(770) 555-0233", rating: "4.8", reviews: 156, badge: "Hired 12x" },
+    { name: "Tim's Tree and Landscaping", phone: "(844) 321-3669", rating: "4.8", reviews: 156, badge: "Hired 12x" },
   ];
 
   return (
