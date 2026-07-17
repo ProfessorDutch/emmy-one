@@ -242,7 +242,7 @@ function SearchScene() {
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <div className="md:col-span-5">
             <ChapterMark n="01" label="The search" />
-            <h2 className="section-opener">The search.</h2>
+            <h2 className="section-opener mt-8">The search.</h2>
           </div>
           <div className="md:col-span-7">
             <p className="body-lg mb-6 max-w-[560px]">
