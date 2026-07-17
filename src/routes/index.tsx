@@ -932,7 +932,7 @@ function TheName() {
         style={{ background: "radial-gradient(ellipse 55% 60% at 50% 50%, rgba(204,85,40,0.14) 0%, rgba(12,12,12,0) 70%)" }}
       />
       <div className="relative mx-auto max-w-[880px] px-5 md:px-10 py-28 md:py-44 text-center">
-        <Eyebrow>Chapter nine · The name</Eyebrow>
+        <div className="flex justify-center"><ChapterMark n="09" label="The name" /></div>
         <p className="font-display mt-10" style={{ fontSize: "clamp(24px, 3.2vw, 40px)", lineHeight: 1.18, letterSpacing: "-0.01em", color: "rgba(255,255,255,0.9)" }}>
           That short list every platform is holding?
         </p>
