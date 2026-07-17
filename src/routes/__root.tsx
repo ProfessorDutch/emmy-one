@@ -119,7 +119,64 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500&display=swap",
       },
     ],
-  }),
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://meetemmy.com/#organization",
+          name: "MeetEmmy",
+          url: "https://meetemmy.com",
+          slogan: "Crisis Managed. Trust Signaled. Brand Expanded.",
+          founder: { "@type": "Person", name: "Dutch" },
+          description:
+            "Crisis response management for 24/7 emergency home service businesses.",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Woodstock",
+            addressRegion: "GA",
+            addressCountry: "US",
+          },
+          areaServed: {
+            "@type": "GeoCircle",
+            geoMidpoint: {
+              "@type": "GeoCoordinates",
+              latitude: 34.1015,
+              longitude: -84.5194,
+            },
+            geoRadius: "80000",
+          },
+          knowsAbout: [
+            "Emergency Whitelist",
+            "Crisis Response Management",
+            "Prominence Theory",
+            "Crisis to Whitelist Framework",
+            "Crisis Search",
+          ],
+          sameAs: [
+            "https://www.facebook.com/MEMeetEmmy",
+            "https://www.instagram.com/me_meetemmy/",
+          ],
+          image,
+          logo: image,
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://meetemmy.com/#website",
+          url: "https://meetemmy.com",
+          name: "MeetEmmy",
+          publisher: { "@id": "https://meetemmy.com/#organization" },
+          inLanguage: "en-US",
+        }),
+      },
+    ],
+    });
+  },
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
