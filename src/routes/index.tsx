@@ -1082,7 +1082,7 @@ function TheNet() {
         style={{ background: "radial-gradient(ellipse 60% 55% at 50% 45%, rgba(12,12,12,0.85) 0%, rgba(12,12,12,0.55) 45%, rgba(12,12,12,0) 80%)" }}
       />
       <div className="relative mx-auto max-w-[760px] px-5 md:px-10 py-28 md:py-44 text-center">
-        <Eyebrow>Chapter twelve · The net</Eyebrow>
+        <div className="flex justify-center"><ChapterMark n="12" label="The net" /></div>
         <h2 className="section-opener mt-8">
           Your staff runs{" "}
           <span className="font-display-italic" style={{ color: "var(--color-ember)" }}>
