@@ -505,7 +505,7 @@ function TwentyFourSeven() {
     <section className="relative bg-night text-white overflow-hidden">
       <img
         src={emptyOffice}
-        alt=""
+        alt="Empty business office after hours with the phone ringing unanswered"
         loading="lazy"
         width={1920}
         height={1080}
