@@ -20,14 +20,6 @@ import meetEmmyIcon from "@/assets/meetemmy-icon.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    links: [
-      {
-        rel: "preload",
-        as: "image",
-        href: phoneAppointment,
-        type: "image/jpeg",
-      },
-    ],
     meta: [
       { title: "MeetEmmy — Every call answered. Every hour of the day." },
       {
@@ -42,6 +34,16 @@ export const Route = createFileRoute("/")({
           "They weren't choosing between you and a competitor. They were moving down a list until somebody helped them.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://meetemmy.com/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://meetemmy.com/" },
+      {
+        rel: "preload",
+        as: "image",
+        href: phoneAppointment,
+        type: "image/jpeg",
+      },
     ],
   }),
   component: Index,
@@ -122,7 +124,7 @@ function Hero() {
     <section className="relative min-h-[100svh] flex flex-col bg-night text-white overflow-hidden">
       <img
         src={heroAlarm}
-        alt=""
+        alt="Alarm clock reading 6:07 AM on the morning of the emergency"
         fetchPriority="high"
         width={1920}
         height={1080}
@@ -503,7 +505,7 @@ function TwentyFourSeven() {
     <section className="relative bg-night text-white overflow-hidden">
       <img
         src={emptyOffice}
-        alt=""
+        alt="Empty business office after hours with the phone ringing unanswered"
         loading="lazy"
         width={1920}
         height={1080}
@@ -604,7 +606,7 @@ function Proof() {
       <div className="relative w-full overflow-hidden">
         <img
           src={coverageMap}
-          alt="Map of Woodstock, Georgia with a 30-mile radius and dozens of glowing dots marking job locations"
+          alt="Map of Woodstock, Georgia showing 47 signed jobs as glowing dots within a 30-mile service radius"
           loading="lazy"
           width={1920}
           height={1080}
@@ -652,7 +654,7 @@ function Shift() {
     <section className="relative min-h-[100svh] flex flex-col bg-night text-white overflow-hidden">
       <img
         src={heroImg}
-        alt=""
+        alt="A planner, phone, and cup of hot coffee arranged on a table under lamplight at dusk"
         fetchPriority="high"
         width={1920}
         height={1080}
@@ -1305,7 +1307,7 @@ function DemoCTA() {
     <section className="relative overflow-hidden bg-night text-white" style={{ minHeight: "100svh" }}>
       <img
         src={phoneIncoming}
-        alt=""
+        alt="Incoming call ringing on a smartphone — Emmy answering a live customer call"
         loading="lazy"
         width={1920}
         height={1080}
@@ -1597,7 +1599,7 @@ function Close() {
     <section className="relative min-h-[80svh] flex flex-col bg-night text-white overflow-hidden">
       <img
         src={img09}
-        alt="Pre-dawn aerial view of a quiet residential neighborhood"
+        alt=""
         loading="lazy"
         width={1920}
         height={1200}
