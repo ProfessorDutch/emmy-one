@@ -614,7 +614,7 @@ function Proof() {
         <div
           aria-hidden="true"
           className="absolute inset-0 md:hidden pointer-events-none"
-          style={{ background: "linear-gradient(180deg, color-mix(in oklab, #fff 70%, transparent) 0%, #fff 70%)" }}
+          style={{ background: "linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.55) 45%, rgba(255,255,255,0.9) 100%)" }}
         />
         <div className="relative mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-36">
           <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
