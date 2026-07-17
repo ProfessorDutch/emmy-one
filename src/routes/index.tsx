@@ -985,7 +985,7 @@ function TheQuestion() {
         />
         <div className="absolute inset-0" style={{ background: "radial-gradient(70% 80% at 50% 55%, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.85) 80%)" }} />
         <div className="relative z-10 px-5 md:px-10 py-28 max-w-[1080px] text-center">
-          <Eyebrow>Chapter ten · The question</Eyebrow>
+          <div className="flex justify-center"><ChapterMark n="10" label="The question" /></div>
           <p className="font-display mt-10 text-white" style={{ fontSize: "clamp(28px, 4.2vw, 54px)", lineHeight: 1.12, letterSpacing: "-0.02em" }}>
             If you were Google, and you had fifteen thousand people a year searching for what you do —
           </p>
