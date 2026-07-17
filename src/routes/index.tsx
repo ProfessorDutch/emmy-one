@@ -1014,8 +1014,8 @@ function MeetEmmy() {
     <section className="relative" style={{ background: "var(--color-muted)" }}>
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-32">
         <div className="max-w-[760px] mb-16">
-          <p className="eyebrow mb-6">Chapter eleven</p>
-          <h2 className="section-opener mb-8">Meet Emmy.</h2>
+          <ChapterMark n="11" label="Meet Emmy" />
+          <h2 className="section-opener mt-8 mb-8">Meet Emmy.</h2>
           <p className="body-lg mb-6">
             At 6 AM they aren't looking for information. They're in crisis.
           </p>
