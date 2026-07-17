@@ -73,22 +73,39 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
+  head: () => {
+    const title = "MeetEmmy — Crisis Managed. Trust Signaled. Brand Expanded.";
+    const description =
+      "MeetEmmy builds crisis response infrastructure for 24/7 emergency home service businesses — the behavioral record Google trusts when the emergency search comes in.";
+    const ogDescription =
+      "Not a marketing company. Not an AI answering service. The system that puts your business on the Emergency Whitelist.";
+    const url = "https://meetemmy.com/";
+    const image =
+      "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/972b4743-3437-44ea-aa4a-f300429c4291/id-preview-0f98466e--74bbe597-fc20-48a8-9292-88ee39433bad.lovable.app-1780381740398.png";
+    return ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Meet Emmy: your 24/7 emergency call answering service that books appointments." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Meet Emmy: your 24/7 emergency call answering service that books appointments." },
+      { name: "robots", content: "index, follow" },
+      { title },
+      { name: "description", content: description },
+      { name: "author", content: "MeetEmmy" },
+      { name: "theme-color", content: "#0b0b0b" },
+      { property: "og:title", content: title },
+      { property: "og:description", content: ogDescription },
+      { property: "og:site_name", content: "MeetEmmy" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Meet Emmy: your 24/7 emergency call answering service that books appointments." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/972b4743-3437-44ea-aa4a-f300429c4291/id-preview-0f98466e--74bbe597-fc20-48a8-9292-88ee39433bad.lovable.app-1780381740398.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/972b4743-3437-44ea-aa4a-f300429c4291/id-preview-0f98466e--74bbe597-fc20-48a8-9292-88ee39433bad.lovable.app-1780381740398.png" },
+      { property: "og:url", content: url },
+      { property: "og:image", content: image },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "MeetEmmy — Crisis Managed. Trust Signaled. Brand Expanded." },
+      { property: "og:locale", content: "en_US" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: ogDescription },
+      { name: "twitter:image", content: image },
+      { name: "twitter:image:alt", content: "MeetEmmy — Crisis Managed. Trust Signaled. Brand Expanded." },
     ],
     links: [
       {
