@@ -604,17 +604,17 @@ function Proof() {
           width={1920}
           height={1080}
           aria-hidden="true"
-          className="absolute inset-y-0 left-0 h-full w-full md:w-[68%] object-cover object-center md:object-left pointer-events-none select-none"
+          className="absolute inset-y-0 left-0 h-full w-full md:w-[68%] object-cover object-center md:object-left pointer-events-none select-none scale-[1.6] md:scale-100"
           style={{
             WebkitMaskImage: "linear-gradient(to right, #000 0%, #000 55%, transparent 95%)",
             maskImage: "linear-gradient(to right, #000 0%, #000 55%, transparent 95%)",
-            opacity: 0.95,
+            opacity: 1,
           }}
         />
         <div
           aria-hidden="true"
           className="absolute inset-0 md:hidden pointer-events-none"
-          style={{ background: "linear-gradient(180deg, color-mix(in oklab, #fff 70%, transparent) 0%, #fff 70%)" }}
+          style={{ background: "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.55) 55%, rgba(255,255,255,0.9) 100%)" }}
         />
         <div className="relative mx-auto max-w-[1280px] px-5 md:px-10 py-20 md:py-36">
           <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
@@ -658,7 +658,7 @@ function Shift() {
         width={1920}
         height={1080}
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ opacity: 0.55, objectPosition: "35% center" }}
+        style={{ opacity: 0.65, objectPosition: "72% 68%" }}
       />
       <div
         className="absolute inset-0"
@@ -723,7 +723,7 @@ function TheFind() {
               </div>
             </div>
           </div>
-          <div className="md:col-span-7 md:col-start-1 md:row-start-1 flex justify-center md:justify-start">
+          <div className="md:col-span-7 md:col-start-1 md:row-start-1 flex justify-center md:justify-start -mx-5 md:mx-0">
             <img
               src={phoneAppointment}
               alt="A phone showing the Recents call list — Tim's Tree and Landscaping answered at 6:39, a 2:19 appointment call"
@@ -731,7 +731,7 @@ function TheFind() {
               fetchPriority="high"
               width={900}
               height={1298}
-              className="block w-full max-w-[360px] md:max-w-[520px] h-auto object-contain"
+              className="block w-full max-w-none md:max-w-[520px] h-auto object-contain"
             />
           </div>
         </div>
