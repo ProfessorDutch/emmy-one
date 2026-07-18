@@ -15,10 +15,15 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/prominence-theory", changefreq: "monthly", priority: "0.8" },
           { path: "/answer-appointment-review", changefreq: "monthly", priority: "0.8" },
           
+          { path: "/emergency-whitelist", changefreq: "monthly", priority: "0.8" },
           { path: "/crisis-to-whitelist", changefreq: "monthly", priority: "0.8" },
           { path: "/the-net", changefreq: "monthly", priority: "0.8" },
           { path: "/crisis-response-management", changefreq: "monthly", priority: "0.8" },
           { path: "/mustard-seed", changefreq: "monthly", priority: "0.8" },
+          { path: "/the-tree", changefreq: "monthly", priority: "0.8" },
+          { path: "/the-amygdala-hijack", changefreq: "monthly", priority: "0.8" },
+          { path: "/the-certainty-effect", changefreq: "monthly", priority: "0.8" },
+          { path: "/lexicon", changefreq: "monthly", priority: "0.7" },
         ];
         const xml = [
           `<?xml version="1.0" encoding="UTF-8"?>`,
