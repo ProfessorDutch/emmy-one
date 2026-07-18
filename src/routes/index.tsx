@@ -438,7 +438,7 @@ function CallSequence() {
               He starts dialing.
             </h2>
             <p className="body-soft mt-5 max-w-[520px]" style={{ color: "rgba(255,255,255,0.78)" }}>
-              7:11 a.m. The top four search results, in order. One call after another.
+              6:11 a.m. The top four search results, in order. One call after another.
             </p>
           </div>
         </div>
@@ -448,7 +448,7 @@ function CallSequence() {
         <div className="rounded-sm overflow-hidden" style={{ border: "1px solid var(--color-border)", background: "var(--color-paper)" }}>
           <div className="flex items-center justify-between px-5 md:px-7 py-3 border-b" style={{ borderColor: "var(--color-border)", background: "var(--color-muted)" }}>
             <p className="text-[11px]" style={{ fontFamily: "var(--font-sans)", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-muted-foreground)" }}>
-              Call log · Tuesday 7:11 a.m.
+              Call log · Tuesday 6:11 a.m.
             </p>
             <span className="text-[11px]" style={{ fontFamily: "var(--font-sans)", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-muted-foreground)" }}>
               4 attempts
