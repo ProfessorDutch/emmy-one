@@ -19,6 +19,7 @@ import { Route as ProminenceTheoryRouteImport } from './routes/prominence-theory
 import { Route as MustardSeedRouteImport } from './routes/mustard-seed'
 import { Route as LexiconRouteImport } from './routes/lexicon'
 import { Route as EmergencyWhitelistRouteImport } from './routes/emergency-whitelist'
+import { Route as DutchRouteImport } from './routes/dutch'
 import { Route as CrisisToWhitelistRouteImport } from './routes/crisis-to-whitelist'
 import { Route as CrisisSearchRouteImport } from './routes/crisis-search'
 import { Route as CrisisResponseManagementRouteImport } from './routes/crisis-response-management'
@@ -75,6 +76,11 @@ const EmergencyWhitelistRoute = EmergencyWhitelistRouteImport.update({
   path: '/emergency-whitelist',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DutchRoute = DutchRouteImport.update({
+  id: '/dutch',
+  path: '/dutch',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CrisisToWhitelistRoute = CrisisToWhitelistRouteImport.update({
   id: '/crisis-to-whitelist',
   path: '/crisis-to-whitelist',
@@ -108,6 +114,7 @@ export interface FileRoutesByFullPath {
   '/crisis-response-management': typeof CrisisResponseManagementRoute
   '/crisis-search': typeof CrisisSearchRoute
   '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
+  '/dutch': typeof DutchRoute
   '/emergency-whitelist': typeof EmergencyWhitelistRoute
   '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
@@ -125,6 +132,7 @@ export interface FileRoutesByTo {
   '/crisis-response-management': typeof CrisisResponseManagementRoute
   '/crisis-search': typeof CrisisSearchRoute
   '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
+  '/dutch': typeof DutchRoute
   '/emergency-whitelist': typeof EmergencyWhitelistRoute
   '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
@@ -143,6 +151,7 @@ export interface FileRoutesById {
   '/crisis-response-management': typeof CrisisResponseManagementRoute
   '/crisis-search': typeof CrisisSearchRoute
   '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
+  '/dutch': typeof DutchRoute
   '/emergency-whitelist': typeof EmergencyWhitelistRoute
   '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
@@ -162,6 +171,7 @@ export interface FileRouteTypes {
     | '/crisis-response-management'
     | '/crisis-search'
     | '/crisis-to-whitelist'
+    | '/dutch'
     | '/emergency-whitelist'
     | '/lexicon'
     | '/mustard-seed'
@@ -179,6 +189,7 @@ export interface FileRouteTypes {
     | '/crisis-response-management'
     | '/crisis-search'
     | '/crisis-to-whitelist'
+    | '/dutch'
     | '/emergency-whitelist'
     | '/lexicon'
     | '/mustard-seed'
@@ -196,6 +207,7 @@ export interface FileRouteTypes {
     | '/crisis-response-management'
     | '/crisis-search'
     | '/crisis-to-whitelist'
+    | '/dutch'
     | '/emergency-whitelist'
     | '/lexicon'
     | '/mustard-seed'
@@ -214,6 +226,7 @@ export interface RootRouteChildren {
   CrisisResponseManagementRoute: typeof CrisisResponseManagementRoute
   CrisisSearchRoute: typeof CrisisSearchRoute
   CrisisToWhitelistRoute: typeof CrisisToWhitelistRoute
+  DutchRoute: typeof DutchRoute
   EmergencyWhitelistRoute: typeof EmergencyWhitelistRoute
   LexiconRoute: typeof LexiconRoute
   MustardSeedRoute: typeof MustardSeedRoute
@@ -298,6 +311,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EmergencyWhitelistRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dutch': {
+      id: '/dutch'
+      path: '/dutch'
+      fullPath: '/dutch'
+      preLoaderRoute: typeof DutchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/crisis-to-whitelist': {
       id: '/crisis-to-whitelist'
       path: '/crisis-to-whitelist'
@@ -342,6 +362,7 @@ const rootRouteChildren: RootRouteChildren = {
   CrisisResponseManagementRoute: CrisisResponseManagementRoute,
   CrisisSearchRoute: CrisisSearchRoute,
   CrisisToWhitelistRoute: CrisisToWhitelistRoute,
+  DutchRoute: DutchRoute,
   EmergencyWhitelistRoute: EmergencyWhitelistRoute,
   LexiconRoute: LexiconRoute,
   MustardSeedRoute: MustardSeedRoute,
