@@ -9,20 +9,40 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TheTreeRouteImport } from './routes/the-tree'
 import { Route as TheNetRouteImport } from './routes/the-net'
+import { Route as TheCertaintyEffectRouteImport } from './routes/the-certainty-effect'
+import { Route as TheAmygdalaHijackRouteImport } from './routes/the-amygdala-hijack'
 import { Route as The6amMomentRouteImport } from './routes/the-6am-moment'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProminenceTheoryRouteImport } from './routes/prominence-theory'
 import { Route as MustardSeedRouteImport } from './routes/mustard-seed'
+import { Route as LexiconRouteImport } from './routes/lexicon'
+import { Route as EmergencyWhitelistRouteImport } from './routes/emergency-whitelist'
 import { Route as CrisisToWhitelistRouteImport } from './routes/crisis-to-whitelist'
 import { Route as CrisisSearchRouteImport } from './routes/crisis-search'
 import { Route as CrisisResponseManagementRouteImport } from './routes/crisis-response-management'
 import { Route as AnswerAppointmentReviewRouteImport } from './routes/answer-appointment-review'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TheTreeRoute = TheTreeRouteImport.update({
+  id: '/the-tree',
+  path: '/the-tree',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TheNetRoute = TheNetRouteImport.update({
   id: '/the-net',
   path: '/the-net',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TheCertaintyEffectRoute = TheCertaintyEffectRouteImport.update({
+  id: '/the-certainty-effect',
+  path: '/the-certainty-effect',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TheAmygdalaHijackRoute = TheAmygdalaHijackRouteImport.update({
+  id: '/the-amygdala-hijack',
+  path: '/the-amygdala-hijack',
   getParentRoute: () => rootRouteImport,
 } as any)
 const The6amMomentRoute = The6amMomentRouteImport.update({
@@ -43,6 +63,16 @@ const ProminenceTheoryRoute = ProminenceTheoryRouteImport.update({
 const MustardSeedRoute = MustardSeedRouteImport.update({
   id: '/mustard-seed',
   path: '/mustard-seed',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LexiconRoute = LexiconRouteImport.update({
+  id: '/lexicon',
+  path: '/lexicon',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmergencyWhitelistRoute = EmergencyWhitelistRouteImport.update({
+  id: '/emergency-whitelist',
+  path: '/emergency-whitelist',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CrisisToWhitelistRoute = CrisisToWhitelistRouteImport.update({
@@ -78,11 +108,16 @@ export interface FileRoutesByFullPath {
   '/crisis-response-management': typeof CrisisResponseManagementRoute
   '/crisis-search': typeof CrisisSearchRoute
   '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
+  '/emergency-whitelist': typeof EmergencyWhitelistRoute
+  '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
   '/prominence-theory': typeof ProminenceTheoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/the-6am-moment': typeof The6amMomentRoute
+  '/the-amygdala-hijack': typeof TheAmygdalaHijackRoute
+  '/the-certainty-effect': typeof TheCertaintyEffectRoute
   '/the-net': typeof TheNetRoute
+  '/the-tree': typeof TheTreeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -90,11 +125,16 @@ export interface FileRoutesByTo {
   '/crisis-response-management': typeof CrisisResponseManagementRoute
   '/crisis-search': typeof CrisisSearchRoute
   '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
+  '/emergency-whitelist': typeof EmergencyWhitelistRoute
+  '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
   '/prominence-theory': typeof ProminenceTheoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/the-6am-moment': typeof The6amMomentRoute
+  '/the-amygdala-hijack': typeof TheAmygdalaHijackRoute
+  '/the-certainty-effect': typeof TheCertaintyEffectRoute
   '/the-net': typeof TheNetRoute
+  '/the-tree': typeof TheTreeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -103,11 +143,16 @@ export interface FileRoutesById {
   '/crisis-response-management': typeof CrisisResponseManagementRoute
   '/crisis-search': typeof CrisisSearchRoute
   '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
+  '/emergency-whitelist': typeof EmergencyWhitelistRoute
+  '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
   '/prominence-theory': typeof ProminenceTheoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/the-6am-moment': typeof The6amMomentRoute
+  '/the-amygdala-hijack': typeof TheAmygdalaHijackRoute
+  '/the-certainty-effect': typeof TheCertaintyEffectRoute
   '/the-net': typeof TheNetRoute
+  '/the-tree': typeof TheTreeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -117,11 +162,16 @@ export interface FileRouteTypes {
     | '/crisis-response-management'
     | '/crisis-search'
     | '/crisis-to-whitelist'
+    | '/emergency-whitelist'
+    | '/lexicon'
     | '/mustard-seed'
     | '/prominence-theory'
     | '/sitemap.xml'
     | '/the-6am-moment'
+    | '/the-amygdala-hijack'
+    | '/the-certainty-effect'
     | '/the-net'
+    | '/the-tree'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -129,11 +179,16 @@ export interface FileRouteTypes {
     | '/crisis-response-management'
     | '/crisis-search'
     | '/crisis-to-whitelist'
+    | '/emergency-whitelist'
+    | '/lexicon'
     | '/mustard-seed'
     | '/prominence-theory'
     | '/sitemap.xml'
     | '/the-6am-moment'
+    | '/the-amygdala-hijack'
+    | '/the-certainty-effect'
     | '/the-net'
+    | '/the-tree'
   id:
     | '__root__'
     | '/'
@@ -141,11 +196,16 @@ export interface FileRouteTypes {
     | '/crisis-response-management'
     | '/crisis-search'
     | '/crisis-to-whitelist'
+    | '/emergency-whitelist'
+    | '/lexicon'
     | '/mustard-seed'
     | '/prominence-theory'
     | '/sitemap.xml'
     | '/the-6am-moment'
+    | '/the-amygdala-hijack'
+    | '/the-certainty-effect'
     | '/the-net'
+    | '/the-tree'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -154,20 +214,46 @@ export interface RootRouteChildren {
   CrisisResponseManagementRoute: typeof CrisisResponseManagementRoute
   CrisisSearchRoute: typeof CrisisSearchRoute
   CrisisToWhitelistRoute: typeof CrisisToWhitelistRoute
+  EmergencyWhitelistRoute: typeof EmergencyWhitelistRoute
+  LexiconRoute: typeof LexiconRoute
   MustardSeedRoute: typeof MustardSeedRoute
   ProminenceTheoryRoute: typeof ProminenceTheoryRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   The6amMomentRoute: typeof The6amMomentRoute
+  TheAmygdalaHijackRoute: typeof TheAmygdalaHijackRoute
+  TheCertaintyEffectRoute: typeof TheCertaintyEffectRoute
   TheNetRoute: typeof TheNetRoute
+  TheTreeRoute: typeof TheTreeRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/the-tree': {
+      id: '/the-tree'
+      path: '/the-tree'
+      fullPath: '/the-tree'
+      preLoaderRoute: typeof TheTreeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/the-net': {
       id: '/the-net'
       path: '/the-net'
       fullPath: '/the-net'
       preLoaderRoute: typeof TheNetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/the-certainty-effect': {
+      id: '/the-certainty-effect'
+      path: '/the-certainty-effect'
+      fullPath: '/the-certainty-effect'
+      preLoaderRoute: typeof TheCertaintyEffectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/the-amygdala-hijack': {
+      id: '/the-amygdala-hijack'
+      path: '/the-amygdala-hijack'
+      fullPath: '/the-amygdala-hijack'
+      preLoaderRoute: typeof TheAmygdalaHijackRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/the-6am-moment': {
@@ -196,6 +282,20 @@ declare module '@tanstack/react-router' {
       path: '/mustard-seed'
       fullPath: '/mustard-seed'
       preLoaderRoute: typeof MustardSeedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lexicon': {
+      id: '/lexicon'
+      path: '/lexicon'
+      fullPath: '/lexicon'
+      preLoaderRoute: typeof LexiconRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/emergency-whitelist': {
+      id: '/emergency-whitelist'
+      path: '/emergency-whitelist'
+      fullPath: '/emergency-whitelist'
+      preLoaderRoute: typeof EmergencyWhitelistRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/crisis-to-whitelist': {
@@ -242,11 +342,16 @@ const rootRouteChildren: RootRouteChildren = {
   CrisisResponseManagementRoute: CrisisResponseManagementRoute,
   CrisisSearchRoute: CrisisSearchRoute,
   CrisisToWhitelistRoute: CrisisToWhitelistRoute,
+  EmergencyWhitelistRoute: EmergencyWhitelistRoute,
+  LexiconRoute: LexiconRoute,
   MustardSeedRoute: MustardSeedRoute,
   ProminenceTheoryRoute: ProminenceTheoryRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   The6amMomentRoute: The6amMomentRoute,
+  TheAmygdalaHijackRoute: TheAmygdalaHijackRoute,
+  TheCertaintyEffectRoute: TheCertaintyEffectRoute,
   TheNetRoute: TheNetRoute,
+  TheTreeRoute: TheTreeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
