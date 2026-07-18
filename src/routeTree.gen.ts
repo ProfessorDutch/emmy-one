@@ -9,12 +9,61 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TheNetRouteImport } from './routes/the-net'
+import { Route as The6amMomentRouteImport } from './routes/the-6am-moment'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ProminenceTheoryRouteImport } from './routes/prominence-theory'
+import { Route as MustardSeedRouteImport } from './routes/mustard-seed'
+import { Route as CrisisToWhitelistRouteImport } from './routes/crisis-to-whitelist'
+import { Route as CrisisSearchRouteImport } from './routes/crisis-search'
+import { Route as CrisisResponseManagementRouteImport } from './routes/crisis-response-management'
+import { Route as AnswerAppointmentReviewRouteImport } from './routes/answer-appointment-review'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TheNetRoute = TheNetRouteImport.update({
+  id: '/the-net',
+  path: '/the-net',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const The6amMomentRoute = The6amMomentRouteImport.update({
+  id: '/the-6am-moment',
+  path: '/the-6am-moment',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProminenceTheoryRoute = ProminenceTheoryRouteImport.update({
+  id: '/prominence-theory',
+  path: '/prominence-theory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MustardSeedRoute = MustardSeedRouteImport.update({
+  id: '/mustard-seed',
+  path: '/mustard-seed',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrisisToWhitelistRoute = CrisisToWhitelistRouteImport.update({
+  id: '/crisis-to-whitelist',
+  path: '/crisis-to-whitelist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrisisSearchRoute = CrisisSearchRouteImport.update({
+  id: '/crisis-search',
+  path: '/crisis-search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrisisResponseManagementRoute =
+  CrisisResponseManagementRouteImport.update({
+    id: '/crisis-response-management',
+    path: '/crisis-response-management',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AnswerAppointmentReviewRoute = AnswerAppointmentReviewRouteImport.update({
+  id: '/answer-appointment-review',
+  path: '/answer-appointment-review',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,37 +74,156 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/answer-appointment-review': typeof AnswerAppointmentReviewRoute
+  '/crisis-response-management': typeof CrisisResponseManagementRoute
+  '/crisis-search': typeof CrisisSearchRoute
+  '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
+  '/mustard-seed': typeof MustardSeedRoute
+  '/prominence-theory': typeof ProminenceTheoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/the-6am-moment': typeof The6amMomentRoute
+  '/the-net': typeof TheNetRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/answer-appointment-review': typeof AnswerAppointmentReviewRoute
+  '/crisis-response-management': typeof CrisisResponseManagementRoute
+  '/crisis-search': typeof CrisisSearchRoute
+  '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
+  '/mustard-seed': typeof MustardSeedRoute
+  '/prominence-theory': typeof ProminenceTheoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/the-6am-moment': typeof The6amMomentRoute
+  '/the-net': typeof TheNetRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/answer-appointment-review': typeof AnswerAppointmentReviewRoute
+  '/crisis-response-management': typeof CrisisResponseManagementRoute
+  '/crisis-search': typeof CrisisSearchRoute
+  '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
+  '/mustard-seed': typeof MustardSeedRoute
+  '/prominence-theory': typeof ProminenceTheoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/the-6am-moment': typeof The6amMomentRoute
+  '/the-net': typeof TheNetRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/answer-appointment-review'
+    | '/crisis-response-management'
+    | '/crisis-search'
+    | '/crisis-to-whitelist'
+    | '/mustard-seed'
+    | '/prominence-theory'
+    | '/sitemap.xml'
+    | '/the-6am-moment'
+    | '/the-net'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml'
-  id: '__root__' | '/' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/answer-appointment-review'
+    | '/crisis-response-management'
+    | '/crisis-search'
+    | '/crisis-to-whitelist'
+    | '/mustard-seed'
+    | '/prominence-theory'
+    | '/sitemap.xml'
+    | '/the-6am-moment'
+    | '/the-net'
+  id:
+    | '__root__'
+    | '/'
+    | '/answer-appointment-review'
+    | '/crisis-response-management'
+    | '/crisis-search'
+    | '/crisis-to-whitelist'
+    | '/mustard-seed'
+    | '/prominence-theory'
+    | '/sitemap.xml'
+    | '/the-6am-moment'
+    | '/the-net'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnswerAppointmentReviewRoute: typeof AnswerAppointmentReviewRoute
+  CrisisResponseManagementRoute: typeof CrisisResponseManagementRoute
+  CrisisSearchRoute: typeof CrisisSearchRoute
+  CrisisToWhitelistRoute: typeof CrisisToWhitelistRoute
+  MustardSeedRoute: typeof MustardSeedRoute
+  ProminenceTheoryRoute: typeof ProminenceTheoryRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  The6amMomentRoute: typeof The6amMomentRoute
+  TheNetRoute: typeof TheNetRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/the-net': {
+      id: '/the-net'
+      path: '/the-net'
+      fullPath: '/the-net'
+      preLoaderRoute: typeof TheNetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/the-6am-moment': {
+      id: '/the-6am-moment'
+      path: '/the-6am-moment'
+      fullPath: '/the-6am-moment'
+      preLoaderRoute: typeof The6amMomentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prominence-theory': {
+      id: '/prominence-theory'
+      path: '/prominence-theory'
+      fullPath: '/prominence-theory'
+      preLoaderRoute: typeof ProminenceTheoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mustard-seed': {
+      id: '/mustard-seed'
+      path: '/mustard-seed'
+      fullPath: '/mustard-seed'
+      preLoaderRoute: typeof MustardSeedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crisis-to-whitelist': {
+      id: '/crisis-to-whitelist'
+      path: '/crisis-to-whitelist'
+      fullPath: '/crisis-to-whitelist'
+      preLoaderRoute: typeof CrisisToWhitelistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crisis-search': {
+      id: '/crisis-search'
+      path: '/crisis-search'
+      fullPath: '/crisis-search'
+      preLoaderRoute: typeof CrisisSearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crisis-response-management': {
+      id: '/crisis-response-management'
+      path: '/crisis-response-management'
+      fullPath: '/crisis-response-management'
+      preLoaderRoute: typeof CrisisResponseManagementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/answer-appointment-review': {
+      id: '/answer-appointment-review'
+      path: '/answer-appointment-review'
+      fullPath: '/answer-appointment-review'
+      preLoaderRoute: typeof AnswerAppointmentReviewRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,8 +238,26 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnswerAppointmentReviewRoute: AnswerAppointmentReviewRoute,
+  CrisisResponseManagementRoute: CrisisResponseManagementRoute,
+  CrisisSearchRoute: CrisisSearchRoute,
+  CrisisToWhitelistRoute: CrisisToWhitelistRoute,
+  MustardSeedRoute: MustardSeedRoute,
+  ProminenceTheoryRoute: ProminenceTheoryRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  The6amMomentRoute: The6amMomentRoute,
+  TheNetRoute: TheNetRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
