@@ -16,6 +16,7 @@ import { Route as TheAmygdalaHijackRouteImport } from './routes/the-amygdala-hij
 import { Route as The6amMomentRouteImport } from './routes/the-6am-moment'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProminenceTheoryRouteImport } from './routes/prominence-theory'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as MustardSeedRouteImport } from './routes/mustard-seed'
 import { Route as LexiconRouteImport } from './routes/lexicon'
 import { Route as EmergencyWhitelistRouteImport } from './routes/emergency-whitelist'
@@ -59,6 +60,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ProminenceTheoryRoute = ProminenceTheoryRouteImport.update({
   id: '/prominence-theory',
   path: '/prominence-theory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MustardSeedRoute = MustardSeedRouteImport.update({
@@ -118,6 +124,7 @@ export interface FileRoutesByFullPath {
   '/emergency-whitelist': typeof EmergencyWhitelistRoute
   '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/prominence-theory': typeof ProminenceTheoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/the-6am-moment': typeof The6amMomentRoute
@@ -136,6 +143,7 @@ export interface FileRoutesByTo {
   '/emergency-whitelist': typeof EmergencyWhitelistRoute
   '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/prominence-theory': typeof ProminenceTheoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/the-6am-moment': typeof The6amMomentRoute
@@ -155,6 +163,7 @@ export interface FileRoutesById {
   '/emergency-whitelist': typeof EmergencyWhitelistRoute
   '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/prominence-theory': typeof ProminenceTheoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/the-6am-moment': typeof The6amMomentRoute
@@ -175,6 +184,7 @@ export interface FileRouteTypes {
     | '/emergency-whitelist'
     | '/lexicon'
     | '/mustard-seed'
+    | '/privacy-policy'
     | '/prominence-theory'
     | '/sitemap.xml'
     | '/the-6am-moment'
@@ -193,6 +203,7 @@ export interface FileRouteTypes {
     | '/emergency-whitelist'
     | '/lexicon'
     | '/mustard-seed'
+    | '/privacy-policy'
     | '/prominence-theory'
     | '/sitemap.xml'
     | '/the-6am-moment'
@@ -211,6 +222,7 @@ export interface FileRouteTypes {
     | '/emergency-whitelist'
     | '/lexicon'
     | '/mustard-seed'
+    | '/privacy-policy'
     | '/prominence-theory'
     | '/sitemap.xml'
     | '/the-6am-moment'
@@ -230,6 +242,7 @@ export interface RootRouteChildren {
   EmergencyWhitelistRoute: typeof EmergencyWhitelistRoute
   LexiconRoute: typeof LexiconRoute
   MustardSeedRoute: typeof MustardSeedRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ProminenceTheoryRoute: typeof ProminenceTheoryRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   The6amMomentRoute: typeof The6amMomentRoute
@@ -288,6 +301,13 @@ declare module '@tanstack/react-router' {
       path: '/prominence-theory'
       fullPath: '/prominence-theory'
       preLoaderRoute: typeof ProminenceTheoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mustard-seed': {
@@ -366,6 +386,7 @@ const rootRouteChildren: RootRouteChildren = {
   EmergencyWhitelistRoute: EmergencyWhitelistRoute,
   LexiconRoute: LexiconRoute,
   MustardSeedRoute: MustardSeedRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ProminenceTheoryRoute: ProminenceTheoryRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   The6amMomentRoute: The6amMomentRoute,
