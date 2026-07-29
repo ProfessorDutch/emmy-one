@@ -14,6 +14,7 @@ import { Route as TheNetRouteImport } from './routes/the-net'
 import { Route as TheCertaintyEffectRouteImport } from './routes/the-certainty-effect'
 import { Route as TheAmygdalaHijackRouteImport } from './routes/the-amygdala-hijack'
 import { Route as The6amMomentRouteImport } from './routes/the-6am-moment'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProminenceTheoryRouteImport } from './routes/prominence-theory'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
@@ -50,6 +51,11 @@ const TheAmygdalaHijackRoute = TheAmygdalaHijackRouteImport.update({
 const The6amMomentRoute = The6amMomentRouteImport.update({
   id: '/the-6am-moment',
   path: '/the-6am-moment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -127,6 +133,7 @@ export interface FileRoutesByFullPath {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/prominence-theory': typeof ProminenceTheoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/the-6am-moment': typeof The6amMomentRoute
   '/the-amygdala-hijack': typeof TheAmygdalaHijackRoute
   '/the-certainty-effect': typeof TheCertaintyEffectRoute
@@ -146,6 +153,7 @@ export interface FileRoutesByTo {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/prominence-theory': typeof ProminenceTheoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/the-6am-moment': typeof The6amMomentRoute
   '/the-amygdala-hijack': typeof TheAmygdalaHijackRoute
   '/the-certainty-effect': typeof TheCertaintyEffectRoute
@@ -166,6 +174,7 @@ export interface FileRoutesById {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/prominence-theory': typeof ProminenceTheoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/the-6am-moment': typeof The6amMomentRoute
   '/the-amygdala-hijack': typeof TheAmygdalaHijackRoute
   '/the-certainty-effect': typeof TheCertaintyEffectRoute
@@ -187,6 +196,7 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/prominence-theory'
     | '/sitemap.xml'
+    | '/terms'
     | '/the-6am-moment'
     | '/the-amygdala-hijack'
     | '/the-certainty-effect'
@@ -206,6 +216,7 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/prominence-theory'
     | '/sitemap.xml'
+    | '/terms'
     | '/the-6am-moment'
     | '/the-amygdala-hijack'
     | '/the-certainty-effect'
@@ -225,6 +236,7 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/prominence-theory'
     | '/sitemap.xml'
+    | '/terms'
     | '/the-6am-moment'
     | '/the-amygdala-hijack'
     | '/the-certainty-effect'
@@ -245,6 +257,7 @@ export interface RootRouteChildren {
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ProminenceTheoryRoute: typeof ProminenceTheoryRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TermsRoute: typeof TermsRoute
   The6amMomentRoute: typeof The6amMomentRoute
   TheAmygdalaHijackRoute: typeof TheAmygdalaHijackRoute
   TheCertaintyEffectRoute: typeof TheCertaintyEffectRoute
@@ -287,6 +300,13 @@ declare module '@tanstack/react-router' {
       path: '/the-6am-moment'
       fullPath: '/the-6am-moment'
       preLoaderRoute: typeof The6amMomentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -389,6 +409,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   ProminenceTheoryRoute: ProminenceTheoryRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TermsRoute: TermsRoute,
   The6amMomentRoute: The6amMomentRoute,
   TheAmygdalaHijackRoute: TheAmygdalaHijackRoute,
   TheCertaintyEffectRoute: TheCertaintyEffectRoute,
