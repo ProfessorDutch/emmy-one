@@ -20,6 +20,7 @@ import { Route as ProminenceTheoryRouteImport } from './routes/prominence-theory
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as MustardSeedRouteImport } from './routes/mustard-seed'
 import { Route as LexiconRouteImport } from './routes/lexicon'
+import { Route as EnrollRouteImport } from './routes/enroll'
 import { Route as EmergencyWhitelistRouteImport } from './routes/emergency-whitelist'
 import { Route as DutchRouteImport } from './routes/dutch'
 import { Route as CrisisToWhitelistRouteImport } from './routes/crisis-to-whitelist'
@@ -83,6 +84,11 @@ const LexiconRoute = LexiconRouteImport.update({
   path: '/lexicon',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EnrollRoute = EnrollRouteImport.update({
+  id: '/enroll',
+  path: '/enroll',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EmergencyWhitelistRoute = EmergencyWhitelistRouteImport.update({
   id: '/emergency-whitelist',
   path: '/emergency-whitelist',
@@ -128,6 +134,7 @@ export interface FileRoutesByFullPath {
   '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
   '/dutch': typeof DutchRoute
   '/emergency-whitelist': typeof EmergencyWhitelistRoute
+  '/enroll': typeof EnrollRoute
   '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -148,6 +155,7 @@ export interface FileRoutesByTo {
   '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
   '/dutch': typeof DutchRoute
   '/emergency-whitelist': typeof EmergencyWhitelistRoute
+  '/enroll': typeof EnrollRoute
   '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -169,6 +177,7 @@ export interface FileRoutesById {
   '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
   '/dutch': typeof DutchRoute
   '/emergency-whitelist': typeof EmergencyWhitelistRoute
+  '/enroll': typeof EnrollRoute
   '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -191,6 +200,7 @@ export interface FileRouteTypes {
     | '/crisis-to-whitelist'
     | '/dutch'
     | '/emergency-whitelist'
+    | '/enroll'
     | '/lexicon'
     | '/mustard-seed'
     | '/privacy-policy'
@@ -211,6 +221,7 @@ export interface FileRouteTypes {
     | '/crisis-to-whitelist'
     | '/dutch'
     | '/emergency-whitelist'
+    | '/enroll'
     | '/lexicon'
     | '/mustard-seed'
     | '/privacy-policy'
@@ -231,6 +242,7 @@ export interface FileRouteTypes {
     | '/crisis-to-whitelist'
     | '/dutch'
     | '/emergency-whitelist'
+    | '/enroll'
     | '/lexicon'
     | '/mustard-seed'
     | '/privacy-policy'
@@ -252,6 +264,7 @@ export interface RootRouteChildren {
   CrisisToWhitelistRoute: typeof CrisisToWhitelistRoute
   DutchRoute: typeof DutchRoute
   EmergencyWhitelistRoute: typeof EmergencyWhitelistRoute
+  EnrollRoute: typeof EnrollRoute
   LexiconRoute: typeof LexiconRoute
   MustardSeedRoute: typeof MustardSeedRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
@@ -344,6 +357,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LexiconRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/enroll': {
+      id: '/enroll'
+      path: '/enroll'
+      fullPath: '/enroll'
+      preLoaderRoute: typeof EnrollRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/emergency-whitelist': {
       id: '/emergency-whitelist'
       path: '/emergency-whitelist'
@@ -404,6 +424,7 @@ const rootRouteChildren: RootRouteChildren = {
   CrisisToWhitelistRoute: CrisisToWhitelistRoute,
   DutchRoute: DutchRoute,
   EmergencyWhitelistRoute: EmergencyWhitelistRoute,
+  EnrollRoute: EnrollRoute,
   LexiconRoute: LexiconRoute,
   MustardSeedRoute: MustardSeedRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
