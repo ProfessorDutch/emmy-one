@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Enroll your business in MeetEmmy. First 50 founder-member pricing: $0 due today, $1 per answered call, and waived setup and membership fees.">
+<link rel="canonical" href="https://www.meetemmy.com/enroll">
+<title>MeetEmmy — Service Enrollment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+    :root {
+      --ember: #fb5e0e;
+      --ember-dark: #d94700;
+      --ember-soft: #fff3ec;
+      --ink: #17181b;
+      --charcoal: #111318;
+      --text: #454a52;
+      --muted: #737983;
+      --line: #e3e6ea;
+      --surface: #f6f7f9;
+      --success: #16875d;
+      --success-soft: #effaf5;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #edf0f3;
+      color: var(--text);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button, input, select, textarea { font: inherit; }
+    a { color: var(--ember-dark); }
+
+    .page-shell { width: min(960px, calc(100% - 32px)); margin: 32px auto; }
+    .form-card { overflow: hidden; background: var(--white); border-radius: 18px; box-shadow: 0 14px 50px rgba(17, 19, 24, .10); }
+
+    .brand-header {
+      padding: 34px 44px 30px;
+      background: var(--charcoal);
+      border-bottom: 4px solid var(--ember);
+    }
+    .brand { color: var(--white); font-size: 34px; font-weight: 900; letter-spacing: -1.8px; line-height: 1; }
+    .brand span { color: var(--ember); }
+    .tagline { margin-top: 9px; color: #bfc4cc; font-size: 12px; font-weight: 700; letter-spacing: 1.1px; text-transform: uppercase; }
+
+    .hero { padding: 40px 44px 30px; }
+    .eyebrow { margin: 0 0 8px; color: var(--ember-dark); font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; }
+    h1 { margin: 0; color: var(--ink); font-size: clamp(30px, 5vw, 44px); line-height: 1.08; letter-spacing: -1.8px; }
+    .hero-copy { max-width: 710px; margin: 15px 0 0; color: var(--muted); font-size: 16px; }
+    .progress-line { width: 100%; height: 1px; margin-top: 28px; background: var(--ember); }
+
+    .founder-banner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 26px;
+      align-items: center;
+      margin: 0 44px 12px;
+      padding: 24px 26px;
+      background: linear-gradient(135deg, #fff7f2 0%, #fff 72%);
+      border: 1px solid #ffd7c2;
+      border-left: 5px solid var(--ember);
+      border-radius: 12px;
+    }
+    .badge { display: inline-block; margin-bottom: 8px; padding: 4px 9px; background: var(--ember); color: white; border-radius: 4px; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+    .founder-banner h2 { margin: 0 0 5px; padding: 0; border: 0; font-size: 21px; }
+    .founder-banner p { margin: 0; font-size: 14px; }
+    .due-today { margin: 7px 0 0; color: var(--ink); font-size: 15px; font-weight: 800; }
+    .savings { min-width: 145px; text-align: right; }
+    .savings strong { display: block; color: var(--success); font-size: 34px; font-weight: 900; line-height: 1; }
+    .savings span { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; }
+
+    .stage-roadmap { margin: 18px 44px 12px; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; }
+    .stage-row { display: grid; grid-template-columns: 92px 1fr auto; gap: 14px; align-items: center; padding: 14px 18px; }
+    .stage-row + .stage-row { border-top: 1px solid var(--line); }
+    .stage-row.active { background: var(--success-soft); }
+    .stage-row.locked { background: var(--surface); color: var(--muted); }
+    .stage-number { color: var(--ink); font-size: 12px; font-weight: 800; letter-spacing: .7px; text-transform: uppercase; }
+    .stage-name { color: var(--ink); font-size: 14px; font-weight: 700; }
+    .stage-row.locked .stage-name { color: #707680; }
+    .stage-status { padding: 3px 8px; border-radius: 4px; font-size: 9px; font-weight: 800; letter-spacing: .7px; text-transform: uppercase; }
+    .stage-status.active { background: var(--success); color: white; }
+    .stage-status.locked { background: #dfe2e6; color: #666c75; }
+
+    form { padding: 12px 44px 46px; }
+    .section { padding: 34px 0 4px; }
+    .section + .section { margin-top: 20px; border-top: 1px solid var(--line); }
+    .section-heading { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 22px; }
+    .section-number { display: grid; width: 34px; height: 34px; flex: 0 0 34px; place-items: center; background: var(--charcoal); color: white; border-radius: 50%; font-size: 13px; font-weight: 800; }
+    .section-heading h2 { margin: 0; color: var(--ink); font-size: 22px; line-height: 1.3; }
+    .section-heading p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+    h3 { margin: 28px 0 12px; color: var(--ink); font-size: 16px; }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; }
+    .grid-3 { display: grid; grid-template-columns: 1.3fr .7fr .7fr; gap: 17px; }
+    .field { margin-bottom: 17px; }
+    label, legend { display: block; margin-bottom: 6px; color: var(--ink); font-size: 13px; font-weight: 700; }
+    .required { color: var(--ember-dark); }
+    .hint { display: block; margin-top: 5px; color: var(--muted); font-size: 11px; }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="date"], select, textarea {
+      width: 100%; min-height: 46px; padding: 10px 13px; background: white; color: var(--ink); border: 1px solid #cfd4da; border-radius: 8px; outline: none; transition: border-color .18s, box-shadow .18s;
+    }
+    textarea { min-height: 105px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { border-color: var(--ember); box-shadow: 0 0 0 3px rgba(251, 94, 14, .12); }
+    input::placeholder, textarea::placeholder { color: #9ca2aa; }
+
+    .choice-card { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; padding: 16px; background: white; border: 1px solid var(--line); border-radius: 10px; }
+    .choice-card.included { background: var(--success-soft); border-color: #ccecdf; }
+    .choice-card input { width: 19px; height: 19px; flex: 0 0 19px; margin-top: 2px; accent-color: var(--ember); }
+    .choice-card label { margin: 0; cursor: pointer; font-weight: 400; }
+    .choice-card strong { color: var(--ink); }
+    .pill { display: inline-block; margin-left: 6px; padding: 2px 7px; border-radius: 4px; font-size: 9px; font-weight: 800; letter-spacing: .7px; text-transform: uppercase; vertical-align: 2px; }
+    .pill.included { background: var(--success); color: white; }
+    .pill.optional { background: var(--ember); color: white; }
+
+    .info-box { margin: 18px 0; padding: 17px 19px; background: var(--ember-soft); border-left: 4px solid var(--ember); border-radius: 0 9px 9px 0; }
+    .info-box.dark { background: #f2f3f5; border-left-color: var(--charcoal); }
+    .info-box h3 { margin: 0 0 7px; font-size: 15px; }
+    .info-box p, .info-box li { font-size: 13px; }
+    .info-box p { margin: 4px 0; }
+    .info-box ol, .info-box ul { margin: 8px 0 0 20px; padding: 0; }
+
+    fieldset { margin: 0; padding: 0; border: 0; }
+    .inline-options { display: flex; flex-wrap: wrap; gap: 10px; }
+    .inline-options label { display: inline-flex; gap: 7px; align-items: center; min-height: 40px; margin: 0; padding: 8px 13px; background: white; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
+    .inline-options input { accent-color: var(--ember); }
+
+    .calendar-row { display: grid; grid-template-columns: .8fr 1.2fr; gap: 12px; margin-bottom: 10px; }
+    .calendar-row[hidden] { display: none; }
+    .secondary-button { padding: 9px 14px; background: white; color: var(--text); border: 1px dashed #aeb4bc; border-radius: 8px; cursor: pointer; font-weight: 700; }
+
+    .pricing { overflow: hidden; border: 1px solid var(--line); border-radius: 12px; }
+    .pricing-row { display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 16px 19px; }
+    .pricing-row + .pricing-row { border-top: 1px solid var(--line); }
+    .pricing-row:nth-child(even) { background: var(--surface); }
+    .pricing-label strong { display: block; color: var(--ink); }
+    .pricing-label span { color: var(--muted); font-size: 12px; }
+    .price { color: var(--ember-dark); font-size: 21px; font-weight: 900; white-space: nowrap; }
+    .price small { color: var(--text); font-size: 12px; font-weight: 600; }
+    .price.free { color: var(--success); }
+
+    .agreement { padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+    .agreement ul { margin: 10px 0 18px 20px; padding: 0; font-size: 13px; }
+    .consent { display: flex; gap: 10px; align-items: flex-start; margin-top: 14px; }
+    .consent input { width: 19px; height: 19px; margin-top: 2px; accent-color: var(--ember); }
+    .consent label { margin: 0; font-weight: 600; }
+
+    .submit-panel { margin-top: 28px; padding: 22px; background: var(--charcoal); border-radius: 12px; text-align: center; }
+    .submit-button { width: 100%; min-height: 52px; padding: 13px 20px; background: var(--ember); color: white; border: 0; border-radius: 8px; cursor: pointer; font-weight: 800; }
+    .submit-button:hover { background: var(--ember-dark); }
+    .submit-note { margin: 10px 0 0; color: #bfc4cc; font-size: 11px; }
+    .form-status { display: none; margin-top: 12px; padding: 12px; border-radius: 8px; font-size: 13px; }
+    .form-status.error { display: block; background: #fff0f0; color: #a42626; }
+    .form-status.success { display: block; background: var(--success-soft); color: #0e6745; }
+
+    footer { padding: 25px 30px; background: #0d0f13; color: #969ca5; text-align: center; font-size: 12px; }
+    footer strong { color: white; }
+    footer a { color: var(--ember); text-decoration: none; }
+
+    @media (max-width: 720px) {
+      .page-shell { width: min(100% - 16px, 960px); margin: 8px auto; }
+      .form-card { border-radius: 12px; }
+      .brand-header, .hero, form { padding-left: 20px; padding-right: 20px; }
+      .founder-banner { grid-template-columns: 1fr; margin-left: 20px; margin-right: 20px; }
+      .stage-roadmap { margin-left: 20px; margin-right: 20px; }
+      .stage-row { grid-template-columns: 78px 1fr; }
+      .stage-status { grid-column: 2; justify-self: start; }
+      .savings { text-align: left; }
+      .grid-2, .grid-3, .calendar-row { grid-template-columns: 1fr; gap: 0; }
+      .pricing-row { align-items: flex-start; }
+    }
+</style>
+</head>
+<body>
+
+<div class="page-shell">
+  <div class="form-card">
+
+    <div class="brand-header">
+      <div class="brand">Meet<span>Emmy</span></div>
+      <div class="tagline">Your calls. Answered.</div>
+    </div>
+
+    <div class="hero">
+      <p class="eyebrow">Service enrollment</p>
+      <h1>Let’s build Emmy for your business.</h1>
+      <p class="hero-copy">Confirm the information we already have, then tell us how your calls, appointments and calendars should be handled. Fields included in your enrollment link will be filled automatically.</p>
+      <div class="progress-line" aria-hidden="true"></div>
+    </div>
+
+    <div class="founder-banner">
+      <div>
+        <span class="badge">First 50 Program</span>
+        <h2>Your $0-due-today founder-member pricing is locked in.</h2>
+        <p>$0 is due today.</p>
+        <p class="due-today">Your $1 per-call pricing is grandfathered for life. The $1,499 setup fee and $299 monthly membership for 24 months are waived.</p>
+      </div>
+      <div class="savings">
+        <strong>$8,675</strong>
+        <span>Total savings</span>
+      </div>
+    </div>
+
+    <div class="stage-roadmap">
+      <div class="stage-row active">
+        <div class="stage-number">Stage 1</div>
+        <div class="stage-name">MeetEmmy Call Answering &amp; Appointment Booking</div>
+        <div class="stage-status active">Included now</div>
+      </div>
+      <div class="stage-row locked">
+        <div class="stage-number">Stage 2</div>
+        <div class="stage-name">Search Engine Whitelist &amp; 5-Star Review System</div>
+        <div class="stage-status locked">Not available</div>
+      </div>
+      <div class="stage-row locked">
+        <div class="stage-number">Stage 3</div>
+        <div class="stage-name">Location Expansion Pack</div>
+        <div class="stage-status locked">Not available</div>
+      </div>
+      <div class="stage-row locked">
+        <div class="stage-number">Stage 4</div>
+        <div class="stage-name">Private Equity Plan</div>
+        <div class="stage-status locked">Not available</div>
+      </div>
+    </div>
+
+    <form id="enrollment-form" action="/enroll" method="POST" novalidate>
+
+      <div class="section">
+        <div class="section-heading">
+          <div class="section-number">1</div>
+          <div>
+            <h2>Business information</h2>
+            <p>Review the prefilled details and correct anything that has changed.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="business-name">Business name <span class="required">*</span></label>
+          <input id="business-name" name="business_name" type="text" required>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="primary-contact">Primary contact <span class="required">*</span></label>
+            <input id="primary-contact" name="primary_contact" type="text" required>
+          </div>
+          <div class="field">
+            <label for="contact-title">Title</label>
+            <input id="contact-title" name="contact_title" type="text">
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="email">Email <span class="required">*</span></label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone <span class="required">*</span></label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="street-address">Street address <span class="required">*</span></label>
+          <input id="street-address" name="street_address" type="text" required>
+        </div>
+
+        <div class="grid-3">
+          <div class="field">
+            <label for="city">City <span class="required">*</span></label>
+            <input id="city" name="city" type="text" required>
+          </div>
+          <div class="field">
+            <label for="state">State <span class="required">*</span></label>
+            <input id="state" name="state" type="text" required>
+          </div>
+          <div class="field">
+            <label for="zip">ZIP code <span class="required">*</span></label>
+            <input id="zip" name="zip" type="text" required>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="industry">Industry / service type <span class="required">*</span></label>
+            <select id="industry" name="industry" required>
+              <option value="">Select one</option>
+              <option value="hvac">HVAC</option>
+              <option value="plumbing">Plumbing</option>
+              <option value="electrical">Electrical</option>
+              <option value="roofing">Roofing</option>
+              <option value="painting">Painting</option>
+              <option value="landscaping">Landscaping</option>
+              <option value="tree-service">Tree service</option>
+              <option value="general-contractor">General contractor</option>
+              <option value="cleaning-service">Cleaning service</option>
+              <option value="legal-attorney">Legal / attorney</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="url" placeholder="https://">
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-heading">
+          <div class="section-number">2</div>
+          <div>
+            <h2>Call handling</h2>
+            <p>Choose how Emmy should handle the calls that require immediate attention.</p>
+          </div>
+        </div>
+
+        <div class="choice-card included">
+          <input id="call-answering" name="call_answering" type="checkbox" checked disabled>
+          <label for="call-answering"><strong>Call answering and screening</strong> <span class="pill included">Included</span><br>$1 per answered call, including qualification and callback messages.</label>
+        </div>
+
+        <div class="choice-card included">
+          <input id="appointment-booking" name="appointment_booking" type="checkbox" checked disabled>
+          <label for="appointment-booking"><strong>Appointment booking</strong> <span class="pill included">Included</span><br>$39 per qualified appointment placed directly on your calendar.</label>
+        </div>
+
+        <div class="choice-card">
+          <input id="live-transfer" name="live_transfer" type="checkbox">
+          <label for="live-transfer"><strong>Live call transfer</strong> <span class="pill optional">Optional</span> $52 per completed transfer for urgent or complex calls.</label>
+        </div>
+
+        <div class="info-box dark">
+          <h3>When live transfers make sense</h3>
+          <p><strong>Attorneys and emergency services:</strong> Transfers can help when the caller requires immediate consultation or dispatch.</p>
+          <p><strong>Most home services:</strong> Emmy can usually schedule the appointment without interrupting your team.</p>
+        </div>
+
+        <fieldset class="field">
+          <legend>Do any lead providers require “Press 1” to accept? <span class="required">*</span></legend>
+          <div class="inline-options">
+            <label><input type="radio" name="press_1" value="yes" required> Yes</label>
+            <label><input type="radio" name="press_1" value="no"> No</label>
+            <label><input type="radio" name="press_1" value="not-sure"> Not sure</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="lead-sources">Lead sources requiring special handling</label>
+          <textarea id="lead-sources" name="lead_sources" placeholder="Leave blank if none apply."></textarea>
+          <span class="hint">Angi, HomeAdvisor, Thumbtack, Meta, etc.</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-heading">
+          <div class="section-number">3</div>
+          <div>
+            <h2>Hours and calendar setup</h2>
+            <p>Tell us when you operate and where Emmy should place appointments.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="business-hours">Standard business hours <span class="required">*</span></label>
+          <input id="business-hours" name="business_hours" type="text" placeholder="e.g., Mon–Fri 8:00 AM – 5:00 PM; Sat 8:00 AM – 12:00 PM" required>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="timezone">Business time zone <span class="required">*</span></label>
+            <select id="timezone" name="timezone" required>
+              <option value="">Select one</option>
+              <option value="eastern">Eastern</option>
+              <option value="central">Central</option>
+              <option value="mountain">Mountain</option>
+              <option value="pacific">Pacific</option>
+              <option value="arizona">Arizona</option>
+              <option value="alaska">Alaska</option>
+              <option value="hawaii">Hawaii</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="calendar-system">Calendar system <span class="required">*</span></label>
+            <select id="calendar-system" name="calendar_system" required>
+              <option value="">Select one</option>
+              <option value="google">Google Calendar</option>
+              <option value="outlook">Outlook / Microsoft 365</option>
+              <option value="apple">Apple Calendar</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <h3>Calendars Emmy may book</h3>
+        <p class="hint">Use one row per person or team calendar. Five fixed calendar slots are included so every value can map cleanly into automation.</p>
+
+        <div id="calendar-rows">
+          <div class="calendar-row">
+            <input type="text" name="calendar_name[]" placeholder="Calendar name">
+            <input type="email" name="calendar_email[]" placeholder="Calendar email / share URL">
+          </div>
+          <div class="calendar-row">
+            <input type="text" name="calendar_name[]" placeholder="Calendar name">
+            <input type="email" name="calendar_email[]" placeholder="Calendar email / share URL">
+          </div>
+          <div class="calendar-row">
+            <input type="text" name="calendar_name[]" placeholder="Calendar name">
+            <input type="email" name="calendar_email[]" placeholder="Calendar email / share URL">
+          </div>
+          <div class="calendar-row">
+            <input type="text" name="calendar_name[]" placeholder="Calendar name">
+            <input type="email" name="calendar_email[]" placeholder="Calendar email / share URL">
+          </div>
+          <div class="calendar-row">
+            <input type="text" name="calendar_name[]" placeholder="Calendar name">
+            <input type="email" name="calendar_email[]" placeholder="Calendar email / share URL">
+          </div>
+        </div>
+        <button type="button" class="secondary-button" id="add-calendar">+ Add another calendar</button>
+
+        <div class="field">
+          <label for="scheduling-rules">Scheduling rules or restrictions</label>
+          <textarea id="scheduling-rules" name="scheduling_rules" placeholder="Minimum lead time, no-go zip codes, buffer time between appointments, etc."></textarea>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-heading">
+          <div class="section-number">4</div>
+          <div>
+            <h2>Pricing and billing</h2>
+            <p>Review the usage rates attached to your First 50 enrollment.</p>
+          </div>
+        </div>
+
+        <div class="pricing">
+          <div class="pricing-row">
+            <div class="pricing-label"><strong>Call answering and screening</strong><span>Includes callback messaging</span></div>
+            <div class="price">$1 <small>/ call</small></div>
+          </div>
+          <div class="pricing-row">
+            <div class="pricing-label"><strong>Appointment booking</strong><span>Per qualified appointment scheduled</span></div>
+            <div class="price">$39 <small>/ appointment</small></div>
+          </div>
+          <div class="pricing-row">
+            <div class="pricing-label"><strong>Live call transfer</strong><span>Only when selected</span></div>
+            <div class="price">$52 <small>/ transfer</small></div>
+          </div>
+          <div class="pricing-row">
+            <div class="pricing-label"><strong>Setup fee</strong><span>Regularly $1,499</span></div>
+            <div class="price free">Waived</div>
+          </div>
+          <div class="pricing-row">
+            <div class="pricing-label"><strong>Monthly membership</strong><span>Regularly $299/month for 24 months</span></div>
+            <div class="price free">Waived</div>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <h3>Billing schedule</h3>
+          <p>Usage is invoiced on the first of each month for the prior month and charged to the payment method on file on the fifth. Usage charges are final. Service is month-to-month and may be canceled with 30 days’ notice.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="billing-contact">Billing contact</label>
+            <input id="billing-contact" name="billing_contact" type="text">
+          </div>
+          <div class="field">
+            <label for="billing-email">Billing email</label>
+            <input id="billing-email" name="billing_email" type="email">
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-heading">
+          <div class="section-number">5</div>
+          <div>
+            <h2>Agreement and authorization</h2>
+            <p>Confirm the enrollment terms and identify the authorized signer.</p>
+          </div>
+        </div>
+
+        <div class="agreement">
+          <h3>By submitting this enrollment, I acknowledge that:</h3>
+          <ul>
+            <li>I agree to MeetEmmy’s <a href="https://meetemmy.com/terms" target="_blank" rel="noopener">Terms and Conditions of Service</a>.</li>
+            <li>I authorize monthly charges to the payment method on file.</li>
+            <li>I understand the usage pricing and billing schedule shown above.</li>
+            <li>I understand usage charges are final and service is month-to-month.</li>
+            <li>I am authorized to enroll the business named in this form.</li>
+            <li>My First 50 per-call pricing is grandfathered for life, subject to the applicable service terms.</li>
+          </ul>
+
+          <div class="consent">
+            <input id="accept-terms" name="accept_terms" type="checkbox" required>
+            <label for="accept-terms">I have reviewed and accept the enrollment terms. <span class="required">*</span></label>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="authorized-signer">Authorized signer <span class="required">*</span></label>
+            <input id="authorized-signer" name="authorized_signer" type="text" required>
+          </div>
+          <div class="field">
+            <label for="signer-title">Title / position <span class="required">*</span></label>
+            <input id="signer-title" name="signer_title" type="text" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="sign-date">Date <span class="required">*</span></label>
+          <input id="sign-date" name="sign_date" type="date" required>
+        </div>
+
+        <div class="submit-panel">
+          <button type="submit" class="submit-button" id="submit-button">Complete enrollment</button>
+          <p class="submit-note">Payment information will be collected separately through a secure payment link.</p>
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<footer>
+  <strong>MeetEmmy</strong> &nbsp;•&nbsp; <a href="mailto:jason@meetemmy.com">jason@meetemmy.com</a> &nbsp;•&nbsp; <a href="https://meetemmy.com">meetemmy.com</a>
+  <p>© 2026 MeetEmmy, LLC. All rights reserved.</p>
+</footer>
+
+<script>
+  (function() {
+    const form = document.getElementById('enrollment-form');
+    const status = document.getElementById('form-status');
+    const submitButton = document.getElementById('submit-button');
+    const addCalendarButton = document.getElementById('add-calendar');
+    const calendarRows = document.getElementById('calendar-rows');
+
+    // Default the date to today
+    const dateInput = document.getElementById('sign-date');
+    if (dateInput && !dateInput.value) {
+      dateInput.valueAsDate = new Date();
+    }
+
+    addCalendarButton.addEventListener('click', function() {
+      const row = document.createElement('div');
+      row.className = 'calendar-row';
+      row.innerHTML = '<input type="text" name="calendar_name[]" placeholder="Calendar name"><input type="email" name="calendar_email[]" placeholder="Calendar email / share URL">';
+      calendarRows.appendChild(row);
+    });
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      status.className = 'form-status';
+      status.textContent = '';
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting…';
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      // Preserve multi-value inputs
+      data.calendar_name = formData.getAll('calendar_name[]');
+      data.calendar_email = formData.getAll('calendar_email[]');
+
+      try {
+        const response = await fetch('/api/public/enroll', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+          throw new Error('Submission failed. Please try again or contact jason@meetemmy.com.');
+        }
+
+        const result = await response.json();
+        status.className = 'form-status success';
+        status.textContent = result.message || 'Enrollment received. We will follow up within one business day.';
+        form.reset();
+        dateInput.valueAsDate = new Date();
+      } catch (error) {
+        status.className = 'form-status error';
+        status.textContent = error.message || 'Something went wrong. Please try again.';
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Complete enrollment';
+      }
+    });
+  }());
+</script>
+
+</body>
+</html>

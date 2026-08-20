@@ -20,6 +20,7 @@ import { Route as ProminenceTheoryRouteImport } from './routes/prominence-theory
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as MustardSeedRouteImport } from './routes/mustard-seed'
 import { Route as LexiconRouteImport } from './routes/lexicon'
+import { Route as EnrollRouteImport } from './routes/enroll'
 import { Route as EmergencyWhitelistRouteImport } from './routes/emergency-whitelist'
 import { Route as DutchRouteImport } from './routes/dutch'
 import { Route as CrisisToWhitelistRouteImport } from './routes/crisis-to-whitelist'
@@ -27,6 +28,7 @@ import { Route as CrisisSearchRouteImport } from './routes/crisis-search'
 import { Route as CrisisResponseManagementRouteImport } from './routes/crisis-response-management'
 import { Route as AnswerAppointmentReviewRouteImport } from './routes/answer-appointment-review'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiPublicEnrollRouteImport } from './routes/api/public/enroll'
 
 const TheTreeRoute = TheTreeRouteImport.update({
   id: '/the-tree',
@@ -83,6 +85,11 @@ const LexiconRoute = LexiconRouteImport.update({
   path: '/lexicon',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EnrollRoute = EnrollRouteImport.update({
+  id: '/enroll',
+  path: '/enroll',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EmergencyWhitelistRoute = EmergencyWhitelistRouteImport.update({
   id: '/emergency-whitelist',
   path: '/emergency-whitelist',
@@ -119,6 +126,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicEnrollRoute = ApiPublicEnrollRouteImport.update({
+  id: '/api/public/enroll',
+  path: '/api/public/enroll',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -128,6 +140,7 @@ export interface FileRoutesByFullPath {
   '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
   '/dutch': typeof DutchRoute
   '/emergency-whitelist': typeof EmergencyWhitelistRoute
+  '/enroll': typeof EnrollRoute
   '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -139,6 +152,7 @@ export interface FileRoutesByFullPath {
   '/the-certainty-effect': typeof TheCertaintyEffectRoute
   '/the-net': typeof TheNetRoute
   '/the-tree': typeof TheTreeRoute
+  '/api/public/enroll': typeof ApiPublicEnrollRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -148,6 +162,7 @@ export interface FileRoutesByTo {
   '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
   '/dutch': typeof DutchRoute
   '/emergency-whitelist': typeof EmergencyWhitelistRoute
+  '/enroll': typeof EnrollRoute
   '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -159,6 +174,7 @@ export interface FileRoutesByTo {
   '/the-certainty-effect': typeof TheCertaintyEffectRoute
   '/the-net': typeof TheNetRoute
   '/the-tree': typeof TheTreeRoute
+  '/api/public/enroll': typeof ApiPublicEnrollRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -169,6 +185,7 @@ export interface FileRoutesById {
   '/crisis-to-whitelist': typeof CrisisToWhitelistRoute
   '/dutch': typeof DutchRoute
   '/emergency-whitelist': typeof EmergencyWhitelistRoute
+  '/enroll': typeof EnrollRoute
   '/lexicon': typeof LexiconRoute
   '/mustard-seed': typeof MustardSeedRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -180,6 +197,7 @@ export interface FileRoutesById {
   '/the-certainty-effect': typeof TheCertaintyEffectRoute
   '/the-net': typeof TheNetRoute
   '/the-tree': typeof TheTreeRoute
+  '/api/public/enroll': typeof ApiPublicEnrollRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -191,6 +209,7 @@ export interface FileRouteTypes {
     | '/crisis-to-whitelist'
     | '/dutch'
     | '/emergency-whitelist'
+    | '/enroll'
     | '/lexicon'
     | '/mustard-seed'
     | '/privacy-policy'
@@ -202,6 +221,7 @@ export interface FileRouteTypes {
     | '/the-certainty-effect'
     | '/the-net'
     | '/the-tree'
+    | '/api/public/enroll'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -211,6 +231,7 @@ export interface FileRouteTypes {
     | '/crisis-to-whitelist'
     | '/dutch'
     | '/emergency-whitelist'
+    | '/enroll'
     | '/lexicon'
     | '/mustard-seed'
     | '/privacy-policy'
@@ -222,6 +243,7 @@ export interface FileRouteTypes {
     | '/the-certainty-effect'
     | '/the-net'
     | '/the-tree'
+    | '/api/public/enroll'
   id:
     | '__root__'
     | '/'
@@ -231,6 +253,7 @@ export interface FileRouteTypes {
     | '/crisis-to-whitelist'
     | '/dutch'
     | '/emergency-whitelist'
+    | '/enroll'
     | '/lexicon'
     | '/mustard-seed'
     | '/privacy-policy'
@@ -242,6 +265,7 @@ export interface FileRouteTypes {
     | '/the-certainty-effect'
     | '/the-net'
     | '/the-tree'
+    | '/api/public/enroll'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -252,6 +276,7 @@ export interface RootRouteChildren {
   CrisisToWhitelistRoute: typeof CrisisToWhitelistRoute
   DutchRoute: typeof DutchRoute
   EmergencyWhitelistRoute: typeof EmergencyWhitelistRoute
+  EnrollRoute: typeof EnrollRoute
   LexiconRoute: typeof LexiconRoute
   MustardSeedRoute: typeof MustardSeedRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
@@ -263,6 +288,7 @@ export interface RootRouteChildren {
   TheCertaintyEffectRoute: typeof TheCertaintyEffectRoute
   TheNetRoute: typeof TheNetRoute
   TheTreeRoute: typeof TheTreeRoute
+  ApiPublicEnrollRoute: typeof ApiPublicEnrollRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -344,6 +370,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LexiconRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/enroll': {
+      id: '/enroll'
+      path: '/enroll'
+      fullPath: '/enroll'
+      preLoaderRoute: typeof EnrollRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/emergency-whitelist': {
       id: '/emergency-whitelist'
       path: '/emergency-whitelist'
@@ -393,6 +426,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/enroll': {
+      id: '/api/public/enroll'
+      path: '/api/public/enroll'
+      fullPath: '/api/public/enroll'
+      preLoaderRoute: typeof ApiPublicEnrollRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -404,6 +444,7 @@ const rootRouteChildren: RootRouteChildren = {
   CrisisToWhitelistRoute: CrisisToWhitelistRoute,
   DutchRoute: DutchRoute,
   EmergencyWhitelistRoute: EmergencyWhitelistRoute,
+  EnrollRoute: EnrollRoute,
   LexiconRoute: LexiconRoute,
   MustardSeedRoute: MustardSeedRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
@@ -415,7 +456,18 @@ const rootRouteChildren: RootRouteChildren = {
   TheCertaintyEffectRoute: TheCertaintyEffectRoute,
   TheNetRoute: TheNetRoute,
   TheTreeRoute: TheTreeRoute,
+  ApiPublicEnrollRoute: ApiPublicEnrollRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
