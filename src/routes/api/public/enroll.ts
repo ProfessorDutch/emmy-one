@@ -53,7 +53,19 @@ export const Route = createFileRoute("/api/public/enroll")({
           );
         }
 
-        // TODO: Persist enrollment and send notifications here.
+        try {
+          const { pushEnrollmentToGHL } = await import("@/lib/ghl.server");
+          await pushEnrollmentToGHL(parsed.data);
+        } catch (err) {
+          console.error("Enrollment sync failed", err);
+          return new Response(
+            JSON.stringify({
+              error:
+                "We received your details but could not complete enrollment automatically. Please contact us at 844-321-3669.",
+            }),
+            { status: 502, headers: { "Content-Type": "application/json" } },
+          );
+        }
 
         return new Response(
           JSON.stringify({
@@ -62,6 +74,7 @@ export const Route = createFileRoute("/api/public/enroll")({
           }),
           { status: 200, headers: { "Content-Type": "application/json" } },
         );
+
       },
     },
   },
