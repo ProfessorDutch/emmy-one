@@ -28,6 +28,7 @@ import { Route as CrisisSearchRouteImport } from './routes/crisis-search'
 import { Route as CrisisResponseManagementRouteImport } from './routes/crisis-response-management'
 import { Route as AnswerAppointmentReviewRouteImport } from './routes/answer-appointment-review'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiPublicEnrollRouteImport } from './routes/api/public/enroll'
 
 const TheTreeRoute = TheTreeRouteImport.update({
   id: '/the-tree',
@@ -125,6 +126,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicEnrollRoute = ApiPublicEnrollRouteImport.update({
+  id: '/api/public/enroll',
+  path: '/api/public/enroll',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -146,6 +152,7 @@ export interface FileRoutesByFullPath {
   '/the-certainty-effect': typeof TheCertaintyEffectRoute
   '/the-net': typeof TheNetRoute
   '/the-tree': typeof TheTreeRoute
+  '/api/public/enroll': typeof ApiPublicEnrollRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -167,6 +174,7 @@ export interface FileRoutesByTo {
   '/the-certainty-effect': typeof TheCertaintyEffectRoute
   '/the-net': typeof TheNetRoute
   '/the-tree': typeof TheTreeRoute
+  '/api/public/enroll': typeof ApiPublicEnrollRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -189,6 +197,7 @@ export interface FileRoutesById {
   '/the-certainty-effect': typeof TheCertaintyEffectRoute
   '/the-net': typeof TheNetRoute
   '/the-tree': typeof TheTreeRoute
+  '/api/public/enroll': typeof ApiPublicEnrollRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -212,6 +221,7 @@ export interface FileRouteTypes {
     | '/the-certainty-effect'
     | '/the-net'
     | '/the-tree'
+    | '/api/public/enroll'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -233,6 +243,7 @@ export interface FileRouteTypes {
     | '/the-certainty-effect'
     | '/the-net'
     | '/the-tree'
+    | '/api/public/enroll'
   id:
     | '__root__'
     | '/'
@@ -254,6 +265,7 @@ export interface FileRouteTypes {
     | '/the-certainty-effect'
     | '/the-net'
     | '/the-tree'
+    | '/api/public/enroll'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -276,6 +288,7 @@ export interface RootRouteChildren {
   TheCertaintyEffectRoute: typeof TheCertaintyEffectRoute
   TheNetRoute: typeof TheNetRoute
   TheTreeRoute: typeof TheTreeRoute
+  ApiPublicEnrollRoute: typeof ApiPublicEnrollRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -413,6 +426,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/enroll': {
+      id: '/api/public/enroll'
+      path: '/api/public/enroll'
+      fullPath: '/api/public/enroll'
+      preLoaderRoute: typeof ApiPublicEnrollRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -436,6 +456,7 @@ const rootRouteChildren: RootRouteChildren = {
   TheCertaintyEffectRoute: TheCertaintyEffectRoute,
   TheNetRoute: TheNetRoute,
   TheTreeRoute: TheTreeRoute,
+  ApiPublicEnrollRoute: ApiPublicEnrollRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
