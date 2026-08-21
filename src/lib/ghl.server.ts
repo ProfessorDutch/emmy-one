@@ -38,7 +38,7 @@ function splitName(full: string): { firstName: string; lastName: string } {
   return { firstName, lastName: parts.join(" ") };
 }
 
-function buildNote(data: EnrollmentPayload): string {
+function buildNote(data: EnrollmentPayload, submittedAt: string): string {
   const calendars = (data.calendar_name ?? [])
     .map((name, i) => `  - ${name || "(unnamed)"}${data.calendar_email?.[i] ? ` — ${data.calendar_email[i]}` : ""}`)
     .filter((line) => line.trim() !== "-")
@@ -46,6 +46,7 @@ function buildNote(data: EnrollmentPayload): string {
 
   return [
     "MEETEMMY ENROLLMENT",
+    `Submitted at: ${submittedAt}`,
     `Business: ${data.business_name}`,
     `Primary contact: ${data.primary_contact}${data.contact_title ? ` (${data.contact_title})` : ""}`,
     `Email: ${data.email}`,
@@ -103,6 +104,7 @@ export async function pushEnrollmentToGHL(data: EnrollmentPayload) {
   }
 
   const { firstName, lastName } = splitName(data.primary_contact);
+  const submittedAt = new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
 
   const upsert = await ghlFetch("/contacts/upsert", token, {
     locationId,
@@ -119,6 +121,12 @@ export async function pushEnrollmentToGHL(data: EnrollmentPayload) {
     website: data.website || undefined,
     timezone: data.timezone,
     source: "MeetEmmy Enrollment Form",
+    customFields: [
+      {
+        id: "hYOU1SI9rLd7AW6v2ax6",
+        field_value: submittedAt,
+      },
+    ],
     tags: [
       "meetemmy-enrollment",
       `industry:${data.industry}`.toLowerCase(),
@@ -132,11 +140,11 @@ export async function pushEnrollmentToGHL(data: EnrollmentPayload) {
 
   if (contactId) {
     try {
-      await ghlFetch(`/contacts/${contactId}/notes`, token, { body: buildNote(data) });
+      await ghlFetch(`/contacts/${contactId}/notes`, token, { body: buildNote(data, submittedAt) });
     } catch (err) {
       console.error("GHL note creation failed", err);
     }
   }
 
-  return { contactId };
+  return { contactId, submittedAt };
 }
