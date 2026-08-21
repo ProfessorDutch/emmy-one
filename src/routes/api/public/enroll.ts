@@ -53,9 +53,12 @@ export const Route = createFileRoute("/api/public/enroll")({
           );
         }
 
+        let contactId: string | undefined;
         try {
           const { pushEnrollmentToGHL } = await import("@/lib/ghl.server");
-          await pushEnrollmentToGHL(parsed.data);
+          const result = await pushEnrollmentToGHL(parsed.data);
+          contactId = result.contactId;
+          console.log(`Enrollment synced to GHL: contactId=${contactId ?? "none"} email=${parsed.data.email}`);
         } catch (err) {
           console.error("Enrollment sync failed", err);
           return new Response(
@@ -70,10 +73,12 @@ export const Route = createFileRoute("/api/public/enroll")({
         return new Response(
           JSON.stringify({
             success: true,
+            contactId: contactId ?? null,
             message: "Enrollment received. We will follow up within one business day.",
           }),
           { status: 200, headers: { "Content-Type": "application/json" } },
         );
+
 
       },
     },
