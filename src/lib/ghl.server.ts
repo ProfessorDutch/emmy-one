@@ -38,7 +38,7 @@ function splitName(full: string): { firstName: string; lastName: string } {
   return { firstName, lastName: parts.join(" ") };
 }
 
-function buildNote(data: EnrollmentPayload): string {
+function buildNote(data: EnrollmentPayload, submittedAt: string): string {
   const calendars = (data.calendar_name ?? [])
     .map((name, i) => `  - ${name || "(unnamed)"}${data.calendar_email?.[i] ? ` — ${data.calendar_email[i]}` : ""}`)
     .filter((line) => line.trim() !== "-")
@@ -46,6 +46,7 @@ function buildNote(data: EnrollmentPayload): string {
 
   return [
     "MEETEMMY ENROLLMENT",
+    `Submitted at: ${submittedAt}`,
     `Business: ${data.business_name}`,
     `Primary contact: ${data.primary_contact}${data.contact_title ? ` (${data.contact_title})` : ""}`,
     `Email: ${data.email}`,
