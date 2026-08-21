@@ -121,7 +121,12 @@ export async function pushEnrollmentToGHL(data: EnrollmentPayload) {
     website: data.website || undefined,
     timezone: data.timezone,
     source: "MeetEmmy Enrollment Form",
-    enrollment_submitted_at: submittedAt,
+    customFields: [
+      {
+        id: "hYOU1SI9rLd7AW6v2ax6",
+        field_value: submittedAt,
+      },
+    ],
     tags: [
       "meetemmy-enrollment",
       `industry:${data.industry}`.toLowerCase(),
