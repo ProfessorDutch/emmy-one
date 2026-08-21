@@ -106,7 +106,7 @@ export async function pushEnrollmentToGHL(data: EnrollmentPayload) {
   const { firstName, lastName } = splitName(data.primary_contact);
   const submittedAt = new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
 
-  const upsert = await ghlFetch("/contacts/upsert", token, {
+  const basePayload: Record<string, unknown> = {
     locationId,
     firstName,
     lastName,
@@ -121,19 +121,25 @@ export async function pushEnrollmentToGHL(data: EnrollmentPayload) {
     website: data.website || undefined,
     timezone: data.timezone,
     source: "MeetEmmy Enrollment Form",
-    customFields: [
-      {
-        id: "hYOU1SI9rLd7AW6v2ax6",
-        field_value: submittedAt,
-      },
-    ],
     tags: [
       "meetemmy-enrollment",
       `industry:${data.industry}`.toLowerCase(),
       `press1:${data.press_1}`,
       data.live_transfer === "on" ? "live-transfer" : "no-live-transfer",
     ],
-  });
+  };
+
+  let upsert: Record<string, unknown>;
+  try {
+    upsert = await ghlFetch("/contacts/upsert", token, {
+      ...basePayload,
+      customFields: [{ id: "hYOU1SI9rLd7AW6v2ax6", field_value: submittedAt }],
+    });
+  } catch (err) {
+    // A rejected/renamed custom field must never fail the whole enrollment.
+    console.error("GHL upsert with custom fields failed, retrying without them", err);
+    upsert = await ghlFetch("/contacts/upsert", token, basePayload);
+  }
 
   const contact = (upsert["contact"] ?? {}) as { id?: string };
   const contactId = contact.id ?? (upsert["id"] as string | undefined);
