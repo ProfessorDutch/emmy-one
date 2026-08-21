@@ -54,11 +54,13 @@ export const Route = createFileRoute("/api/public/enroll")({
         }
 
         let contactId: string | undefined;
+        let submittedAt: string | undefined;
         try {
           const { pushEnrollmentToGHL } = await import("@/lib/ghl.server");
           const result = await pushEnrollmentToGHL(parsed.data);
           contactId = result.contactId;
-          console.log(`Enrollment synced to GHL: contactId=${contactId ?? "none"} email=${parsed.data.email}`);
+          submittedAt = result.submittedAt;
+          console.log(`Enrollment synced to GHL: contactId=${contactId ?? "none"} email=${parsed.data.email} submittedAt=${submittedAt}`);
         } catch (err) {
           console.error("Enrollment sync failed", err);
           return new Response(
@@ -74,6 +76,7 @@ export const Route = createFileRoute("/api/public/enroll")({
           JSON.stringify({
             success: true,
             contactId: contactId ?? null,
+            submittedAt: submittedAt ?? null,
             message: "Enrollment received. We will follow up within one business day.",
           }),
           { status: 200, headers: { "Content-Type": "application/json" } },
