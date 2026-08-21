@@ -106,7 +106,7 @@ export async function pushEnrollmentToGHL(data: EnrollmentPayload) {
   const { firstName, lastName } = splitName(data.primary_contact);
   const submittedAt = new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
 
-  const upsert = await ghlFetch("/contacts/upsert", token, {
+  const basePayload: Record<string, unknown> = {
     locationId,
     firstName,
     lastName,
