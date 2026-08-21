@@ -104,6 +104,7 @@ export async function pushEnrollmentToGHL(data: EnrollmentPayload) {
   }
 
   const { firstName, lastName } = splitName(data.primary_contact);
+  const submittedAt = new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
 
   const upsert = await ghlFetch("/contacts/upsert", token, {
     locationId,
@@ -120,6 +121,7 @@ export async function pushEnrollmentToGHL(data: EnrollmentPayload) {
     website: data.website || undefined,
     timezone: data.timezone,
     source: "MeetEmmy Enrollment Form",
+    enrollment_submitted_at: submittedAt,
     tags: [
       "meetemmy-enrollment",
       `industry:${data.industry}`.toLowerCase(),
@@ -133,11 +135,11 @@ export async function pushEnrollmentToGHL(data: EnrollmentPayload) {
 
   if (contactId) {
     try {
-      await ghlFetch(`/contacts/${contactId}/notes`, token, { body: buildNote(data) });
+      await ghlFetch(`/contacts/${contactId}/notes`, token, { body: buildNote(data, submittedAt) });
     } catch (err) {
       console.error("GHL note creation failed", err);
     }
   }
 
-  return { contactId };
+  return { contactId, submittedAt };
 }
